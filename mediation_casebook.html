@@ -354,6 +354,21 @@ footer {
 @media print {
   .topbar { position: static; }
   body { background: white; }
+
+  /* Hide non-essential UI */
+  .topbar, .download-btn, footer, #level-standard-modal { display: none !important; }
+
+  /* Page breaks: joint brief (= common facts), then each party card, then overview each on new page */
+  section.block { page-break-inside: avoid; break-inside: avoid; }
+  section.block + section.block { page-break-before: always; break-before: page; }
+
+  /* Confidential briefs section: break grid into single column so each party card gets its own page */
+  .confidentials { display: block !important; }
+  .confidentials .party-card { page-break-after: always; break-after: page; page-break-inside: avoid; break-inside: avoid; }
+  .confidentials .party-card:last-child { page-break-after: auto; break-after: auto; }
+
+  /* Print-friendly party card */
+  .party-card { box-shadow: none; border: 1px solid #999; }
 }
 
 /* Download buttons */
@@ -504,6 +519,84 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
   text-align: right;
   padding-right: 4px;
 }
+
+/* ============ Level Standard Modal ============ */
+.modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(31, 27, 22, 0.55);
+  display: none;
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+.modal-backdrop.open { display: flex; }
+.modal-panel {
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  max-width: 1100px;
+  width: 100%;
+  padding: 32px 36px 40px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.modal-close {
+  position: absolute;
+  top: 12px; right: 16px;
+  background: transparent;
+  border: 1px solid var(--ink-faint);
+  color: var(--ink);
+  padding: 4px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+.modal-close:hover { border-color: var(--ink); }
+.modal-panel h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  color: var(--accent);
+}
+.modal-panel .modal-subtitle {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+.modal-panel table.level-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.modal-panel table.level-table th,
+.modal-panel table.level-table td {
+  border: 1px solid var(--ink-faint);
+  padding: 9px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+.modal-panel table.level-table thead th {
+  background: var(--paper-2);
+  font-weight: 600;
+}
+.modal-panel table.level-table tbody th {
+  width: 18%;
+  background: var(--paper-2);
+  font-weight: 600;
+  color: var(--ink);
+}
+.modal-panel table.level-table tbody td { width: 27.3%; }
+.modal-panel .level-footnote {
+  margin-top: 20px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .modal-panel { padding: 24px 18px 28px; }
+  .modal-panel table.level-table { font-size: 12.5px; }
+  .modal-panel table.level-table th, .modal-panel table.level-table td { padding: 6px 8px; }
+}
 </style>
 </head>
 <body class="lang-zh">
@@ -518,6 +611,7 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
       </label>
       <button id="shuffle-btn" class="topbar-btn" type="button" title="Pick a random case"><span class="lang-zh">隨機抽案</span><span class="lang-sc">随机抽案</span><span class="lang-en">Shuffle</span></button>
       <button id="options-toggle" class="topbar-btn" type="button" aria-pressed="false"><span class="lang-zh">顯示分析參考</span><span class="lang-sc">显示分析参考</span><span class="lang-en">Show Reference</span></button>
+      <button id="level-standard-btn" class="topbar-btn" type="button"><span class="lang-zh">等級標準</span><span class="lang-sc">等级标准</span><span class="lang-en">Level Standard</span></button>
     </div>
     <button id="topbar-collapse" class="topbar-btn topbar-collapse-btn" type="button" aria-pressed="false" aria-label="Toggle topbar"><span class="collapse-arrow">▴</span></button>
     <div class="toggle-group" role="group" aria-label="Language">
@@ -537,6 +631,92 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
     <span class="lang-sc">调解案集 · 内容均为虚构，仅供调解员练习之用</span>
     <span class="lang-en">Mediation Casebook · All content fictional, for mediator practice only</span>
   </footer>
+
+  <div id="level-standard-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="level-modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" id="level-modal-close" type="button"><span class="lang-zh">關閉</span><span class="lang-sc">关闭</span><span class="lang-en">Close</span></button>
+
+      <h2 id="level-modal-title">
+        <span class="lang-zh">案例等級標準</span>
+        <span class="lang-sc">案例等级标准</span>
+        <span class="lang-en">Case Level Standard</span>
+      </h2>
+      <p class="modal-subtitle">
+        <span class="lang-zh">L1 / L2 / L3 為學員準備度之分層，並非任何考試之等級對應。</span>
+        <span class="lang-sc">L1 / L2 / L3 为学员准备度之分层，并非任何考试之等级对应。</span>
+        <span class="lang-en">L1 / L2 / L3 are trainee-readiness tiers, not an equivalence to any examination grade.</span>
+      </p>
+
+      <!-- ============ 繁中表格 ============ -->
+      <table class="level-table lang-zh">
+        <thead>
+          <tr><th>維度</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>爭議事項</th><td>一項主要爭議，可附帶一兩項輕微附屬事項</td><td>兩至四項相互糾纏之事項，一項之解決會影響另一項</td><td>五項或以上事項相互交織；其中至少一項為結構性或關係性問題，無法單以金錢解決</td></tr>
+          <tr><th>金錢複雜度</th><td>單一金額或簡單扣減；算術直觀</td><td>多項分項、分期支付、或結構性和解；算術須細心處理</td><td>多軌金額：修訂條款、有條件支付、級距上調、交叉抵押或分階段注資</td></tr>
+          <tr><th>文件狀況</th><td>雙方均有清晰書面紀錄；無事實空隙</td><td>有部分書面紀錄，但關鍵事實依賴語音訊息、口頭討論或條款解讀</td><td>文件繁多；條款解讀有爭議；常需專家報告；部分事實有所爭議</td></tr>
+          <tr><th>場外角色</th><td>並無活躍場外角色；最多一名旁觀者並非爭議推動者</td><td>一至兩名活躍場外角色（如介紹人、知悉中之監管機關）</td><td>三名或以上活躍場外角色（銀團成員、監管機關、家族共同擔保人、審計師），其同意或立場直接影響結果</td></tr>
+          <tr><th>時間壓力</th><td>寬鬆；雙方可自行選擇解決時間</td><td>有明確期限（如通知期、學期），但可延長</td><td>有外部硬性期限（法定窗口、補救期、財政年度截止）超出雙方控制</td></tr>
+          <tr><th>權力不對稱</th><td>單軸，輕微（如小商戶對消費者）</td><td>雙軸（如企業對個人＋專業聲譽涉及其中）</td><td>多軸（機構對個人＋專業紀錄＋家族／社區地位＋跨境管轄）</td></tr>
+          <tr><th>正當性框架</th><td>雙方各自有一主導框架（通常為合約或公平）</td><td>兩種框架相互張力（合約對慣例；履行對衡平）</td><td>三種或以上框架同時運作，包括行業慣例、監管期望、專業紀錄保護</td></tr>
+          <tr><th>調解員技能要求</th><td>主動聆聽、重新框架、基本選項產生</td><td>私下會議管理、現實檢驗、措辭精細擬定、處理情緒浮面</td><td>多方協調、專家證據處理、離場管理、複雜和解結構、平行軌道設計</td></tr>
+          <tr><th>離場風險</th><td>低；雙方均欲達成解決</td><td>中度；若處理不當，因尊嚴問題可能情緒反轉</td><td>高；若專業紀錄、家族地位或機構立場被公開定性，任何一方均可能離場</td></tr>
+          <tr><th>和解結構</th><td>單一文件，即時或短期執行</td><td>含條件之和解，附明確履行窗口</td><td>多文件和解：旁註書、延後條件、第三方同意、持續履行檢視</td></tr>
+          <tr><th>聯合摘要目標字數</th><td>700 至 800 字</td><td>800 至 1,000 字</td><td>900 至 1,100 字</td></tr>
+          <tr><th>培訓階段</th><td>學員建立核心調解技能；入門練習</td><td>已有基礎技能之學員，朝向 Stage 2 之準備</td><td>等同 Stage 2 或考取資格後之練習；僅供經驗豐富之學員</td></tr>
+        </tbody>
+      </table>
+
+      <!-- ============ 簡中表格 ============ -->
+      <table class="level-table lang-sc">
+        <thead>
+          <tr><th>维度</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>争议事项</th><td>一项主要争议，可附带一两项轻微附属事项</td><td>两至四项相互纠缠之事项，一项之解决会影响另一项</td><td>五项或以上事项相互交织；其中至少一项为结构性或关系性问题，无法单以金钱解决</td></tr>
+          <tr><th>金钱复杂度</th><td>单一金额或简单扣减；算术直观</td><td>多项分项、分期支付、或结构性和解；算术须细心处理</td><td>多轨金额：修订条款、有条件支付、级距上调、交叉抵押或分阶段注资</td></tr>
+          <tr><th>文件状况</th><td>双方均有清晰书面纪录；无事实空隙</td><td>有部分书面纪录，但关键事实依赖语音讯息、口头讨论或条款解读</td><td>文件繁多；条款解读有争议；常需专家报告；部分事实有所争议</td></tr>
+          <tr><th>场外角色</th><td>并无活跃场外角色；最多一名旁观者并非争议推动者</td><td>一至两名活跃场外角色（如介绍人、知悉中之监管机关）</td><td>三名或以上活跃场外角色（银团成员、监管机关、家族共同担保人、审计师），其同意或立场直接影响结果</td></tr>
+          <tr><th>时间压力</th><td>宽松；双方可自行选择解决时间</td><td>有明确期限（如通知期、学期），但可延长</td><td>有外部硬性期限（法定窗口、补救期、财政年度截止）超出双方控制</td></tr>
+          <tr><th>权力不对称</th><td>单轴，轻微（如小商户对消费者）</td><td>双轴（如企业对个人＋专业声誉涉及其中）</td><td>多轴（机构对个人＋专业纪录＋家族／社区地位＋跨境管辖）</td></tr>
+          <tr><th>正当性框架</th><td>双方各自有一主导框架（通常为合约或公平）</td><td>两种框架相互张力（合约对惯例；履行对衡平）</td><td>三种或以上框架同时运作，包括行业惯例、监管期望、专业纪录保护</td></tr>
+          <tr><th>调解员技能要求</th><td>主动聆听、重新框架、基本选项产生</td><td>私下会议管理、现实检验、措辞精细拟定、处理情绪浮面</td><td>多方协调、专家证据处理、离场管理、复杂和解结构、平行轨道设计</td></tr>
+          <tr><th>离场风险</th><td>低；双方均欲达成解决</td><td>中度；若处理不当，因尊严问题可能情绪反转</td><td>高；若专业纪录、家族地位或机构立场被公开定性，任何一方均可能离场</td></tr>
+          <tr><th>和解结构</th><td>单一文件，即时或短期执行</td><td>含条件之和解，附明确履行窗口</td><td>多文件和解：旁注书、延后条件、第三方同意、持续履行检视</td></tr>
+          <tr><th>联合摘要目标字数</th><td>700 至 800 字</td><td>800 至 1,000 字</td><td>900 至 1,100 字</td></tr>
+          <tr><th>培训阶段</th><td>学员建立核心调解技能；入门练习</td><td>已有基础技能之学员，朝向 Stage 2 之准备</td><td>等同 Stage 2 或考取资格后之练习；仅供经验丰富之学员</td></tr>
+        </tbody>
+      </table>
+
+      <!-- ============ English table ============ -->
+      <table class="level-table lang-en">
+        <thead>
+          <tr><th>Dimension</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Issues in dispute</th><td>One main issue, optionally with one or two minor subsidiary items</td><td>Two to four entangled issues, where movement on one affects another</td><td>Five or more issues bound together; at least one is a structural or relational question that cannot be resolved by money alone</td></tr>
+          <tr><th>Money complexity</th><td>Single sum or simple deduction; arithmetic is obvious</td><td>Multiple line items, partial payments, or a structured settlement; arithmetic requires care</td><td>Multi-track quantum: revised terms, conditional payments, step-ups, cross-collateralisation, or staged injections</td></tr>
+          <tr><th>Documentary state</th><td>Clean written record on both sides; no factual gaps</td><td>Some written record but key facts rest on voice messages, oral discussions, or clause interpretation</td><td>Heavy documentary record; disputed clauses; expert reports often required; some facts contested</td></tr>
+          <tr><th>Off-stage actors</th><td>None active; one bystander at most who does not drive the dispute</td><td>One to two active off-stage parties (e.g. a referrer, a regulator on notice)</td><td>Three or more active off-stage parties (syndicate members, regulators, family co-signers, audit firm) whose consent or position shapes the outcome</td></tr>
+          <tr><th>Time pressure</th><td>Soft; parties choose when to resolve</td><td>Defined deadline (e.g. notice period, school term) but extendable</td><td>Hard external deadline (statutory window, cure period, financial-year close) outside the parties' control</td></tr>
+          <tr><th>Power asymmetry</th><td>Single axis, mild (e.g. small business vs consumer)</td><td>Two axes (e.g. corporate vs individual plus professional reputation at stake)</td><td>Multi-axis (institutional vs individual plus professional record plus family or community standing plus cross-jurisdiction)</td></tr>
+          <tr><th>Legitimacy framings</th><td>One framing dominates each side (usually contract or fairness)</td><td>Two framings in tension (contract vs custom; performance vs equity)</td><td>Three or more framings in play, including industry norms, regulatory expectation, professional-record protection</td></tr>
+          <tr><th>Mediator skill demand</th><td>Active listening, reframing, basic option-generation</td><td>Caucus management, reality-testing, drafting nuanced wording, handling emotional surfaces</td><td>Multi-party coordination, expert-evidence handling, walk-out management, complex settlement structuring, parallel-track design</td></tr>
+          <tr><th>Walk-out risk</th><td>Low; parties want resolution</td><td>Medium; emotional reversals possible if dignity issues mishandled</td><td>High; either side may walk if professional record, family standing, or institutional position is publicly framed</td></tr>
+          <tr><th>Settlement structure</th><td>Single document, immediate or short-period execution</td><td>Settlement with conditions and a defined performance window</td><td>Multi-document settlement: side letters, deferred conditions, third-party consents, ongoing performance reviews</td></tr>
+          <tr><th>Joint brief target length</th><td>700 to 800 characters (Chinese)</td><td>800 to 1,000 characters</td><td>900 to 1,100 characters</td></tr>
+          <tr><th>Training stage</th><td>Trainees building core mediation skills; introductory practice</td><td>Trainees with foundational skills, building toward Stage 2 readiness</td><td>Stage 2-equivalent or post-qualification practice; experienced trainees only</td></tr>
+        </tbody>
+      </table>
+
+      <p class="level-footnote">
+        <span class="lang-zh">關於 HKMAAL Stage 2：Stage 2 設有兩個模擬案例（各一單元），並無公開之難度分級，採用 Form 1 固定評分準則。本案集之 L1 / L2 / L3 為學員準備度之分層，並非與 Stage 2 之考試案例一對一對應；實務上 Stage 2 案例多介乎 L2 至 L3 之間。</span>
+        <span class="lang-sc">关于 HKMAAL Stage 2：Stage 2 设有两个模拟案例（各一单元），并无公开之难度分级，采用 Form 1 固定评分准则。本案集之 L1 / L2 / L3 为学员准备度之分层，并非与 Stage 2 之考试案例一对一对应；实务上 Stage 2 案例多介乎 L2 至 L3 之间。</span>
+        <span class="lang-en">A note on HKMAAL Stage 2: Stage 2 features two simulated cases (one session each), no published difficulty tiers, with assessment on a Form 1 fixed-criteria basis. The L1 / L2 / L3 framework in this casebook is a trainee-readiness tiering, not a one-to-one mapping to Stage 2 examination cases; in practice Stage 2 cases tend to sit between L2 and L3.</span>
+      </p>
+    </div>
+  </div>
 
 </main>
 
@@ -6781,7 +6961,7 @@ function openPrintWindow(title, bodyHtml) {
     + '.toolbar button { font-family: "Spectral", serif; font-size: 13px; padding: 6px 14px; cursor: pointer; background: #1F1B16; color: #FAF6EE; border: none; border-radius: 2px; margin: 0 4px; }'
     + '.toolbar button:hover { background: #6E2A1F; }'
     + 'hr { border: 0; border-top: 1px solid #DDD5C3; margin: 28px 0; }'
-    + '@media print { .no-print { display: none; } body { background: white; padding: 0; max-width: none; } }'
+    + '@media print { .no-print { display: none; } body { background: white; padding: 0; max-width: none; } hr { border: 0; margin: 0; page-break-before: always; break-before: page; } hr + .party-label, hr + h2 { margin-top: 0; } }'
     + '</style></head><body>'
     + '<div class="toolbar no-print"><button onclick="window.print()">Print / Save as PDF</button><button onclick="window.close()">Close</button></div>'
     + bodyHtml
@@ -7135,6 +7315,24 @@ document.getElementById("topbar-collapse").addEventListener("click", function ()
   const collapsed = document.body.classList.toggle("topbar-collapsed");
   this.setAttribute("aria-pressed", collapsed ? "true" : "false");
 });
+
+// Level standard modal
+(function () {
+  const modal = document.getElementById("level-standard-modal");
+  const openBtn = document.getElementById("level-standard-btn");
+  const closeBtn = document.getElementById("level-modal-close");
+  if (!modal || !openBtn || !closeBtn) return;
+
+  function open() { modal.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function close() { modal.classList.remove("open"); document.body.style.overflow = ""; }
+
+  openBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("open")) close();
+  });
+})();
 
 render(CASES[0]);
 </script>
