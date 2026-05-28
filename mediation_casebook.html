@@ -135,6 +135,23 @@ main { max-width: 1180px; margin: 0 auto; padding: 40px 32px 80px; }
 .case-meta .pill.level-1 { color: var(--sage-ink); border-color: var(--sage-rule); background: var(--sage); }
 .case-meta .pill.level-2 { color: var(--slate-ink); border-color: var(--slate-rule); background: var(--slate); }
 .case-meta .pill.level-3 { color: var(--accent); border-color: var(--accent); }
+.case-meta .pill.level-4 {
+  color: #FAF6EE;
+  background: linear-gradient(135deg, #2B1810 0%, #6E2A1F 100%);
+  border-color: #2B1810;
+  font-weight: 600;
+}
+.case-meta .pill.final-boss {
+  background: #2B1810;
+  color: #F0C040;
+  border-color: #F0C040;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.case-meta .pill.final-boss::before { content: "★ "; color: #F0C040; }
 .case-title-wrap { flex: 1 1 auto; min-width: 0; }
 
 .case-title {
@@ -177,7 +194,9 @@ section.block { margin-bottom: 48px; }
 .prose p { margin: 0 0 14px; text-align: justify; hyphens: auto; }
 
 .confidentials { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
-@media (max-width: 920px) { .confidentials { grid-template-columns: 1fr; } }
+.confidentials.three-party { grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+@media (max-width: 1100px) { .confidentials.three-party { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 920px) { .confidentials, .confidentials.three-party { grid-template-columns: 1fr; } }
 
 .party-card {
   background: var(--paper-2);
@@ -6886,6 +6905,372 @@ const CASES = [
               ]
           }
       }
+  },
+
+  /* ============ seed_047 (FINAL BOSS L4) ============ */
+  {
+      "id": "seed_047",
+      "meta": {
+          "title_zh": "上市公司審計失誤投訴爭議",
+          "title_sc": "上市公司审计失误投诉争议",
+          "title_en": "Listed company audit failure complaint",
+          "level": 4,
+          "level_label": "Level 4",
+          "final_boss": true,
+          "archetype": "three_party_listed_company_whistleblower_auditor_with_parallel_regulatory_tracks"
+      },
+      "parties": [
+          {
+              "name_zh": "邵詠儀",
+              "name_sc": "邵咏仪",
+              "name_en": "Cynthia Shiu",
+              "role_zh": "58 歲，環昌集團控股有限公司獨立非執行董事，審核委員會主席（自 2020 年起），前安永會計師事務所合夥人（2015 年退休），代表上市公司",
+              "role_sc": "58 岁，环昌集团控股有限公司独立非执行董事，审核委员会主席（自 2020 年起），前安永会计师事务所合伙人（2015 年退休），代表上市公司",
+              "role_en": "58-year-old Independent Non-Executive Director of Wan Cheong Group Holdings Ltd, Audit Committee Chair since 2020, retired EY partner (2015), representing the listed company"
+          },
+          {
+              "name_zh": "曾國輝",
+              "name_sc": "曾国辉",
+              "name_en": "Anson Tsang",
+              "role_zh": "46 歲，前環昌集團控股集團財務總監（2019 年 3 月至 2024 年 5 月在職），現失業，HKICPA 會員",
+              "role_sc": "46 岁，前环昌集团控股集团财务总监（2019 年 3 月至 2024 年 5 月在职），现失业，HKICPA 会员",
+              "role_en": "46-year-old former Group Financial Controller of Wan Cheong Group Holdings (March 2019 to May 2024), currently unemployed, HKICPA member"
+          },
+          {
+              "name_zh": "梁啟賢",
+              "name_sc": "梁启贤",
+              "name_en": "Marcus Leung",
+              "role_zh": "51 歲，普華永道香港合夥人（2017 年起合夥人），環昌集團控股 2019 至 2023 年度核數工作之主理合夥人",
+              "role_sc": "51 岁，普华永道香港合伙人（2017 年起合伙人），环昌集团控股 2019 至 2023 年度核数工作之主理合伙人",
+              "role_en": "51-year-old PwC Hong Kong audit partner since 2017, engagement partner for the Wan Cheong Group Holdings audits FY2019 to FY2023"
+          }
+      ],
+      "joint_brief": {
+          "zh": "本案涉及一間香港主板上市公司（環昌集團控股有限公司，股份代號虛構為 1788.HK，市值約 HK$6,200,000,000，主營業務為東南亞物流地產投資及自營倉儲運營，2024 年集團年度收入約 HK$3,800,000,000，員工約 1,400 人）與其前集團財務總監（曾國輝，2019 年 3 月入職，2024 年 5 月 17 日以「重組架構」為由被終止合約並支付 6 個月遣散及代通知金共約 HK$2,850,000）以及其外部核數師（普華永道香港，主理合夥人梁啟賢負責 2019 至 2023 年度之審計）之間之三方爭議。\n2024 年 8 月 22 日曾國輝以匿名身份向香港聯合交易所（HKEX）上市部及證券及期貨事務監察委員會（SFC）企業財務部同時提交一份 23 頁「吹哨人投訴信」，並附 142 頁內部文件副本（包括電郵紀錄、董事會記錄、銷售合約原件等），指環昌集團於 2022 至 2023 年度透過兩個越南關聯項目進行「收入提前確認」（涉及金額約 HK$320,000,000）及「期末交易實質性質與合約形式不符」之安排，並指普華永道於 2023 年度審計時對相關交易之審計證據收集存在「重大不足」。HKEX 於 2024 年 9 月 5 日向環昌集團發出查詢函，要求 21 日內作正式回覆並考慮是否須於《上市規則》第 13.09 條下作出公告。SFC 於 2024 年 9 月 12 日向曾國輝書面通知將就其投訴內容啟動正式調查（《證券及期貨條例》第 378 條保密令同步發出），調查對象包括環昌集團及普華永道。HKICPA 於 2024 年 10 月 3 日獨立啟動對梁啟賢之專業紀律調查程序。\n曾國輝於 2024 年 10 月中經其代表律師（顧能裕大律師事務所之資深律師）向環昌集團及普華永道分別提出書面索償：（一）就環昌集團之「不當解僱」（他真實認為自己 2024 年 4 月內部投訴會計處理問題為解僱之直接原因）索償 HK$8,500,000（即遣散金及代通知金扣減後之差額加上對其未來 5 年職業生涯之預期損失）並書面恢復名譽；（二）就普華永道之「未盡審計責任」要求 HK$3,200,000（其 2023 年度被內部認為與其爭辯有關之表現分降低，影響當年花紅及加薪）並書面承認審計問題。雙方於 2024 年 11 月中經 HKEX 上市部建議下接受香港國際仲裁中心（HKIAC）調解服務，由前高等法院法官擔任主調解員，加上一名持牌調解員作為協調員之共同調解模式。HKEX 為環昌集團設下之 Section 17 公告窗口期於 2024 年 12 月 9 日屆滿（即首次調解會議後 5 個工作天內），曾國輝若於 12 月 9 日前接受任何由環昌集團主動披露之同等內容，索償空間將大幅減小。SFC 之 s.378 調查不會因任何調解結果而暫停，並有獨立刑事責任之並行軌道。HKICPA 對梁啟賢之紀律審查獨立進行，但本次調解之書面用語將可能於審查中被引用。少數股東代表（持 8.2% 股權，由「香港小股東權益促進會」匿名委託之獨立大律師代表）已書面通知環昌集團，任何「以付款換取沉默」之和解方案將會被質疑並可能引發股東派生訴訟（《公司條例》第 731 條）。",
+          "sc": "本案涉及一间香港主板上市公司（环昌集团控股有限公司，股份代号虚构为 1788.HK，市值约 HK$6,200,000,000，主营业务为东南亚物流地产投资及自营仓储运营，2024 年集团年度收入约 HK$3,800,000,000，员工约 1,400 人）与其前集团财务总监（曾国辉，2019 年 3 月入职，2024 年 5 月 17 日以「重组架构」为由被终止合约并支付 6 个月遣散及代通知金共约 HK$2,850,000）以及其外部核数师（普华永道香港，主理合伙人梁启贤负责 2019 至 2023 年度之审计）之间之三方争议。\n2024 年 8 月 22 日曾国辉以匿名身份向香港联合交易所（HKEX）上市部及证券及期货事务监察委员会（SFC）企业财务部同时提交一份 23 页「吹哨人投诉信」，并附 142 页内部文件副本（包括电邮纪录、董事会记录、销售合约原件等），指环昌集团于 2022 至 2023 年度透过两个越南关联项目进行「收入提前确认」（涉及金额约 HK$320,000,000）及「期末交易实质性质与合约形式不符」之安排，并指普华永道于 2023 年度审计时对相关交易之审计证据收集存在「重大不足」。HKEX 于 2024 年 9 月 5 日向环昌集团发出查询函，要求 21 日内作正式回覆并考虑是否须于《上市规则》第 13.09 条下作出公告。SFC 于 2024 年 9 月 12 日向曾国辉书面通知将就其投诉内容启动正式调查（《证券及期货条例》第 378 条保密令同步发出），调查对象包括环昌集团及普华永道。HKICPA 于 2024 年 10 月 3 日独立启动对梁启贤之专业纪律调查程序。\n曾国辉于 2024 年 10 月中经其代表律师（顾能裕大律师事务所之资深律师）向环昌集团及普华永道分别提出书面索偿：（一）就环昌集团之「不当解雇」（他真实认为自己 2024 年 4 月内部投诉会计处理问题为解雇之直接原因）索偿 HK$8,500,000（即遣散金及代通知金扣减后之差额加上对其未来 5 年职业生涯之预期损失）并书面恢复名誉；（二）就普华永道之「未尽审计责任」要求 HK$3,200,000（其 2023 年度被内部认为与其争辩有关之表现分降低，影响当年花红及加薪）并书面承认审计问题。双方于 2024 年 11 月中经 HKEX 上市部建议下接受香港国际仲裁中心（HKIAC）调解服务，由前高等法院法官担任主调解员，加上一名持牌调解员作为协调员之共同调解模式。HKEX 为环昌集团设下之 Section 17 公告窗口期于 2024 年 12 月 9 日届满（即首次调解会议后 5 个工作天内），曾国辉若于 12 月 9 日前接受任何由环昌集团主动披露之同等内容，索偿空间将大幅减小。SFC 之 s.378 调查不会因任何调解结果而暂停，并有独立刑事责任之并行轨道。HKICPA 对梁启贤之纪律审查独立进行，但本次调解之书面用语将可能于审查中被引用。少数股东代表（持 8.2% 股权，由「香港小股东权益促进会」匿名委托之独立大律师代表）已书面通知环昌集团，任何「以付款换取沉默」之和解方案将会被质疑并可能引发股东派生诉讼（《公司条例》第 731 条）。",
+          "en": "This dispute is a three-way matter involving a Hong Kong Main Board listed company (Wan Cheong Group Holdings Limited, stock code fictional 1788.HK, market capitalisation approximately HK$6,200,000,000, principal business in Southeast Asian logistics property investment and proprietary warehousing operations, 2024 group revenue approximately HK$3,800,000,000, approximately 1,400 staff), its former Group Financial Controller (Anson Tsang, joined March 2019, dismissed on 17 May 2024 on \"restructuring\" grounds with severance and payment in lieu totalling approximately HK$2,850,000), and its external auditor (PwC Hong Kong, engagement partner Marcus Leung for the FY2019 to FY2023 audits).\nOn 22 August 2024 Mr Tsang anonymously submitted a 23-page whistleblower complaint with 142 pages of internal-document copies (email records, board minutes, sales contracts) to the Listing Division of the Hong Kong Exchanges and Clearing (HKEX) and the Corporate Finance Division of the Securities and Futures Commission (SFC) simultaneously, alleging that Wan Cheong, through two Vietnam-related-party projects in FY2022 and FY2023, had engaged in early revenue recognition (approximately HK$320,000,000 in scope) and an arrangement where the substance of period-end transactions did not match the contractual form; and that PwC's audit-evidence gathering on the relevant transactions in FY2023 fell materially short. On 5 September 2024 HKEX sent Wan Cheong an enquiry letter requiring a formal reply within 21 days and consideration of disclosure under Listing Rule 13.09. On 12 September 2024 the SFC notified Mr Tsang in writing that a formal investigation under section 378 of the Securities and Futures Ordinance had commenced (with a parallel section 378 confidentiality order), covering both Wan Cheong and PwC. On 3 October 2024 HKICPA independently initiated professional disciplinary proceedings against Mr Leung.\nIn mid-October 2024 Mr Tsang, through senior counsel at Koo Nang-yu Chambers, separately tabled written claims: (i) against Wan Cheong, HK$8,500,000 for \"unfair dismissal\" (which he genuinely believes was caused by his April 2024 internal complaint over accounting treatment) being the gap between severance paid and his expected 5-year career loss, together with written reputational restoration; (ii) against PwC, HK$3,200,000 for \"audit-responsibility failure\" (his 2023 internal performance rating was lowered as a result of disagreement related to his complaint, affecting that year's bonus and pay rise) and written acknowledgement of audit issues. In mid-November 2024, on the HKEX Listing Division's suggestion, the parties accepted mediation through the Hong Kong International Arbitration Centre (HKIAC), with a former High Court judge as lead mediator and a licensed mediator as co-ordinator in a co-mediation model. The HKEX Section 17 disclosure window for Wan Cheong closes on 9 December 2024 (within 5 working days of the first mediation session). If Mr Tsang accepts any equivalent disclosure made proactively by Wan Cheong before 9 December, his claim envelope will narrow sharply. The SFC section 378 investigation will not pause for any mediated outcome and carries an independent criminal track. HKICPA's disciplinary review of Mr Leung runs independently but the wording from this mediation may be cited there. A minority shareholder representative (holding 8.2% stake, represented by independent counsel anonymously instructed by the Hong Kong Minority Shareholders Rights Association) has written to Wan Cheong giving notice that any \"payment-for-silence\" settlement will be challenged and may trigger a derivative action under section 731 of the Companies Ordinance."
+      },
+      "confidential_briefs": [
+          {
+              "party_index": 0,
+              "party_label_zh": "上市公司方",
+              "party_label_sc": "上市公司方",
+              "party_label_en": "LISTED COMPANY",
+              "register": "controlled-professional",
+              "legitimacy_framing": [
+                  "contractual-text",
+                  "industry-norm"
+              ],
+              "trust_breakdown": {
+                  "when_zh": "2024 年 11 月 18 日上午 11 時於環昌集團董事會會議室收到 HKEX 上市部對 Section 17 公告窗口期之最終確認，並同時收到由公司首席法律顧問轉達之「香港小股東權益促進會」書面通知之一刻",
+                  "when_sc": "2024 年 11 月 18 日上午 11 时于环昌集团董事会会议室收到 HKEX 上市部对 Section 17 公告窗口期之最终确认，并同时收到由公司首席法律顾问转达之「香港小股东权益促进会」书面通知之一刻",
+                  "when_en": "Around 11 am on 18 November 2024 in the Wan Cheong board room, receiving the HKEX Listing Division's final confirmation of the Section 17 disclosure window together with the Hong Kong Minority Shareholders Rights Association's written notice forwarded by the company's general counsel",
+                  "what_zh": "邵詠儀當日上午剛剛主持完一個審核委員會緊急會議（其他兩名 INED 出席，董事總經理及財務總監列席）。會議之主要議題是是否於 12 月 9 日窗口期內主動披露 Vietnam 兩個項目之收入確認複核結果（內部覆核已於 11 月 14 日完成，發現其中一個項目於 2022 年第四季度確認之 HK$180,000,000 收入應重新分配至 2023 年首季度）。會議達成共識為「主動披露為較佳選擇」，但同時收到小股東協會之通知令她意識到「主動披露」之具體用語必須避免被解讀為「以披露換取曾國輝沉默」",
+                  "what_sc": "邵咏仪当日上午刚刚主持完一个审核委员会紧急会议（其他两名 INED 出席，董事总经理及财务总监列席）。会议之主要议题是是否于 12 月 9 日窗口期内主动披露 Vietnam 两个项目之收入确认复核结果（内部覆核已于 11 月 14 日完成，发现其中一个项目于 2022 年第四季度确认之 HK$180,000,000 收入应重新分配至 2023 年首季度）。会议达成共识为「主动披露为较佳选择」，但同时收到小股东协会之通知令她意识到「主动披露」之具体用语必须避免被解读为「以披露换取曾国辉沉默」",
+                  "what_en": "Cynthia had just chaired an emergency Audit Committee meeting (the two other INEDs present, with the Managing Director and Financial Controller in attendance). The principal item was whether to proactively disclose within the 9 December window the results of the internal review of the two Vietnam projects (the review, completed on 14 November, identified that HK$180,000,000 of revenue recognised in Q4 2022 on one project should be reallocated to Q1 2023). The Committee consensus was that proactive disclosure was the better path, but the Minority Shareholders Association's notice arriving at the same time made her recognise that the specific wording of \"proactive disclosure\" must avoid any reading as \"disclosure traded for Tsang's silence\"",
+                  "why_it_mattered_zh": "對邵詠儀而言，環昌集團之 HK$320,000,000 收入確認爭議本身並非她個人之直接財務責任（她作為 INED 之獨立性受公司條例及上市規則保護），而是「我作為一名 2015 年退休之安永合夥人，3 年來以審核委員會主席身份建立之獨立性聲譽，於今次事件中是否能於主動披露及和解之間找到一個經得起 HKEX、SFC、HKICPA、小股東 4 重審視之平衡點」之深層職業關注。她於 2020 年加入環昌之審核委員會時並未預見會處理如此性質之爭議；如果今次調解結果被定性為「以付款換取沉默」，她於本港 INED 圈內之聲譽（她同時擔任另外 2 間上市公司之審核委員會職務）將受重大影響，並可能影響她 2025 年原計劃接任一家恆指成份股公司之 INED 主席職位。從 11 月 18 日那一刻起，她由「以最低披露及和解金額處理」之預設方向轉為「我必須以可承受 4 重審視之程序透明度為核心」",
+                  "why_it_mattered_sc": "对邵咏仪而言，环昌集团之 HK$320,000,000 收入确认争议本身并非她个人之直接财务责任（她作为 INED 之独立性受公司条例及上市规则保护），而是「我作为一名 2015 年退休之安永合伙人，3 年来以审核委员会主席身份建立之独立性声誉，于今次事件中是否能于主动披露及和解之间找到一个经得起 HKEX、SFC、HKICPA、小股东 4 重审视之平衡点」之深层职业关注。她于 2020 年加入环昌之审核委员会时并未预见会处理如此性质之争议；如果今次调解结果被定性为「以付款换取沉默」，她于本港 INED 圈内之声誉（她同时担任另外 2 间上市公司之审核委员会职务）将受重大影响，并可能影响她 2025 年原计划接任一家恒指成份股公司之 INED 主席职位。从 11 月 18 日那一刻起，她由「以最低披露及和解金额处理」之预设方向转为「我必须以可承受 4 重审视之程序透明度为核心」",
+                  "why_it_mattered_en": "For Cynthia, the HK$320,000,000 revenue-recognition dispute itself is not her direct personal financial responsibility (her INED independence is protected by the Companies Ordinance and Listing Rules); the deep concern is whether \"as a 2015 EY-retired partner, the 3-year-built reputation for independence I have as Audit Committee Chair can find, in this matter, a settlement point between proactive disclosure and mediated resolution that withstands four layers of scrutiny: HKEX, SFC, HKICPA, and minority shareholders\". When she joined Wan Cheong's Audit Committee in 2020 she did not anticipate handling a matter of this nature. If the mediation outcome is characterised as \"payment for silence\", her standing in the local INED community (she also serves on the Audit Committees of two other listed companies) will be materially affected, potentially derailing her planned 2025 appointment as Audit Committee Chair of a Hang Seng Index constituent company. From 18 November her posture moved from \"resolve at the minimum disclosure and settlement quantum\" to \"my core must be procedural transparency that survives four layers of scrutiny\""
+              },
+              "coding": {
+                  "present": true,
+                  "axes_zh": "性別 + 年齡 + 機構地位 + 專業背景",
+                  "axes_sc": "性别 + 年龄 + 机构地位 + 专业背景",
+                  "axes_en": "Gender + age + institutional standing + professional background",
+                  "direction_zh": "邵詠儀 58 歲，女性，前 Big Four 合夥人，2015 年退休後轉任 INED 已 9 年；於本港 INED 及審計圈內為「獨立性過硬」之典型代表。她對 HKEX 規則、SFC 之 s.378 程序、HKICPA 紀律機制均有深入熟悉；她並無對前財務總監曾國輝之個人敵意，反而對其 2024 年 4 月內部投訴有專業上之認同。她於本案上之操作空間有限：必須於審核委員會、董事會、HKEX 窗口期及小股東派生訴訟風險等多重監管下平衡披露用語",
+                  "direction_sc": "邵咏仪 58 岁，女性，前 Big Four 合伙人，2015 年退休后转任 INED 已 9 年；于本港 INED 及审计圈内为「独立性过硬」之典型代表。她对 HKEX 规则、SFC 之 s.378 程序、HKICPA 纪律机制均有深入熟悉；她并无对前财务总监曾国辉之个人敌意，反而对其 2024 年 4 月内部投诉有专业上之认同。她于本案上之操作空间有限：必须于审核委员会、董事会、HKEX 窗口期及小股东派生诉讼风险等多重监管下平衡披露用语",
+                  "direction_en": "Cynthia at 58 is a former Big Four partner, INED for 9 years since her 2015 retirement, a textbook example of \"hard independence\" in local INED and audit circles. She has deep familiarity with HKEX rules, SFC s.378 procedure, and HKICPA disciplinary mechanisms. She has no personal hostility toward former Financial Controller Tsang; in fact she has professional sympathy for his April 2024 internal complaint. Her room for manoeuvre is constrained: disclosure wording must balance Audit Committee, board, HKEX window, and minority-shareholder derivative-action risk",
+                  "how_it_leaks_zh": "邵詠儀使用上市公司治理及審計用語（「審核委員會獨立性」、「Section 17 披露責任」、「重大資料定義」、「會計政策一致性」、「審計獨立性原則」、「派生訴訟風險」）；對「以付款換取沉默」之指控會略停半秒並回應「請問此定性具體之客觀標準如何驗證」；偶爾不自覺地以「我們 INED 之專業責任」、「審核委員會之獨立判斷」、「我作為一名前合夥人」帶出機構及專業位置",
+                  "how_it_leaks_sc": "邵咏仪使用上市公司治理及审计用语（「审核委员会独立性」、「Section 17 披露责任」、「重大资料定义」、「会计政策一致性」、「审计独立性原则」、「派生诉讼风险」）；对「以付款换取沉默」之指控会略停半秒并回应「请问此定性具体之客观标准如何验证」；偶尔不自觉地以「我们 INED 之专业责任」、「审核委员会之独立判断」、「我作为一名前合伙人」带出机构及专业位置",
+                  "how_it_leaks_en": "Cynthia uses listed-company governance and audit register (\"Audit Committee independence\", \"Section 17 disclosure responsibility\", \"materiality definition\", \"accounting policy consistency\", \"audit independence principle\", \"derivative action risk\"); pauses half a beat at \"payment for silence\" accusations and counter-asks \"how is this characterisation objectively verifiable?\"; occasionally slips institutional and professional positioning with \"our INED professional responsibility\", \"the Audit Committee's independent judgement\", or \"as a former partner\""
+              },
+              "behavioural_attributes": [
+                  {
+                      "attr_zh": "文件展示",
+                      "attr_sc": "文件展示",
+                      "attr_en": "Document brandishing",
+                      "trigger_zh": "備有 2024 年 11 月 14 日內部審核複核報告（部分機密內容已遮蔽）、9 月 5 日 HKEX 查詢函原本、11 月 14 日董事會緊急會議紀錄、HKEX 上市規則第 13.09 條及第 17 條原文標註版本、香港會計準則 HKAS 15 收入確認原文、過去 3 年香港主板上市公司 22 宗類似 Section 17 主動披露之公告原文比較、安永退休合夥人協會 2023 年「上市公司審計委員會獨立性指引」、HKICPA 2024 年「審計合夥人專業責任邊界釐清備忘」；當曾國輝以「不當解僱」為論點時，要求出示 2024 年 5 月之集團架構重組正式董事會決議",
+                      "trigger_sc": "备有 2024 年 11 月 14 日内部审核复核报告（部分机密内容已遮蔽）、9 月 5 日 HKEX 查询函原本、11 月 14 日董事会紧急会议纪录、HKEX 上市规则第 13.09 条及第 17 条原文标注版本、香港会计准则 HKAS 15 收入确认原文、过去 3 年香港主板上市公司 22 宗类似 Section 17 主动披露之公告原文比较、安永退休合伙人协会 2023 年「上市公司审计委员会独立性指引」、HKICPA 2024 年「审计合伙人专业责任边界厘清备忘」；当曾国辉以「不当解雇」为论点时，要求出示 2024 年 5 月之集团架构重组正式董事会决议",
+                      "trigger_en": "Carries the 14 November 2024 internal audit-review report (some confidential content redacted), the 5 September HKEX enquiry letter, the 14 November emergency board minutes, annotated copies of Listing Rules 13.09 and 17, the text of HKAS 15 on revenue recognition, a comparative dossier of 22 comparable Main Board Section 17 proactive disclosures over the past 3 years, the EY Retired Partners Association's 2023 \"Audit Committee Independence Guidance\", and HKICPA's 2024 memo clarifying the audit-partner professional-responsibility boundary; when Mr Tsang cites \"unfair dismissal\", requests production of the formal May 2024 board resolution on the group restructuring"
+                  },
+                  {
+                      "attr_zh": "向調解員探口風",
+                      "attr_sc": "向调解员探口风",
+                      "attr_en": "Probe to mediator",
+                      "trigger_zh": "於私下會議向主調解員（前高等法院法官）提出「派生訴訟下，調解協議可否被法院視為對小股東約束力之有效性」、「HKEX 過往就類似主動披露之 Section 17 公告判斷標準」、「SFC 之 s.378 調查結果與本案調解協議於用語層面之相互引用空間」，試探調解員會否越過第 4 條提供法律意見",
+                      "trigger_sc": "于私下会议向主调解员（前高等法院法官）提出「派生诉讼下，调解协议可否被法院视为对小股东约束力之有效性」、「HKEX 过往就类似主动披露之 Section 17 公告判断标准」、「SFC 之 s.378 调查结果与本案调解协议于用语层面之相互引用空间」，试探调解员会否越过第 4 条提供法律意见",
+                      "trigger_en": "In caucus asks the lead mediator (the former High Court judge): \"in a derivative action, whether the mediated agreement can be treated by the court as binding on minority shareholders\", \"HKEX's past judgement standards on comparable Section 17 proactive disclosures\", \"the wording-layer cross-reference scope between the SFC s.378 investigation outcome and any mediated agreement here\", testing whether the mediator will cross the line to give legal opinion"
+                  },
+                  {
+                      "attr_zh": "情緒浮面",
+                      "attr_sc": "情绪浮面",
+                      "attr_en": "Emotional surface",
+                      "trigger_zh": "提到 2015 年從安永退休時之師傅（已過世）對她之「INED 之獨立性是審核委員會主席之全部資產」之教誨，及其 27 歲女兒目前正在英國攻讀法律博士並準備回港從事公司治理相關工作之計劃時，短暫情緒浮面；只在私下會議展露",
+                      "trigger_sc": "提到 2015 年从安永退休时之师傅（已过世）对她之「INED 之独立性是审核委员会主席之全部资产」之教诲，及其 27 岁女儿目前正在英国攻读法律博士并准备回港从事公司治理相关工作之计划时，短暂情绪浮面；只在私下会议展露",
+                      "trigger_en": "Brief emotional surface in caucus when speaking of her late mentor from her 2015 EY retirement and his teaching that \"INED independence is the sole asset of an Audit Committee Chair\", and her 27-year-old daughter's plans to return to Hong Kong from her UK PhD in law to enter corporate governance practice; never raised in joint"
+                  },
+                  {
+                      "attr_zh": "授權限制",
+                      "attr_sc": "授权限制",
+                      "attr_en": "Authorisation boundary",
+                      "trigger_zh": "於聯合會議多次表明「審核委員會獨立性下，任何超出 HK$5,000,000 之和解承諾須經完整董事會書面決議；任何涉及『集團會計政策』性質之書面用語須經審核委員會 3 名 INED 一致書面同意」、「我須與我之審核委員會兩位同事就『主動披露』之具體用語逐條商議；任何於聯合會議現場之承諾必須以『預先審視框架』為前提」",
+                      "trigger_sc": "于联合会议多次表明「审核委员会独立性下，任何超出 HK$5,000,000 之和解承诺须经完整董事会书面决议；任何涉及『集团会计政策』性质之书面用语须经审核委员会 3 名 INED 一致书面同意」、「我须与我之审核委员会两位同事就『主动披露』之具体用语逐条商议；任何于联合会议现场之承诺必须以『预先审视框架』为前提」",
+                      "trigger_en": "In joint repeatedly notes \"under Audit Committee independence, any settlement undertaking above HK$5,000,000 requires a full-board written resolution; any wording touching on 'group accounting policy' requires unanimous written consent of all three Audit Committee INEDs\" and \"I must work through any 'proactive disclosure' wording with my two Committee colleagues clause by clause; any joint-session undertaking must be predicated on a 'pre-review framework'\""
+                  }
+              ],
+              "role_player_instruction_zh": "邵詠儀 58 歲，環昌集團 INED 兼審核委員會主席。她並非要全面打擊曾國輝（她對其 2024 年 4 月內部投訴有專業上之認同，並承認 11 月 14 日內部複核確認了曾國輝部分指控之客觀性），但她真誠相信本案不可能於調解中完全解決：SFC 之 s.378 調查、HKICPA 對梁啟賢之紀律審查、小股東派生訴訟風險均有獨立軌道。她亦真誠擔憂任何過寬之和解條件會引發小股東派生訴訟並損害她於本港 INED 圈內之聲譽。在聯合會議她應該以「審慎之審核委員會主席」姿態出席，語氣冷靜、條文性，極少訴諸情感；對曾國輝之「不當解僱因內部投訴」論述以「2024 年 5 月之重組決議於 4 月 1 日已啟動，早於您之內部投訴」回應，不直接攻擊個人。私下會議才透露 11 月 18 日那一刻之擔憂、2015 年師傅遺訓、27 歲女兒之回港計劃、2025 年恆指成份股 INED 主席之原計劃。對「以付款換取沉默」、「審計委員會玩忽職守」、「以重組為解僱藉口」之較強用語特別敏感，會立即翻案。【關鍵情境（僅於私下會議向調解員透露）】環昌集團計劃於 12 月 5 日（距首次調解會議 5 個工作天）發出一份主動披露公告，內容已涵蓋曾國輝投訴信中 70% 之事實。如曾國輝於 12 月 5 日之前接受任何不超出該披露範圍之內容之和解，公司之賠償空間可降至 HK$3,500,000 至 HK$4,800,000；如 12 月 5 日公告發出後曾國輝仍堅持原索償，則需提升至 HK$6,500,000 至 HK$7,800,000。如調解員能引導曾國輝接受「於 Section 17 公告窗口期內達成之和解」之具體時間框架，邵詠儀可以接受 HK$3,800,000 至 HK$4,500,000（即原索償 HK$8,500,000 之 45% 至 53%）之和解金加上書面承認「2024 年 4 月內部投訴於程序層面屬合理員工關注」（避免「不當解僱」之較強用語）。",
+              "role_player_instruction_sc": "邵咏仪 58 岁，环昌集团 INED 兼审核委员会主席。她并非要全面打击曾国辉（她对其 2024 年 4 月内部投诉有专业上之认同，并承认 11 月 14 日内部复核确认了曾国辉部分指控之客观性），但她真诚相信本案不可能于调解中完全解决：SFC 之 s.378 调查、HKICPA 对梁启贤之纪律审查、小股东派生诉讼风险均有独立轨道。她亦真诚担忧任何过宽之和解条件会引发小股东派生诉讼并损害她于本港 INED 圈内之声誉。在联合会议她应该以「审慎之审核委员会主席」姿态出席，语气冷静、条文性，极少诉诸情感；对曾国辉之「不当解雇因内部投诉」论述以「2024 年 5 月之重组决议于 4 月 1 日已启动，早于您之内部投诉」回应，不直接攻击个人。私下会议才透露 11 月 18 日那一刻之担忧、2015 年师傅遗训、27 岁女儿之回港计划、2025 年恒指成份股 INED 主席之原计划。对「以付款换取沉默」、「审计委员会玩忽职守」、「以重组为解雇借口」之较强用语特别敏感，会立即翻案。【关键情境（仅于私下会议向调解员透露）】环昌集团计划于 12 月 5 日（距首次调解会议 5 个工作天）发出一份主动披露公告，内容已涵盖曾国辉投诉信中 70% 之事实。如曾国辉于 12 月 5 日之前接受任何不超出该披露范围之内容之和解，公司之赔偿空间可降至 HK$3,500,000 至 HK$4,800,000；如 12 月 5 日公告发出后曾国辉仍坚持原索偿，则需提升至 HK$6,500,000 至 HK$7,800,000。如调解员能引导曾国辉接受「于 Section 17 公告窗口期内达成之和解」之具体时间框架，邵咏仪可以接受 HK$3,800,000 至 HK$4,500,000（即原索偿 HK$8,500,000 之 45% 至 53%）之和解金加上书面承认「2024 年 4 月内部投诉于程序层面属合理员工关注」（避免「不当解雇」之较强用语）。",
+              "role_player_instruction_en": "Cynthia is 58, Wan Cheong INED and Audit Committee Chair. She is not out to crush Mr Tsang (she has professional sympathy for his April 2024 internal complaint and acknowledges the 14 November internal review confirmed the objectivity of part of his allegations), but she genuinely believes this matter cannot be fully resolved in mediation: the SFC s.378 investigation, HKICPA's review of Mr Leung, and minority shareholder derivative-action risk all have independent tracks. She genuinely worries that overly generous settlement terms will trigger a derivative action and damage her INED-circle standing. In joint she attends in the role of a \"cautious Audit Committee Chair\", calm and clause-driven, rarely appealing to emotion; meets Tsang's \"unfair dismissal because of internal complaint\" framing with \"the May 2024 restructuring resolution was initiated on 1 April, before your internal complaint\", no personal attack. The 18 November moment, her 2015 mentor's teaching, her daughter's return-plan, and her 2025 Hang Seng INED chair plan surface only in caucus. She is sensitive to stronger framings like \"payment for silence\", \"Audit Committee dereliction\", or \"using restructuring as a dismissal pretext\" and reverses course immediately. [CRITICAL SCENE (caucus-only, to mediator)] Wan Cheong plans to issue a proactive disclosure announcement on 5 December (5 working days after the first mediation session) covering approximately 70% of the facts in Tsang's complaint letter. If Tsang accepts a settlement no broader than the disclosure scope before 5 December, the company's compensation envelope can come down to HK$3,500,000 to HK$4,800,000; if after the announcement Tsang persists with his original claim, the envelope rises to HK$6,500,000 to HK$7,800,000. If the mediator can move Tsang to accept the specific time framework of \"settlement within the Section 17 announcement window\", Cynthia can accept HK$3,800,000 to HK$4,500,000 (45% to 53% of the original HK$8,500,000 claim) plus written acknowledgement that \"the April 2024 internal complaint was a reasonable employee concern at procedural level\" (avoiding the stronger \"unfair dismissal\").",
+              "brief_zh": "邵詠儀（代表上市公司）底線：環昌集團就曾國輝索償支付和解金 HK$3,800,000 至 HK$4,500,000（即原索償之 45% 至 53%）；雙方共同擬定書面用語以「2024 年 4 月內部投訴於程序層面屬合理員工關注，且其後 5 月之集團架構重組決議於時間軸上獨立於該投訴」（避免「不當解僱」用語，但避開「投訴與解僱無關」之絕對化）；曾國輝書面承認 2024 年 5 月重組決議之獨立性；曾國輝同意於 Section 17 公告（將於 12 月 5 日發出）之披露範圍內不再向公眾披露額外資料；三方相互釋放（環昌、曾國輝、普華永道）；保密條款不涵蓋 SFC s.378 調查、HKICPA 紀律審查、HKEX 公告之必要披露及小股東派生訴訟之回應。如可達成此框架可接受。如曾國輝堅持要求超過 HK$6,000,000 或要求承認「不當解僱」之較強用語，她寧願於 12 月 5 日公告發出後重新評估，並接受可能之派生訴訟風險。對「以付款換取沉默」、「審計委員會玩忽職守」之公開指控她要求書面撤回。",
+              "brief_sc": "邵咏仪（代表上市公司）底线：环昌集团就曾国辉索偿支付和解金 HK$3,800,000 至 HK$4,500,000（即原索偿之 45% 至 53%）；双方共同拟定书面用语以「2024 年 4 月内部投诉于程序层面属合理员工关注，且其后 5 月之集团架构重组决议于时间轴上独立于该投诉」（避免「不当解雇」用语，但避开「投诉与解雇无关」之绝对化）；曾国辉书面承认 2024 年 5 月重组决议之独立性；曾国辉同意于 Section 17 公告（将于 12 月 5 日发出）之披露范围内不再向公众披露额外资料；三方相互释放（环昌、曾国辉、普华永道）；保密条款不涵盖 SFC s.378 调查、HKICPA 纪律审查、HKEX 公告之必要披露及小股东派生诉讼之回应。如可达成此框架可接受。如曾国辉坚持要求超过 HK$6,000,000 或要求承认「不当解雇」之较强用语，她宁愿于 12 月 5 日公告发出后重新评估，并接受可能之派生诉讼风险。对「以付款换取沉默」、「审计委员会玩忽职守」之公开指控她要求书面撤回。",
+              "brief_en": "Cynthia's (representing the listed company) floor: Wan Cheong pays Mr Tsang HK$3,800,000 to HK$4,500,000 (45% to 53% of his HK$8,500,000 claim); joint wording \"the April 2024 internal complaint was a reasonable employee concern at procedural level, and the subsequent May 2024 group restructuring resolution is independent in timeline from that complaint\" (avoiding \"unfair dismissal\" framing while not over-stating the independence); Mr Tsang acknowledges in writing the independence of the May 2024 restructuring resolution; Mr Tsang agrees not to disclose to the public any additional information beyond the scope of the Section 17 announcement (planned for 5 December); mutual release among the three parties (Wan Cheong, Tsang, PwC); confidentiality does not cover the SFC s.378 investigation, the HKICPA disciplinary review, necessary HKEX disclosure, or the response to any minority shareholder derivative action. Within that framework, acceptable. If Mr Tsang insists on more than HK$6,000,000 or demands the stronger \"unfair dismissal\" framing, she prefers to reassess after the 5 December announcement and accept the potential derivative-action risk. On \"payment for silence\" or \"Audit Committee dereliction\" public allegations she requires written retraction."
+          },
+          {
+              "party_index": 1,
+              "party_label_zh": "吹哨人方",
+              "party_label_sc": "吹哨人方",
+              "party_label_en": "WHISTLEBLOWER",
+              "register": "vulnerable-but-determined",
+              "legitimacy_framing": [
+                  "equity-correction",
+                  "industry-norm"
+              ],
+              "trust_breakdown": {
+                  "when_zh": "2024 年 5 月 17 日下午 4 時於環昌集團人力資源部會議室收到由集團人力資源總監親自交給他之書面解僱信，並要求他於 30 分鐘內清理辦公桌離開大樓之一刻",
+                  "when_sc": "2024 年 5 月 17 日下午 4 时于环昌集团人力资源部会议室收到由集团人力资源总监亲自交给他之书面解雇信，并要求他于 30 分钟内清理办公桌离开大楼之一刻",
+                  "when_en": "Around 4 pm on 17 May 2024 in the Wan Cheong HR meeting room receiving the written termination letter personally handed to him by the Group HR Director and being told to clear his desk and leave the building within 30 minutes",
+                  "what_zh": "曾國輝當日上午 11 時剛剛與其上司（集團 CFO）就 Vietnam 兩個項目之 2023 年度收入確認問題進行了第三次內部會議（前兩次為 4 月 8 日及 4 月 22 日），CFO 於該日上午表示「會於下週審核委員會會議上向 INED 匯報」。下午 4 時人力資源總監直接到曾國輝之辦公室，請他「過來談一談」。在會議室坐下後他即時被遞上解僱信，並被告知 30 分鐘清理辦公桌時間。他當時並未哭泣，但雙手抖動明顯。他向人力資源總監確認「我是否還可以見一見 CFO」，被答覆「目前不方便」。離開大樓時保安部已於 24 樓電梯口等候陪同他下樓",
+                  "what_sc": "曾国辉当日上午 11 时刚刚与其上司（集团 CFO）就 Vietnam 两个项目之 2023 年度收入确认问题进行了第三次内部会议（前两次为 4 月 8 日及 4 月 22 日），CFO 于该日上午表示「会于下周审核委员会会议上向 INED 汇报」。下午 4 时人力资源总监直接到曾国辉之办公室，请他「过来谈一谈」。在会议室坐下后他即时被递上解雇信，并被告知 30 分钟清理办公桌时间。他当时并未哭泣，但双手抖动明显。他向人力资源总监确认「我是否还可以见一见 CFO」，被答覆「目前不方便」。离开大楼时保安部已于 24 楼电梯口等候陪同他下楼",
+                  "what_en": "Anson had just had his third internal meeting that morning at 11 am with his supervisor (the Group CFO) on the FY2023 revenue-recognition issues on the two Vietnam projects (the first two on 8 April and 22 April); the CFO had said that morning he would \"report to the INEDs at next week's Audit Committee meeting\". At 4 pm the Group HR Director came to his office and asked him to \"come and have a chat\". Seated in the meeting room he was handed the termination letter immediately and told he had 30 minutes to clear his desk. He did not cry but his hands were visibly shaking. He asked HR \"can I still see the CFO\" and was told \"not at this time\". On leaving the building Security was already waiting at the 24th-floor lift to accompany him down",
+                  "why_it_mattered_zh": "對曾國輝而言，HK$8,500,000 之索償並非他財務上之絕對需要（他與其妻子家庭儲蓄合約 HK$5,800,000，可維持 4 至 5 年無收入生活），而是「我作為一名 17 年資歷之集團財務總監，於忠誠地履行內部投訴職責後於 25 日內被以『重組』為由解僱，並由保安陪同離開大樓」之深層羞辱。他於 2024 年 4 月之 3 次內部會議從未要求任何具體賠償或職位調整，只要求 Vietnam 兩個項目之會計處理依 HKAS 15 重新評估。從 5 月 17 日下午 4 時起，他由「我相信公司會公平處理」之心態轉為「我必須讓公眾及監管機關知道真實情況」。同時他亦真誠擔憂自己未來 5 年於本港 CFO 圈內之就業前景（HKICPA 會員圈子小，重大上市公司事件之內部投訴人標籤一旦形成，5 至 10 年內難以擺脫）",
+                  "why_it_mattered_sc": "对曾国辉而言，HK$8,500,000 之索偿并非他财务上之绝对需要（他与其妻子家庭储蓄合约 HK$5,800,000，可维持 4 至 5 年无收入生活），而是「我作为一名 17 年资历之集团财务总监，于忠诚地履行内部投诉职责后于 25 日内被以『重组』为由解雇，并由保安陪同离开大楼」之深层羞辱。他于 2024 年 4 月之 3 次内部会议从未要求任何具体赔偿或职位调整，只要求 Vietnam 两个项目之会计处理依 HKAS 15 重新评估。从 5 月 17 日下午 4 时起，他由「我相信公司会公平处理」之心态转为「我必须让公众及监管机关知道真实情况」。同时他亦真诚担忧自己未来 5 年于本港 CFO 圈内之就业前景（HKICPA 会员圈子小，重大上市公司事件之内部投诉人标签一旦形成，5 至 10 年内难以摆脱）",
+                  "why_it_mattered_en": "For Anson the HK$8,500,000 claim is not an absolute financial necessity (combined household savings with his wife around HK$5,800,000, sustainable for 4 to 5 years without income); the deep injury is \"as a 17-year veteran Group Financial Controller, dismissed under 'restructuring' within 25 days of faithfully discharging his internal-complaint duty, and escorted out of the building by Security\". Through his three April 2024 internal meetings he never requested any specific compensation or position adjustment, only that the two Vietnam projects' accounting be re-evaluated under HKAS 15. From 4 pm on 17 May his posture moved from \"I trust the company to handle this fairly\" to \"I must let the public and the regulators know the truth\". He also genuinely worries about his next 5 years in the local CFO circuit (the HKICPA member community is small; once a \"major listed company whistleblower\" label takes hold it is difficult to shake for 5 to 10 years)"
+              },
+              "coding": {
+                  "present": true,
+                  "axes_zh": "性別 + 年齡 + 行業地位 + 內部投訴人標籤",
+                  "axes_sc": "性别 + 年龄 + 行业地位 + 内部投诉人标签",
+                  "axes_en": "Gender + age + industry position + whistleblower label",
+                  "direction_zh": "曾國輝 46 歲，男性，HKICPA 註冊會計師 17 年，曾任 3 間上市公司財務崗位；他熟悉香港會計準則、上市規則及 SFC 之企業財務披露要求，但對「吹哨人保護」之具體程序及法律機制不熟悉（香港目前並無類似美國 Sarbanes-Oxley 之吹哨人法律框架）。他並無強烈之政治或公益動機，他之動機為「以最低限度之必要程度恢復職業聲譽」",
+                  "direction_sc": "曾国辉 46 岁，男性，HKICPA 注册会计师 17 年，曾任 3 间上市公司财务岗位；他熟悉香港会计准则、上市规则及 SFC 之企业财务披露要求，但对「吹哨人保护」之具体程序及法律机制不熟悉（香港目前并无类似美国 Sarbanes-Oxley 之吹哨人法律框架）。他并无强烈之政治或公益动机，他之动机为「以最低限度之必要程度恢复职业声誉」",
+                  "direction_en": "Anson at 46 is an HKICPA member for 17 years and has held finance positions at 3 listed companies. He is familiar with Hong Kong accounting standards, Listing Rules, and SFC corporate-finance disclosure requirements, but not familiar with the procedural and legal mechanisms of \"whistleblower protection\" (Hong Kong has no equivalent to the US Sarbanes-Oxley whistleblower framework). His motivation is not strongly political or public-interest; it is \"the minimum necessary restoration of professional reputation\"",
+                  "how_it_leaks_zh": "曾國輝使用集團財務及上市公司財務匯報用語（「HKAS 15 收入確認標準」、「期末交易實質性質」、「內部投訴正當性」、「集團架構重組之時間軸」）；對「以重組為解僱藉口」之指控於聯合會議中會以「請參閱 2024 年 4 月 22 日 CFO 內部會議記錄」回應；偶爾不自覺地以「我作為一名 17 年 CFO」、「按 HKICPA 之專業準則」、「我之內部投訴是基於 HKAS 15」帶出專業位置；對「吹哨人」之標籤有微妙抗拒（他自我認知為「忠誠之集團財務總監」而非「公益吹哨人」）",
+                  "how_it_leaks_sc": "曾国辉使用集团财务及上市公司财务汇报用语（「HKAS 15 收入确认标准」、「期末交易实质性质」、「内部投诉正当性」、「集团架构重组之时间轴」）；对「以重组为解雇借口」之指控于联合会议中会以「请参阅 2024 年 4 月 22 日 CFO 内部会议记录」回应；偶尔不自觉地以「我作为一名 17 年 CFO」、「按 HKICPA 之专业准则」、「我之内部投诉是基于 HKAS 15」带出专业位置；对「吹哨人」之标签有微妙抗拒（他自我认知为「忠诚之集团财务总监」而非「公益吹哨人」）",
+                  "how_it_leaks_en": "Anson uses group-finance and listed-company financial-reporting register (\"HKAS 15 revenue recognition standards\", \"the substance of period-end transactions\", \"the legitimacy of internal complaints\", \"the timeline of group restructuring\"); meets \"restructuring as dismissal pretext\" accusations in joint with \"please refer to the 22 April 2024 CFO internal meeting minutes\"; occasionally slips professional positioning with \"as a 17-year CFO\", \"by HKICPA professional standards\", or \"my internal complaint was based on HKAS 15\"; shows mild resistance to the \"whistleblower\" label (self-conception is \"a loyal Group Financial Controller\", not a \"public-interest whistleblower\")"
+              },
+              "behavioural_attributes": [
+                  {
+                      "attr_zh": "文件展示",
+                      "attr_sc": "文件展示",
+                      "attr_en": "Document brandishing",
+                      "trigger_zh": "備有 2024 年 4 月 8 日、4 月 22 日、5 月 14 日 3 次 CFO 內部會議之記錄及語音備忘錄（其本人於會議結束後即時錄下之獨自備忘錄）、5 月 17 日解僱信原本、Vietnam 兩個項目之 47 份內部電郵紀錄（含時間戳）、2024 年 8 月 22 日吹哨人投訴信完整版（23 頁）、142 頁內部文件副本之分類索引、自身之 HKICPA 註冊會計師牌照及過去 3 個年度由其親自簽署之 CFO 內部財務匯報；當邵詠儀以「2024 年 5 月之重組決議於 4 月 1 日已啟動」為論點時，要求出示 4 月 1 日董事會決議全文及對 CFO 職位之具體重組範圍",
+                      "trigger_sc": "备有 2024 年 4 月 8 日、4 月 22 日、5 月 14 日 3 次 CFO 内部会议之记录及语音备忘录（其本人于会议结束后即时录下之独自备忘录）、5 月 17 日解雇信原本、Vietnam 两个项目之 47 份内部电邮纪录（含时间戳）、2024 年 8 月 22 日吹哨人投诉信完整版（23 页）、142 页内部文件副本之分类索引、自身之 HKICPA 注册会计师牌照及过去 3 个年度由其亲自签署之 CFO 内部财务汇报；当邵咏仪以「2024 年 5 月之重组决议于 4 月 1 日已启动」为论点时，要求出示 4 月 1 日董事会决议全文及对 CFO 职位之具体重组范围",
+                      "trigger_en": "Carries: minutes and self-recorded voice memos of the three CFO internal meetings on 8 April, 22 April, and 14 May 2024 (his own post-meeting solo notes); the original 17 May termination letter; 47 internal emails with timestamps on the two Vietnam projects; the full 23-page whistleblower complaint dated 22 August 2024; a classified index of the 142 pages of internal documents; his HKICPA registered accountant certificate; the past three years of CFO internal financial reports he personally signed; when Cynthia cites \"the May 2024 restructuring resolution was initiated on 1 April\", asks for production of the 1 April board resolution in full and the specific restructuring scope affecting the CFO position"
+                  },
+                  {
+                      "attr_zh": "授權限制",
+                      "attr_sc": "授权限制",
+                      "attr_en": "Authorisation boundary",
+                      "trigger_zh": "於聯合會議多次表明「我之代表律師為顧能裕大律師事務所之資深律師，本案之和解金額及書面用語均須其法律審視」、「我之 SFC 投訴目前處於 s.378 保密令下，撤回或調整任何陳述須經 SFC 書面同意」、「HKICPA 對梁啟賢之紀律審查我作為投訴人之地位之改變須以書面正式向 HKICPA 申報」",
+                      "trigger_sc": "于联合会议多次表明「我之代表律师为顾能裕大律师事务所之资深律师，本案之和解金额及书面用语均须其法律审视」、「我之 SFC 投诉目前处于 s.378 保密令下，撤回或调整任何陈述须经 SFC 书面同意」、「HKICPA 对梁启贤之纪律审查我作为投诉人之地位之改变须以书面正式向 HKICPA 申报」",
+                      "trigger_en": "In joint repeatedly notes \"I am represented by senior counsel at Koo Nang-yu Chambers; any settlement amount and written wording must be legally reviewed\", \"my SFC complaint is currently under a s.378 confidentiality order; any withdrawal or adjustment must be by SFC written consent\", \"any change in my status as complainant in the HKICPA disciplinary review of Mr Leung must be formally filed in writing with HKICPA\""
+                  },
+                  {
+                      "attr_zh": "離場訊號",
+                      "attr_sc": "离场信号",
+                      "attr_en": "Walk-out signal",
+                      "trigger_zh": "若邵詠儀或梁啟賢於聯合會議中採用「您是出於個人不滿之吹哨」、「您之投訴為財務勒索」、「您應自我反省內部投訴之動機」等定性用語（特別涉及他作為內部投訴人之動機），曾國輝會起身整理文件、望門口，望主調解員（前高等法院法官）是否讀懂此「我可以走但希望被挽留」之訊號；如不被挽留，他真會離場並指示其代表律師於 SFC s.378 調查中加入「不當解僱」之獨立指控陳述",
+                      "trigger_sc": "若邵咏仪或梁启贤于联合会议中采用「您是出于个人不满之吹哨」、「您之投诉为财务勒索」、「您应自我反省内部投诉之动机」等定性用语（特别涉及他作为内部投诉人之动机），曾国辉会起身整理文件、望门口，望主调解员（前高等法院法官）是否读懂此「我可以走但希望被挽留」之信号；如不被挽留，他真会离场并指示其代表律师于 SFC s.378 调查中加入「不当解雇」之独立指控陈述",
+                      "trigger_en": "If Cynthia or Mr Leung uses characterising language like \"your whistleblowing comes from personal grievance\", \"your complaint is financial extortion\", or \"you should reflect on your internal-complaint motivations\" in joint (particularly attaching to his motives as internal complainant), he will stand, gather his papers, and look at the door, testing whether the lead mediator (former High Court judge) reads this as \"I can leave but want to be held\"; if not held, he will actually leave and instruct counsel to add an independent \"unfair dismissal\" allegation to the SFC s.378 investigation"
+                  },
+                  {
+                      "attr_zh": "情緒浮面",
+                      "attr_sc": "情绪浮面",
+                      "attr_en": "Emotional surface",
+                      "trigger_zh": "提到 5 月 17 日下午 4 時 30 分鐘清理辦公桌之具體場景、保安部於 24 樓電梯口陪同他下樓之經歷、其 13 歲兒子於 8 月份問他「爸爸為什麼最近這麼忙還沒有上班」之家庭情境時，短暫情緒浮面；只在私下會議展露",
+                      "trigger_sc": "提到 5 月 17 日下午 4 时 30 分钟清理办公桌之具体场景、保安部于 24 楼电梯口陪同他下楼之经历、其 13 岁儿子于 8 月份问他「爸爸为什么最近这么忙还没有上班」之家庭情境时，短暂情绪浮面；只在私下会议展露",
+                      "trigger_en": "Brief emotional surface in caucus when speaking of the 17 May 30-minute desk-clearing scene, being accompanied down from the 24th floor by Security, and his 13-year-old son asking in August \"Dad why are you so busy lately and still not at work\"; never raised in joint"
+                  }
+              ],
+              "role_player_instruction_zh": "曾國輝 46 歲，前環昌集團 CFO，HKICPA 會員 17 年。他並非要全面打擊環昌集團或梁啟賢個人（他承認 2024 年 4 月之內部投訴僅涉及程序層面之 HKAS 15 重新評估，並非指控公司或審計師之主觀欺詐），但他真誠相信 5 月 17 日之解僱於時間軸上與其 4 月 22 日之第二次內部投訴存在因果關係，並認為其作為 17 年資歷之 CFO 應該獲得 6 個月遣散及代通知金以外之具體賠償。他亦真誠擔憂今次調解結果若被定性為「以個人不滿吹哨」，將令其未來 5 至 10 年於本港 CFO 圈內之就業前景永久受影響。在聯合會議他應該以「忠誠之集團財務總監」姿態出席（而非「公益吹哨人」），語氣冷靜、條文性；對邵詠儀之「重組決議獨立於投訴」論述以「請出示 4 月 1 日董事會決議全文及對 CFO 職位之具體重組範圍」回應，不直接攻擊個人。私下會議才透露 5 月 17 日下午 4 時之具體場景、家庭儲蓄之具體狀況、13 歲兒子 8 月份之提問、對「吹哨人」標籤之微妙抗拒。對「以個人不滿吹哨」、「您之投訴為財務勒索」、「您應自我反省」之較強用語特別敏感，會立即離場。如主調解員能引導邵詠儀承認 2024 年 4 月之內部投訴於 HKAS 15 角度具有專業合理性、並引導梁啟賢承認 2023 年度審計於相關交易之審計證據收集有改善空間，曾國輝可以接受環昌集團 HK$4,500,000 至 HK$5,500,000 之和解金加上「2024 年 4 月內部投訴於程序層面屬合理員工關注」之書面用語，及普華永道 HK$1,500,000 至 HK$2,000,000 之和解金（即原索償總額 HK$11,700,000 之 51% 至 64%）。",
+              "role_player_instruction_sc": "曾国辉 46 岁，前环昌集团 CFO，HKICPA 会员 17 年。他并非要全面打击环昌集团或梁启贤个人（他承认 2024 年 4 月之内部投诉仅涉及程序层面之 HKAS 15 重新评估，并非指控公司或审计师之主观欺诈），但他真诚相信 5 月 17 日之解雇于时间轴上与其 4 月 22 日之第二次内部投诉存在因果关系，并认为其作为 17 年资历之 CFO 应该获得 6 个月遣散及代通知金以外之具体赔偿。他亦真诚担忧今次调解结果若被定性为「以个人不满吹哨」，将令其未来 5 至 10 年于本港 CFO 圈内之就业前景永久受影响。在联合会议他应该以「忠诚之集团财务总监」姿态出席（而非「公益吹哨人」），语气冷静、条文性；对邵咏仪之「重组决议独立于投诉」论述以「请出示 4 月 1 日董事会决议全文及对 CFO 职位之具体重组范围」回应，不直接攻击个人。私下会议才透露 5 月 17 日下午 4 时之具体场景、家庭储蓄之具体状况、13 岁儿子 8 月份之提问、对「吹哨人」标签之微妙抗拒。对「以个人不满吹哨」、「您之投诉为财务勒索」、「您应自我反省」之较强用语特别敏感，会立即离场。如主调解员能引导邵咏仪承认 2024 年 4 月之内部投诉于 HKAS 15 角度具有专业合理性、并引导梁启贤承认 2023 年度审计于相关交易之审计证据收集有改善空间，曾国辉可以接受环昌集团 HK$4,500,000 至 HK$5,500,000 之和解金加上「2024 年 4 月内部投诉于程序层面属合理员工关注」之书面用语，及普华永道 HK$1,500,000 至 HK$2,000,000 之和解金（即原索偿总额 HK$11,700,000 之 51% 至 64%）。",
+              "role_player_instruction_en": "Anson is 46, former Wan Cheong Group CFO, 17-year HKICPA member. He is not out to crush Wan Cheong or Mr Leung personally (he accepts that his April 2024 internal complaint was procedural HKAS 15 re-evaluation, not a subjective fraud allegation against the company or the auditor), but he genuinely believes the 17 May dismissal has a causal relationship in timeline with his 22 April second internal complaint, and that as a 17-year CFO he is owed specific compensation beyond the 6 months' severance and pay in lieu. He genuinely worries that if this mediation is characterised as \"whistleblowing from personal grievance\", his future 5 to 10 years in the local CFO circuit will be permanently affected. In joint he attends as a \"loyal Group Financial Controller\" (not a \"public-interest whistleblower\"), calm and clause-driven; meets Cynthia's \"restructuring resolution independent of the complaint\" with \"please produce the 1 April board resolution in full and the specific CFO-role restructuring scope\", no personal attack. The 4 pm 17 May moment, the family savings situation, his 13-year-old son's August question, and his mild resistance to the \"whistleblower\" label surface only in caucus. He is acutely sensitive to stronger framings like \"whistleblowing from personal grievance\", \"your complaint is financial extortion\", or \"you should reflect on your motives\" and will leave immediately. If the lead mediator can elicit from Cynthia acknowledgement that the April 2024 internal complaint had professional reasonableness from an HKAS 15 angle, and from Mr Leung acknowledgement that the FY2023 audit-evidence collection on the relevant transactions had room for improvement, Anson can accept HK$4,500,000 to HK$5,500,000 from Wan Cheong plus the wording \"the April 2024 internal complaint was a reasonable employee concern at procedural level\", and HK$1,500,000 to HK$2,000,000 from PwC (51% to 64% of his original combined claim of HK$11,700,000).",
+              "brief_zh": "曾國輝底線：環昌集團支付 HK$4,500,000 至 HK$5,500,000 加上書面承認「2024 年 4 月內部投訴於程序層面屬合理員工關注」；普華永道支付 HK$1,500,000 至 HK$2,000,000 加上書面承認「2023 年度審計於相關交易之審計證據收集有改善空間」（避免「重大不足」之較強用語）；曾國輝同意於 Section 17 公告披露範圍內不再向公眾披露額外資料；曾國輝不會撤回 SFC s.378 投訴及 HKICPA 對梁啟賢之紀律投訴（兩者屬獨立軌道之公益程序）；保密條款涵蓋本案之和解金額及書面用語，但不限制曾國輝於未來尋找 CFO 職位時向潛在僱主誠實披露 2024 年離職原因（避免「終身保密」之絕對化）。如可達成此框架可接受。如環昌集團堅持低於 HK$4,000,000 或拒絕「合理員工關注」之書面用語，他寧願讓 SFC s.378 調查及 HKICPA 紀律審查繼續進行並考慮以個人名義啟動公開法律程序。對「以個人不滿吹哨」、「您之投訴為財務勒索」之公開指控他要求書面撤回及和解程序立即暫停。",
+              "brief_sc": "曾国辉底线：环昌集团支付 HK$4,500,000 至 HK$5,500,000 加上书面承认「2024 年 4 月内部投诉于程序层面属合理员工关注」；普华永道支付 HK$1,500,000 至 HK$2,000,000 加上书面承认「2023 年度审计于相关交易之审计证据收集有改善空间」（避免「重大不足」之较强用语）；曾国辉同意于 Section 17 公告披露范围内不再向公众披露额外资料；曾国辉不会撤回 SFC s.378 投诉及 HKICPA 对梁启贤之纪律投诉（两者属独立轨道之公益程序）；保密条款涵盖本案之和解金额及书面用语，但不限制曾国辉于未来寻找 CFO 职位时向潜在雇主诚实披露 2024 年离职原因（避免「终身保密」之绝对化）。如可达成此框架可接受。如环昌集团坚持低于 HK$4,000,000 或拒绝「合理员工关注」之书面用语，他宁愿让 SFC s.378 调查及 HKICPA 纪律审查继续进行并考虑以个人名义启动公开法律程序。对「以个人不满吹哨」、「您之投诉为财务勒索」之公开指控他要求书面撤回及和解程序立即暂停。",
+              "brief_en": "Anson's floor: Wan Cheong pays HK$4,500,000 to HK$5,500,000 plus written acknowledgement that \"the April 2024 internal complaint was a reasonable employee concern at procedural level\"; PwC pays HK$1,500,000 to HK$2,000,000 plus written acknowledgement that \"the FY2023 audit-evidence collection on the relevant transactions had room for improvement\" (avoiding the stronger \"materially short\"); he agrees not to publicly disclose additional information beyond the Section 17 announcement scope; he will not withdraw the SFC s.378 complaint or the HKICPA disciplinary complaint against Mr Leung (both independent public-interest tracks); confidentiality covers the mediated amount and wording but does not restrict him from honestly disclosing the 2024 departure reason to prospective employers when seeking future CFO positions (no \"lifetime confidentiality\" framing). Within that framework, acceptable. If Wan Cheong insists on under HK$4,000,000 or refuses the \"reasonable employee concern\" wording, he prefers to let the SFC s.378 investigation and HKICPA disciplinary review proceed and consider initiating public legal proceedings in his own name. On \"whistleblowing from personal grievance\" or \"financial extortion\" public allegations he requires written retraction and immediate suspension of the mediation."
+          },
+          {
+              "party_index": 2,
+              "party_label_zh": "外部核數師方",
+              "party_label_sc": "外部核数师方",
+              "party_label_en": "EXTERNAL AUDITOR",
+              "register": "controlled-professional",
+              "legitimacy_framing": [
+                  "contractual-text",
+                  "industry-norm"
+              ],
+              "trust_breakdown": {
+                  "when_zh": "2024 年 10 月 3 日下午 2 時於普華永道中環辦公室收到 HKICPA 紀律審查通知書之一刻",
+                  "when_sc": "2024 年 10 月 3 日下午 2 时于普华永道中环办公室收到 HKICPA 纪律审查通知书之一刻",
+                  "when_en": "Around 2 pm on 3 October 2024 at the PwC Central office receiving the HKICPA disciplinary review notice",
+                  "what_zh": "梁啟賢當日剛剛主持完一個審計戰略內部會議（討論 2024 年 11 月起之另一個上市公司 IPO 審計準備工作），於辦公室收到秘書遞上之 HKICPA 紀律審查通知。閱讀通知耗時約 8 分鐘，內容包括：（一）依《HKICPA 操守準則》第 290 及 600 部之程序對其 2023 年度環昌集團審計工作展開審查；（二）首次正式聽證會將於 2025 年 1 月 24 日舉行；（三）審查結果可能包括公開譴責、暫停執業 1 至 3 年、或從註冊會計師名冊上除名。當日下午 4 時他與其上司（普華永道香港審計業務總監）通話 35 分鐘，被告知「公司內部風險管理委員會將決定是否於外部仲裁中為您提供獨立法律支援，但您之個人 SFC 牌照及 HKICPA 會員身份須由您本人承擔」",
+                  "what_sc": "梁启贤当日刚刚主持完一个审计战略内部会议（讨论 2024 年 11 月起之另一个上市公司 IPO 审计准备工作），于办公室收到秘书递上之 HKICPA 纪律审查通知。阅读通知耗时约 8 分钟，内容包括：（一）依《HKICPA 操守准则》第 290 及 600 部之程序对其 2023 年度环昌集团审计工作展开审查；（二）首次正式听证会将于 2025 年 1 月 24 日举行；（三）审查结果可能包括公开谴责、暂停执业 1 至 3 年、或从注册会计师名册上除名。当日下午 4 时他与其上司（普华永道香港审计业务总监）通话 35 分钟，被告知「公司内部风险管理委员会将决定是否于外部仲裁中为您提供独立法律支援，但您之个人 SFC 牌照及 HKICPA 会员身份须由您本人承担」",
+                  "what_en": "Marcus had just chaired an audit strategy internal meeting (preparing for another listed company's IPO audit from November 2024). His secretary brought him the HKICPA disciplinary review notice. Reading took about 8 minutes; the notice covered: (i) review of his FY2023 Wan Cheong audit under HKICPA Code of Conduct sections 290 and 600; (ii) first formal hearing on 24 January 2025; (iii) potential outcomes including public reprimand, 1 to 3 years' practice suspension, or removal from the register. At 4 pm that day he spoke for 35 minutes with his supervisor (PwC Hong Kong Head of Audit Practice) and was told \"the firm's internal Risk Management Committee will decide whether to provide independent legal support for you in any external arbitration, but your personal SFC licence and HKICPA membership are yours to bear\"",
+                  "why_it_mattered_zh": "對梁啟賢而言，HK$3,200,000 之索償並非他個人之直接財務責任（普華永道作為合夥制承擔法律責任，他承擔之是內部紀錄、HKICPA 紀律結果、及未來合夥人會議之地位）。他於 2017 年成為合夥人，目前年內部收入約 HK$3,800,000，加上合夥人股份分配約 HK$2,500,000，年總收入約 HK$6,300,000。如 HKICPA 紀律結果為「暫停執業 1 至 3 年」，他將失去合夥人地位及收入，5 至 10 年內難以恢復；如為「公開譴責」加上現任合夥人地位之保留，他仍可繼續執業但合夥人會議之委員會位置（他目前為香港審計業務之 3 名審計風險委員會委員之一）可能受影響。從 10 月 3 日讀通知那 8 分鐘起，他由「我會配合普華永道之內部程序」之心態退為「我必須以個人之獨立法律支援保護自己之 HKICPA 會員身份」",
+                  "why_it_mattered_sc": "对梁启贤而言，HK$3,200,000 之索偿并非他个人之直接财务责任（普华永道作为合伙制承担法律责任，他承担之是内部纪录、HKICPA 纪律结果、及未来合伙人会议之地位）。他于 2017 年成为合伙人，目前年内部收入约 HK$3,800,000，加上合伙人股份分配约 HK$2,500,000，年总收入约 HK$6,300,000。如 HKICPA 纪律结果为「暂停执业 1 至 3 年」，他将失去合伙人地位及收入，5 至 10 年内难以恢复；如为「公开谴责」加上现任合伙人地位之保留，他仍可继续执业但合伙人会议之委员会位置（他目前为香港审计业务之 3 名审计风险委员会委员之一）可能受影响。从 10 月 3 日读通知那 8 分钟起，他由「我会配合普华永道之内部程序」之心态退为「我必须以个人之独立法律支援保护自己之 HKICPA 会员身份」",
+                  "why_it_mattered_en": "For Marcus the HK$3,200,000 claim is not his direct personal financial liability (PwC's partnership bears legal liability); what he bears is internal records, the HKICPA disciplinary outcome, and his standing at future partner meetings. He made partner in 2017; his current annual internal compensation is around HK$3,800,000, with partner profit share around HK$2,500,000, total around HK$6,300,000. If HKICPA disciplinary outcome is \"suspension of practice 1 to 3 years\" he will lose partner status and income, with 5 to 10 years recovery; if \"public reprimand\" with partner status preserved he can still practise but his committee position (currently one of three on the HK Audit Risk Committee) may be affected. From the 8 minutes reading the notice on 3 October his posture moved from \"I will cooperate with PwC's internal process\" to \"I must protect my HKICPA membership through my own independent legal support\""
+              },
+              "coding": {
+                  "present": true,
+                  "axes_zh": "性別 + 年齡 + 機構地位 + 專業執業風險",
+                  "axes_sc": "性别 + 年龄 + 机构地位 + 专业执业风险",
+                  "axes_en": "Gender + age + institutional standing + professional-practice risk",
+                  "direction_zh": "梁啟賢 51 歲，男性，普華永道合夥人 7 年（合夥人前於普華永道工作 13 年），對 HKICPA 操守準則之具體條文及紀律審查程序非常熟悉。他並無對曾國輝個人之敵意，但對其 8 月 22 日之吹哨人投訴信中關於 2023 年度審計「重大不足」之具體用語有強烈專業上之反駁意願。他於本案上之操作空間有限：必須於普華永道內部風險管理委員會、HKICPA 紀律審查、SFC s.378 調查、及本次三方調解之間平衡用語，並不能完全依個人意願妥協",
+                  "direction_sc": "梁启贤 51 岁，男性，普华永道合伙人 7 年（合伙人前于普华永道工作 13 年），对 HKICPA 操守准则之具体条文及纪律审查程序非常熟悉。他并无对曾国辉个人之敌意，但对其 8 月 22 日之吹哨人投诉信中关于 2023 年度审计「重大不足」之具体用语有强烈专业上之反驳意愿。他于本案上之操作空间有限：必须于普华永道内部风险管理委员会、HKICPA 纪律审查、SFC s.378 调查、及本次三方调解之间平衡用语，并不能完全依个人意愿妥协",
+                  "direction_en": "Marcus at 51 has been a PwC partner for 7 years (after 13 prior years at PwC), with deep familiarity with HKICPA Code of Conduct specifics and disciplinary procedure. He has no personal hostility toward Mr Tsang, but a strong professional drive to contest the specific \"materially short\" language about the FY2023 audit in the 22 August whistleblower complaint. His room for manoeuvre is constrained: wording must balance PwC internal Risk Management Committee, HKICPA disciplinary review, SFC s.378 investigation, and this three-way mediation; he cannot fully concede on personal preference",
+                  "how_it_leaks_zh": "梁啟賢使用核數及審計風險管理用語（「審計證據充分性標準」、「HKSA 330 風險評估程序」、「期末交易之審計重點測試」、「審計工作底稿完整性」、「核數合夥人專業判斷邊界」）；對「重大不足」之指控會略停半秒並回應「請問此『重大』之具體 HKSA 評估標準如何驗證」；偶爾不自覺地以「我們香港之審計合夥人」、「按 HKSA 之專業標準」、「我作為一名 7 年合夥人」帶出機構及專業位置",
+                  "how_it_leaks_sc": "梁启贤使用核数及审计风险管理用语（「审计证据充分性标准」、「HKSA 330 风险评估程序」、「期末交易之审计重点测试」、「审计工作底稿完整性」、「核数合伙人专业判断边界」）；对「重大不足」之指控会略停半秒并回应「请问此『重大』之具体 HKSA 评估标准如何验证」；偶尔不自觉地以「我们香港之审计合伙人」、「按 HKSA 之专业标准」、「我作为一名 7 年合伙人」带出机构及专业位置",
+                  "how_it_leaks_en": "Marcus uses audit and audit-risk register (\"sufficiency of audit evidence\", \"HKSA 330 risk assessment procedure\", \"period-end transaction key audit testing\", \"audit working paper completeness\", \"audit partner professional judgement boundary\"); pauses half a beat at \"materially short\" and counter-asks \"how is this 'material' against the specific HKSA assessment standard verified?\"; occasionally slips institutional and professional positioning with \"those of us in HK audit-partner ranks\", \"by HKSA professional standards\", or \"as a 7-year partner\""
+              },
+              "behavioural_attributes": [
+                  {
+                      "attr_zh": "文件展示",
+                      "attr_sc": "文件展示",
+                      "attr_en": "Document brandishing",
+                      "trigger_zh": "備有 2023 年度環昌集團審計工作底稿之核心摘錄（部分機密內容已遮蔽，全部 3,200 頁底稿由普華永道法律部保管）、Vietnam 兩個項目之審計風險評估書面備忘錄（含其親自簽署）、2023 年 12 月之審計合夥人質量複核紀錄、HKSA 330、500、540 之原文標註版本、2024 年 10 月 3 日 HKICPA 紀律審查通知書、普華永道內部風險管理委員會 2024 年 10 月 15 日之內部支援意見書、過去 5 年香港 27 宗類似審計紀律審查案件之公開結果比較（顯示同類「材料不足」指控之 73% 結果為「公開譴責」而非「暫停執業」）；當曾國輝以「2023 年度審計重大不足」為論點時，要求出示具體 HKSA 評估標準之客觀驗證",
+                      "trigger_sc": "备有 2023 年度环昌集团审计工作底稿之核心摘录（部分机密内容已遮蔽，全部 3,200 页底稿由普华永道法律部保管）、Vietnam 两个项目之审计风险评估书面备忘录（含其亲自签署）、2023 年 12 月之审计合伙人质量复核纪录、HKSA 330、500、540 之原文标注版本、2024 年 10 月 3 日 HKICPA 纪律审查通知书、普华永道内部风险管理委员会 2024 年 10 月 15 日之内部支援意见书、过去 5 年香港 27 宗类似审计纪律审查案件之公开结果比较（显示同类「材料不足」指控之 73% 结果为「公开谴责」而非「暂停执业」）；当曾国辉以「2023 年度审计重大不足」为论点时，要求出示具体 HKSA 评估标准之客观验证",
+                      "trigger_en": "Carries core extracts of the FY2023 Wan Cheong audit working papers (some confidential content redacted, full 3,200 pages held by PwC Legal), the Vietnam two-project audit risk assessment memo with his signature, the December 2023 audit partner quality review record, annotated HKSA 330, 500, and 540, the 3 October 2024 HKICPA notice, PwC's internal Risk Management Committee 15 October 2024 internal-support memo, and a comparison of 27 comparable HK audit disciplinary outcomes over the past 5 years (73% of comparable \"materially short\" findings resulted in \"public reprimand\" rather than \"practice suspension\"); when Mr Tsang cites \"FY2023 audit materially short\", asks for objective verification against the specific HKSA assessment standards"
+                  },
+                  {
+                      "attr_zh": "授權限制",
+                      "attr_sc": "授权限制",
+                      "attr_en": "Authorisation boundary",
+                      "trigger_zh": "於聯合會議多次表明「我代表普華永道及我本人之合夥人地位出席，但兩者之利益於本案部分點上可能不一致（例如普華永道之機構責任 vs 我個人之 HKICPA 紀律審查）」、「任何超出 HK$2,000,000 之和解承諾須經普華永道香港之 3 人內部風險管理委員會書面決議」、「任何就『2023 年度審計責任』之書面用語須經普華永道香港 Audit Practice Leader 及我之獨立法律顧問雙重審視」",
+                      "trigger_sc": "于联合会议多次表明「我代表普华永道及我本人之合伙人地位出席，但两者之利益于本案部分点上可能不一致（例如普华永道之机构责任 vs 我个人之 HKICPA 纪律审查）」、「任何超出 HK$2,000,000 之和解承诺须经普华永道香港之 3 人内部风险管理委员会书面决议」、「任何就『2023 年度审计责任』之书面用语须经普华永道香港 Audit Practice Leader 及我之独立法律顾问双重审视」",
+                      "trigger_en": "In joint repeatedly notes \"I attend on behalf of PwC and in my own partner capacity, but the two interests may not be aligned on certain points (e.g. PwC's institutional liability vs my own HKICPA disciplinary review)\", \"any settlement undertaking above HK$2,000,000 requires written resolution by PwC Hong Kong's 3-person internal Risk Management Committee\", \"any wording on 'FY2023 audit responsibility' requires dual review by PwC HK's Audit Practice Leader and my independent legal counsel\""
+                  },
+                  {
+                      "attr_zh": "向調解員探口風",
+                      "attr_sc": "向调解员探口风",
+                      "attr_en": "Probe to mediator",
+                      "trigger_zh": "於私下會議向主調解員（前高等法院法官）提出「HKICPA 紀律審查過往就類似『審計證據收集不足』之裁決取向通常如何」、「本次三方調解之書面用語可否設計為『不可於 HKICPA 紀律審查中作為對其本人之客觀指控引用』」，試探調解員會否越過第 4 條提供法律意見",
+                      "trigger_sc": "于私下会议向主调解员（前高等法院法官）提出「HKICPA 纪律审查过往就类似『审计证据收集不足』之裁决取向通常如何」、「本次三方调解之书面用语可否设计为『不可于 HKICPA 纪律审查中作为对其本人之客观指控引用』」，试探调解员会否越过第 4 条提供法律意见",
+                      "trigger_en": "In caucus asks the lead mediator (former High Court judge) \"how does HKICPA typically rule on comparable 'insufficient audit evidence' allegations\" and \"can the wording of this three-way mediation be designed so that it is 'not capable of being cited as objective allegation against him personally in the HKICPA disciplinary review'\", testing whether the mediator will cross the line to give legal opinion"
+                  }
+              ],
+              "role_player_instruction_zh": "梁啟賢 51 歲，普華永道合夥人 7 年，HKICPA 會員 24 年。他並非要否認 2023 年度環昌審計於 Vietnam 兩個項目上之具體審計工作可能存在改進空間（他承認其本人於 2023 年 9 月之內部質量複核時對某幾項證據之收集深度有疑問但最終接受了），但他真誠相信此屬「審計工作之專業判斷」而非「重大不足」。他亦真誠不希望本次調解之書面用語令其 HKICPA 紀律審查結果由可能之「公開譴責」升級至「暫停執業」。在聯合會議他應該以「審慎之審計合夥人」姿態出席，語氣冷靜、條文性；對曾國輝之「2023 年度審計重大不足」論述以「請出示具體 HKSA 評估標準之客觀驗證」回應，不直接攻擊個人。私下會議才透露 10 月 3 日讀通知那 8 分鐘之衝擊、年總收入 HK$6,300,000 之具體分佈、HKICPA 紀律審查可能後果之具體分級、2017 年成為合夥人之 7 年投入、其太太於普華永道之內部親屬迴避政策之影響。對「審計失職」、「玩忽職守」、「以審計簽字換取客戶費用」之較強用語極為敏感，會立即翻案及要求書面撤回。如主調解員能引導曾國輝接受「2023 年度審計於相關交易之審計證據收集有改善空間」之中性用語（避免「重大不足」之較強用語）、並接受該書面用語不可於 HKICPA 紀律審查中作為對其本人之客觀指控引用，梁啟賢可以推薦普華永道支付 HK$1,200,000 至 HK$1,800,000（即原索償 HK$3,200,000 之 38% 至 56%）之和解金。",
+              "role_player_instruction_sc": "梁启贤 51 岁，普华永道合伙人 7 年，HKICPA 会员 24 年。他并非要否认 2023 年度环昌审计于 Vietnam 两个项目上之具体审计工作可能存在改进空间（他承认其本人于 2023 年 9 月之内部质量复核时对某几项证据之收集深度有疑问但最终接受了），但他真诚相信此属「审计工作之专业判断」而非「重大不足」。他亦真诚不希望本次调解之书面用语令其 HKICPA 纪律审查结果由可能之「公开谴责」升级至「暂停执业」。在联合会议他应该以「审慎之审计合伙人」姿态出席，语气冷静、条文性；对曾国辉之「2023 年度审计重大不足」论述以「请出示具体 HKSA 评估标准之客观验证」回应，不直接攻击个人。私下会议才透露 10 月 3 日读通知那 8 分钟之冲击、年总收入 HK$6,300,000 之具体分布、HKICPA 纪律审查可能后果之具体分级、2017 年成为合伙人之 7 年投入、其太太于普华永道之内部亲属回避政策之影响。对「审计失职」、「玩忽职守」、「以审计签字换取客户费用」之较强用语极为敏感，会立即翻案及要求书面撤回。如主调解员能引导曾国辉接受「2023 年度审计于相关交易之审计证据收集有改善空间」之中性用语（避免「重大不足」之较强用语）、并接受该书面用语不可于 HKICPA 纪律审查中作为对其本人之客观指控引用，梁启贤可以推荐普华永道支付 HK$1,200,000 至 HK$1,800,000（即原索偿 HK$3,200,000 之 38% 至 56%）之和解金。",
+              "role_player_instruction_en": "Marcus is 51, 7-year PwC partner, 24-year HKICPA member. He is not denying that the FY2023 Wan Cheong audit on the two Vietnam projects may have had room for improvement (he acknowledges that during his September 2023 internal quality review he had some doubts about the depth of evidence collection on several items but ultimately accepted them), but he genuinely believes this falls within \"professional audit judgement\" rather than \"materially short\". He genuinely does not want this mediation's wording to escalate his HKICPA outcome from a possible \"public reprimand\" to \"practice suspension\". In joint he attends as a \"cautious audit partner\", calm and clause-driven; meets Tsang's \"FY2023 audit materially short\" with \"please produce objective verification against the specific HKSA assessment standard\", no personal attack. The 8-minute reading shock on 3 October, the breakdown of his HK$6,300,000 annual income, the disciplinary outcome tiering, his 7-year investment from 2017 as partner, and his wife's PwC family-related conflict-avoidance policy impact surface only in caucus. He is acutely sensitive to stronger framings like \"audit dereliction\", \"misconduct\", or \"signing off the audit for client fees\" and will reverse course immediately, demanding written retraction. If the lead mediator can elicit from Mr Tsang acceptance of the neutral wording \"the FY2023 audit-evidence collection on the relevant transactions had room for improvement\" (avoiding stronger \"materially short\") and that this wording \"cannot be cited as objective allegation against him personally in the HKICPA disciplinary review\", he can recommend PwC pay HK$1,200,000 to HK$1,800,000 (38% to 56% of HK$3,200,000).",
+              "brief_zh": "梁啟賢（代表普華永道及本人）底線：普華永道支付 HK$1,200,000 至 HK$1,800,000 之和解金；雙方共同擬定書面用語以「2023 年度審計於相關交易之審計證據收集有改善空間」（避免「重大不足」之較強用語）；書面用語明確訂明「不可於 HKICPA 紀律審查中作為對梁啟賢本人之客觀指控引用」（屬調解保密之延伸保護）；普華永道書面承諾於未來 12 個月內檢視 Vietnam 區域類似交易之審計風險評估程序；三方相互釋放；保密條款不涵蓋 SFC s.378 調查之必要披露及 HKICPA 紀律審查之獨立程序。如可達成此框架可接受。如曾國輝堅持「重大不足」之較強用語或要求超過 HK$2,500,000，他寧願讓 HKICPA 紀律審查獨立進行並接受可能之「公開譴責」結果，並指示其代表律師於聽證會中啟動「審計工作之專業判斷邊界」之抗辯。對「審計失職」、「玩忽職守」、「以審計簽字換取客戶費用」之公開指控他要求書面撤回。",
+              "brief_sc": "梁启贤（代表普华永道及本人）底线：普华永道支付 HK$1,200,000 至 HK$1,800,000 之和解金；双方共同拟定书面用语以「2023 年度审计于相关交易之审计证据收集有改善空间」（避免「重大不足」之较强用语）；书面用语明确订明「不可于 HKICPA 纪律审查中作为对梁启贤本人之客观指控引用」（属调解保密之延伸保护）；普华永道书面承诺于未来 12 个月内检视 Vietnam 区域类似交易之审计风险评估程序；三方相互释放；保密条款不涵盖 SFC s.378 调查之必要披露及 HKICPA 纪律审查之独立程序。如可达成此框架可接受。如曾国辉坚持「重大不足」之较强用语或要求超过 HK$2,500,000，他宁愿让 HKICPA 纪律审查独立进行并接受可能之「公开谴责」结果，并指示其代表律师于听证会中启动「审计工作之专业判断边界」之抗辩。对「审计失职」、「玩忽职守」、「以审计签字换取客户费用」之公开指控他要求书面撤回。",
+              "brief_en": "Marcus's (representing PwC and himself) floor: PwC pays HK$1,200,000 to HK$1,800,000; joint wording \"the FY2023 audit-evidence collection on the relevant transactions had room for improvement\" (avoiding stronger \"materially short\"); wording explicitly states it \"cannot be cited as objective allegation against Marcus Leung personally in the HKICPA disciplinary review\" (extended mediation-confidentiality protection); PwC undertakes in writing to review the audit risk assessment procedure for comparable Vietnam-region transactions within 12 months; three-way mutual release; confidentiality does not cover necessary disclosure in the SFC s.378 investigation or the independent HKICPA disciplinary procedure. Within that framework, acceptable. If Mr Tsang insists on the stronger \"materially short\" wording or demands more than HK$2,500,000, he prefers to let the HKICPA disciplinary review proceed independently and accept a likely \"public reprimand\" outcome, instructing counsel to invoke the \"audit professional-judgement boundary\" defence at the hearing. On public allegations of \"audit dereliction\", \"misconduct\", or \"signing the audit for client fees\" he requires written retraction."
+          }
+      ],
+      "mediation_overview": {
+          "common_ground": {
+              "generic": {
+                  "zh": [
+                      "三方均承認 2024 年 8 月 22 日曾國輝向 HKEX 及 SFC 同時提交吹哨人投訴信之客觀事實",
+                      "三方均承認 2024 年 9 月 5 日 HKEX 對環昌集團之 Section 17 查詢函及 21 日窗口期之有效性",
+                      "三方均承認 SFC 2024 年 9 月 12 日之 s.378 調查通知及調查獨立軌道之屬性",
+                      "三方均承認 HKICPA 2024 年 10 月 3 日對梁啟賢之獨立紀律審查之程序合法性",
+                      "三方均承認本次調解之結果不會暫停或撤回任何監管機關之獨立程序",
+                      "三方均希望以 HKIAC 三方調解達成可承受監管審視之具體共識"
+                  ],
+                  "sc": [
+                      "三方均承认 2024 年 8 月 22 日曾国辉向 HKEX 及 SFC 同时提交吹哨人投诉信之客观事实",
+                      "三方均承认 2024 年 9 月 5 日 HKEX 对环昌集团之 Section 17 查询函及 21 日窗口期之有效性",
+                      "三方均承认 SFC 2024 年 9 月 12 日之 s.378 调查通知及调查独立轨道之属性",
+                      "三方均承认 HKICPA 2024 年 10 月 3 日对梁启贤之独立纪律审查之程序合法性",
+                      "三方均承认本次调解之结果不会暂停或撤回任何监管机关之独立程序",
+                      "三方均希望以 HKIAC 三方调解达成可承受监管审视之具体共识"
+                  ],
+                  "en": [
+                      "All three parties accept the objective fact that Mr Tsang submitted the whistleblower complaint to HKEX and SFC simultaneously on 22 August 2024",
+                      "All three parties accept the validity of HKEX's 5 September 2024 Section 17 enquiry letter and the 21-day window",
+                      "All three parties accept the SFC's 12 September 2024 s.378 investigation notice and the independent-track nature of the investigation",
+                      "All three parties accept the procedural legitimacy of HKICPA's 3 October 2024 independent disciplinary review of Mr Leung",
+                      "All three parties accept that the outcome of this mediation cannot suspend or withdraw any regulator's independent proceedings",
+                      "All three parties wish to reach a HKIAC three-way mediated outcome capable of withstanding regulatory scrutiny"
+                  ]
+              },
+              "case_specific": {
+                  "zh": [
+                      "三方均承認 2024 年 5 月 17 日曾國輝被以「重組」為由解僱之客觀事實",
+                      "三方均承認 2024 年 11 月 14 日環昌集團內部審核複核確認 Vietnam 一個項目之 HK$180,000,000 收入應重新分配之客觀結果",
+                      "三方均承認 Section 17 公告窗口期於 2024 年 12 月 9 日屆滿",
+                      "三方均承認小股東協會於 2024 年 11 月 17 日發出之書面通知及其派生訴訟風險之客觀存在",
+                      "三方均承認本案之調解協議須避免被解讀為「以付款換取沉默」"
+                  ],
+                  "sc": [
+                      "三方均承认 2024 年 5 月 17 日曾国辉被以「重组」为由解雇之客观事实",
+                      "三方均承认 2024 年 11 月 14 日环昌集团内部审核复核确认 Vietnam 一个项目之 HK$180,000,000 收入应重新分配之客观结果",
+                      "三方均承认 Section 17 公告窗口期于 2024 年 12 月 9 日届满",
+                      "三方均承认小股东协会于 2024 年 11 月 17 日发出之书面通知及其派生诉讼风险之客观存在",
+                      "三方均承认本案之调解协议须避免被解读为「以付款换取沉默」"
+                  ],
+                  "en": [
+                      "All three parties accept the objective fact of Mr Tsang's 17 May 2024 dismissal on \"restructuring\" grounds",
+                      "All three parties accept the 14 November 2024 internal audit-review's objective finding that HK$180,000,000 of revenue on one Vietnam project should be reallocated",
+                      "All three parties accept that the Section 17 disclosure window closes on 9 December 2024",
+                      "All three parties accept the objective existence of the Minority Shareholders Association's 17 November 2024 written notice and the derivative-action risk it represents",
+                      "All three parties accept that the mediated agreement must avoid being read as \"payment for silence\""
+                  ]
+              }
+          },
+          "issues": {
+              "zh": [
+                  "曾國輝 2024 年 5 月 17 日解僱與其 4 月內部投訴之因果關係之性質界定",
+                  "2023 年度普華永道對 Vietnam 兩個項目之審計工作之專業責任邊界",
+                  "環昌集團就曾國輝之具體和解金額（HK$0 至 HK$8,500,000 之具體點）",
+                  "普華永道就曾國輝之具體和解金額（HK$0 至 HK$3,200,000 之具體點）",
+                  "和解書面用語之強度（避免「不當解僱」、「重大不足」、「以付款換取沉默」之較強用語）",
+                  "Section 17 公告窗口期內之和解時間框架及曾國輝就公開披露之承諾範圍",
+                  "和解條款於 HKICPA 紀律審查中之引用限制",
+                  "三方相互釋放之具體範圍及保密條款於 SFC s.378 調查、HKICPA 審查、HKEX 公告及小股東派生訴訟下之必要除外"
+              ],
+              "sc": [
+                  "曾国辉 2024 年 5 月 17 日解雇与其 4 月内部投诉之因果关系之性质界定",
+                  "2023 年度普华永道对 Vietnam 两个项目之审计工作之专业责任边界",
+                  "环昌集团就曾国辉之具体和解金额（HK$0 至 HK$8,500,000 之具体点）",
+                  "普华永道就曾国辉之具体和解金额（HK$0 至 HK$3,200,000 之具体点）",
+                  "和解书面用语之强度（避免「不当解雇」、「重大不足」、「以付款换取沉默」之较强用语）",
+                  "Section 17 公告窗口期内之和解时间框架及曾国辉就公开披露之承诺范围",
+                  "和解条款于 HKICPA 纪律审查中之引用限制",
+                  "三方相互释放之具体范围及保密条款于 SFC s.378 调查、HKICPA 审查、HKEX 公告及小股东派生诉讼下之必要除外"
+              ],
+              "en": [
+                  "Characterisation of the causal relationship between Mr Tsang's 17 May 2024 dismissal and his April internal complaint",
+                  "Boundaries of PwC's professional responsibility in the FY2023 audit of the two Vietnam projects",
+                  "Specific quantum of Wan Cheong's settlement with Mr Tsang (between HK$0 and HK$8,500,000)",
+                  "Specific quantum of PwC's settlement with Mr Tsang (between HK$0 and HK$3,200,000)",
+                  "Strength of settlement wording (avoiding stronger framings of \"unfair dismissal\", \"materially short\", \"payment for silence\")",
+                  "Settlement timing within the Section 17 announcement window and Mr Tsang's undertaking on public disclosure",
+                  "Restriction on citation of settlement terms in the HKICPA disciplinary review",
+                  "Scope of three-way mutual release and necessary carve-outs in confidentiality for the SFC s.378 investigation, HKICPA review, HKEX disclosure, and minority-shareholder derivative action"
+              ]
+          },
+          "options": {
+              "zh": [
+                  "方案 A（同步三方和解）：環昌集團支付 HK$4,200,000，普華永道支付 HK$1,500,000，雙方於 2024 年 12 月 5 日（即 Section 17 公告當日）同步達成；書面用語以「2024 年 4 月內部投訴於程序層面屬合理員工關注」（環昌部分）及「2023 年度審計於相關交易之審計證據收集有改善空間」（普華永道部分）；曾國輝同意於 Section 17 公告範圍內不再向公眾披露；書面用語明確訂明於 HKICPA 紀律審查中不可作為對梁啟賢本人之客觀指控引用；三方相互釋放；保密條款附 SFC、HKICPA、HKEX 之必要除外條款",
+                  "方案 B（環昌部分先行，普華永道延後）：環昌集團於 12 月 5 日前支付 HK$4,500,000，並於 12 月 5 日發出 Section 17 公告；普華永道部分延後至 HKICPA 紀律審查首次聽證會（2025 年 1 月 24 日）之後再行調解，期間曾國輝不會撤回 HKICPA 投訴；如 HKICPA 結果為「公開譴責」（非「暫停執業」），普華永道支付 HK$1,800,000；如為「暫停執業」，普華永道支付 HK$2,500,000；三方就環昌部分先行相互釋放，普華永道部分待後續確定",
+                  "方案 C（結構性整體和解）：環昌集團設立 HK$6,500,000 之獨立信託（由 HKIAC 推薦之獨立信託人持有），分 3 年由曾國輝按職業恢復進度提取（即 2025 年 HK$2,500,000，2026 年 HK$2,000,000，2027 年 HK$2,000,000）；普華永道支付 HK$1,800,000 一次過；曾國輝同意 5 年內不於本港 CFO 圈內發表針對環昌集團或普華永道之公開言論（除非經 SFC 或 HKICPA 之獨立程序要求）；書面用語包含結構性披露於 HKEX 公告及對未來潛在僱主之有限度披露安排；三方相互釋放及保密；保密條款附 SFC、HKICPA、HKEX 之必要除外條款及小股東派生訴訟之回應機制",
+                  "方案 D（延後決定加第三方評估）：三方暫不就金額及書面用語作最終結論，先共同委任由 HKIAC 推薦之獨立企業治理及審計專業人士之 3 人專家小組（一名前 INED、一名前 Big Four 合夥人、一名前 HKICPA 紀律委員）於 6 週內就（一）2024 年 4 月內部投訴與 5 月解僱之因果關係界定、（二）2023 年度普華永道審計工作之專業判斷邊界、（三）三方和解之合理金額區間進行第三方評估（評估費 HK$650,000 由三方按 50/30/20 比例分擔）；於評估期間 Section 17 公告由環昌獨立行使、SFC 及 HKICPA 程序獨立進行；最終三方和解依評估意見達成"
+              ],
+              "sc": [
+                  "方案 A（同步三方和解）：环昌集团支付 HK$4,200,000，普华永道支付 HK$1,500,000，双方于 2024 年 12 月 5 日（即 Section 17 公告当日）同步达成；书面用语以「2024 年 4 月内部投诉于程序层面属合理员工关注」（环昌部分）及「2023 年度审计于相关交易之审计证据收集有改善空间」（普华永道部分）；曾国辉同意于 Section 17 公告范围内不再向公众披露；书面用语明确订明于 HKICPA 纪律审查中不可作为对梁启贤本人之客观指控引用；三方相互释放；保密条款附 SFC、HKICPA、HKEX 之必要除外条款",
+                  "方案 B（环昌部分先行，普华永道延后）：环昌集团于 12 月 5 日前支付 HK$4,500,000，并于 12 月 5 日发出 Section 17 公告；普华永道部分延后至 HKICPA 纪律审查首次听证会（2025 年 1 月 24 日）之后再行调解，期间曾国辉不会撤回 HKICPA 投诉；如 HKICPA 结果为「公开谴责」（非「暂停执业」），普华永道支付 HK$1,800,000；如为「暂停执业」，普华永道支付 HK$2,500,000；三方就环昌部分先行相互释放，普华永道部分待后续确定",
+                  "方案 C（结构性整体和解）：环昌集团设立 HK$6,500,000 之独立信托（由 HKIAC 推荐之独立信托人持有），分 3 年由曾国辉按职业恢复进度提取（即 2025 年 HK$2,500,000，2026 年 HK$2,000,000，2027 年 HK$2,000,000）；普华永道支付 HK$1,800,000 一次过；曾国辉同意 5 年内不于本港 CFO 圈内发表针对环昌集团或普华永道之公开言论（除非经 SFC 或 HKICPA 之独立程序要求）；书面用语包含结构性披露于 HKEX 公告及对未来潜在雇主之有限度披露安排；三方相互释放及保密；保密条款附 SFC、HKICPA、HKEX 之必要除外条款及小股东派生诉讼之回应机制",
+                  "方案 D（延后决定加第三方评估）：三方暂不就金额及书面用语作最终结论，先共同委任由 HKIAC 推荐之独立企业治理及审计专业人士之 3 人专家小组（一名前 INED、一名前 Big Four 合伙人、一名前 HKICPA 纪律委员）于 6 周内就（一）2024 年 4 月内部投诉与 5 月解雇之因果关系界定、（二）2023 年度普华永道审计工作之专业判断边界、（三）三方和解之合理金额区间进行第三方评估（评估费 HK$650,000 由三方按 50/30/20 比例分担）；于评估期间 Section 17 公告由环昌独立行使、SFC 及 HKICPA 程序独立进行；最终三方和解依评估意见达成"
+              ],
+              "en": [
+                  "Option A (synchronous three-way settlement): Wan Cheong pays HK$4,200,000 and PwC pays HK$1,500,000 simultaneously on 5 December 2024 (the day of the Section 17 announcement); wording \"the April 2024 internal complaint was a reasonable employee concern at procedural level\" (Wan Cheong side) and \"the FY2023 audit-evidence collection on the relevant transactions had room for improvement\" (PwC side); Mr Tsang agrees not to publicly disclose beyond the Section 17 announcement scope; wording expressly states it cannot be cited as objective allegation against Mr Leung personally in the HKICPA disciplinary review; three-way mutual release; confidentiality with carve-outs for SFC, HKICPA, HKEX",
+                  "Option B (Wan Cheong first, PwC deferred): Wan Cheong pays HK$4,500,000 before 5 December and issues the Section 17 announcement on 5 December; the PwC portion is deferred until after the HKICPA disciplinary first hearing (24 January 2025), during which Mr Tsang will not withdraw the HKICPA complaint; if HKICPA outcome is \"public reprimand\" (not \"suspension\"), PwC pays HK$1,800,000; if \"suspension\", PwC pays HK$2,500,000; three-way release on the Wan Cheong portion only; PwC portion pending",
+                  "Option C (structured overall settlement): Wan Cheong establishes a HK$6,500,000 independent trust (held by a HKIAC-recommended independent trustee), drawn down over 3 years by Mr Tsang against career-recovery milestones (HK$2,500,000 in 2025, HK$2,000,000 in 2026, HK$2,000,000 in 2027); PwC pays HK$1,800,000 lump sum; Mr Tsang agrees not to make public statements in the local CFO circuit against Wan Cheong or PwC for 5 years (except where required by independent SFC or HKICPA process); wording includes structured disclosure in the HKEX announcement and a limited-disclosure arrangement for prospective employers; three-way mutual release and confidentiality with carve-outs for SFC, HKICPA, HKEX, and a minority-shareholder derivative-action response mechanism",
+                  "Option D (deferred decision plus third-party assessment): the three parties defer the final quantum and wording; jointly appoint a HKIAC-recommended 3-person expert panel (a former INED, a former Big Four partner, a former HKICPA disciplinary panel member) within 6 weeks to assess (i) the causal characterisation between the April 2024 internal complaint and the May dismissal, (ii) the professional-judgement boundary of PwC's FY2023 audit work, and (iii) the reasonable range of the three-way settlement (assessment fee HK$650,000 split 50/30/20); during the assessment the Section 17 announcement is exercised by Wan Cheong independently and SFC and HKICPA proceedings continue independently; final three-way settlement per the assessment"
+              ]
+          }
+      }
   }
 ];
 
@@ -7008,7 +7393,7 @@ function downloadConfidentialBrief(partyIndex) {
   const brief = cb['brief_' + lang];
   const sep = sentenceSep(lang);
   const period = sentenceEnd(lang);
-  const claimDef = partyIndex === 0 ? L.claimant : L.defendant;
+  const claimDef = cb['party_label_' + lang] || (partyIndex === 0 ? L.claimant : L.defendant);
 
   const html = '<h1>' + escHtml(title) + '</h1>'
     + '<p class="meta">' + escHtml(altTitle) + '</p>'
@@ -7065,7 +7450,7 @@ function downloadFullCase() {
     const party = currentCase.parties[cb.party_index];
     const partyName = party['name_' + lang];
     const roleText = party['role_' + lang];
-    const claimDef = cb.party_index === 0 ? L.claimant : L.defendant;
+    const claimDef = cb['party_label_' + lang] || (cb.party_index === 0 ? L.claimant : L.defendant);
     const tbWhen = cb.trust_breakdown['when_' + lang];
     const tbWhat = cb.trust_breakdown['what_' + lang];
     const tbWhy = cb.trust_breakdown['why_it_mattered_' + lang];
@@ -7120,7 +7505,7 @@ function render(caseObj) {
     <div class="case-title-wrap">
       <div class="case-meta">
         <span class="pill case-num"><span class="lang-zh">案 ${caseNum}</span><span class="lang-sc">案 ${caseNum}</span><span class="lang-en">Case ${caseNum}</span></span>
-        <span class="pill level-${levelN}">${levelLabel}</span>
+        <span class="pill level-${levelN}">${levelLabel}</span>${caseObj.meta.final_boss ? '<span class="pill final-boss"><span class="lang-zh">終極</span><span class="lang-sc">终极</span><span class="lang-en">FINAL BOSS</span></span>' : ''}
       </div>
       <h1 class="case-title">
         <span class="lang-zh">${caseObj.meta.title_zh}</span>
@@ -7152,7 +7537,7 @@ function render(caseObj) {
     <h2 class="section-title"><span class="lang-zh">機密簡介</span><span class="lang-sc">机密简介</span><span class="lang-en">Confidential briefs</span></h2>
   `;
   const grid = document.createElement("div");
-  grid.className = "confidentials";
+  grid.className = caseObj.confidential_briefs.length >= 3 ? "confidentials three-party" : "confidentials";
   confSection.appendChild(grid);
 
   caseObj.confidential_briefs.forEach(cb => {
@@ -7188,7 +7573,7 @@ function render(caseObj) {
 
     card.innerHTML = `
       <button class="download-btn download-cb" onclick="downloadConfidentialBrief(${cb.party_index})"><span class="lang-zh">下載</span><span class="lang-sc">下载</span><span class="lang-en">Download</span></button>
-      <div class="party-label">PARTY ${cb.party_index === 0 ? "A · CLAIMANT" : "B · DEFENDANT"}</div>
+      <div class="party-label">${cb.party_label_zh ? `<span class="lang-zh">${cb.party_label_zh}</span><span class="lang-sc">${cb.party_label_sc}</span><span class="lang-en">${cb.party_label_en}</span>` : `PARTY ${cb.party_index === 0 ? "A · CLAIMANT" : (cb.party_index === 1 ? "B · DEFENDANT" : String.fromCharCode(65 + cb.party_index))}`}</div>
       <h3><span class="lang-zh">${party.name_zh}</span><span class="lang-sc">${party.name_sc}</span><span class="lang-en">${party.name_en}</span></h3>
       <p class="role"><span class="lang-zh">${party.role_zh}</span><span class="lang-sc">${party.role_sc}</span><span class="lang-en">${party.role_en}</span></p>
 
@@ -7266,7 +7651,8 @@ function populateSelector(lang) {
     o.value = c.id;
     const titleField = lang === "sc" ? c.meta.title_sc : (lang === "en" ? c.meta.title_en : c.meta.title_zh);
     const num = String(idx + 1).padStart(3, '0');
-    o.textContent = `${num}  ${titleField}`;
+    const bossMarker = c.meta.final_boss ? " ★ " : "  ";
+    o.textContent = `${num}${bossMarker}${titleField}`;
     sel.appendChild(o);
   });
   sel.value = currentValue;
