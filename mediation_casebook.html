@@ -83,18 +83,6 @@ body {
   color: var(--accent);
   margin-right: auto;
 }
-.brand .sub {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 2px 8px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-faint);
-  border: 1px solid var(--rule);
-  border-radius: 3px;
-  background: var(--paper);
-  vertical-align: 4px;
-}
 select, .toggle-btn {
   font-family: 'Spectral', 'Noto Serif TC', serif;
   font-size: 14px;
@@ -223,113 +211,6 @@ section.block { margin-bottom: 48px; }
   margin-bottom: 18px;
 }
 
-.schema-box {
-  border-left: 3px solid;
-  padding: 16px 18px;
-  margin: 18px 0;
-  border-radius: 0 4px 4px 0;
-}
-.schema-box .box-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.schema-box .box-label .zh { font-family: 'Noto Serif TC', serif; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; }
-.schema-box .box-content { font-size: 14.5px; line-height: 1.65; }
-.schema-box .box-content .field-name {
-  font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
-  font-style: italic;
-  font-weight: 500;
-  margin-right: 6px;
-}
-.schema-box .box-content p { margin: 6px 0; }
-.schema-box .tag {
-  display: inline-block;
-  padding: 2px 8px;
-  margin: 2px 4px 2px 0;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.02em;
-  border: 1px solid;
-  border-radius: 2px;
-  background: rgba(255,255,255,0.55);
-}
-
-.box-register { background: var(--slate); border-left-color: var(--slate-rule); color: var(--slate-ink); }
-.box-register .tag { color: var(--slate-ink); border-color: var(--slate-rule); }
-
-.box-legitimacy { background: var(--terracotta); border-left-color: var(--terracotta-rule); color: var(--terracotta-ink); }
-.box-legitimacy .tag { color: var(--terracotta-ink); border-color: var(--terracotta-rule); }
-
-.box-trust { background: var(--plum); border-left-color: var(--plum-rule); color: var(--plum-ink); }
-.box-trust .field-row { display: grid; grid-template-columns: 80px 1fr; gap: 8px; margin-bottom: 6px; }
-.box-trust .field-key {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--plum-ink);
-  opacity: 0.7;
-  padding-top: 4px;
-}
-
-.box-coding { background: var(--stone); border-left-color: var(--stone-rule); color: var(--stone-ink); }
-.box-coding .tag { color: var(--stone-ink); border-color: var(--stone-rule); }
-
-.box-attributes { background: var(--sage); border-left-color: var(--sage-rule); color: var(--sage-ink); }
-.box-attributes .attr-row { padding: 8px 0; border-bottom: 1px dashed rgba(58, 74, 46, 0.2); }
-.box-attributes .attr-row:last-child { border-bottom: none; }
-.box-attributes .attr-name {
-  font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-}
-.box-attributes .attr-trigger { font-size: 13.5px; margin-top: 3px; color: var(--sage-ink); opacity: 0.85; }
-
-.box-instruction { background: var(--dijon); border-left-color: var(--dijon-rule); color: var(--dijon-ink); }
-.box-instruction .box-content { font-style: italic; }
-
-.schema-legend {
-  margin: 32px 0;
-  padding: 24px 28px;
-  background: var(--paper-2);
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--accent);
-}
-.schema-legend h4 {
-  font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
-  font-size: 18px;
-  margin: 0 0 12px;
-  color: var(--accent);
-  letter-spacing: 0.01em;
-}
-.schema-legend .legend-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  font-size: 13px;
-}
-.schema-legend .legend-item .swatch { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 8px; border: 1px solid; }
-.schema-legend .legend-item strong { font-family: 'Cormorant Garamond', 'Noto Serif TC', serif; font-weight: 600; }
-
-.placeholder-note {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--accent);
-  padding: 8px 12px;
-  background: rgba(110, 42, 31, 0.05);
-  border-left: 2px solid var(--accent);
-  margin: 12px 0;
-}
-
 body.lang-zh .lang-en, body.lang-zh .lang-sc { display: none; }
 body.lang-sc .lang-en, body.lang-sc .lang-zh { display: none; }
 body.lang-en .lang-zh, body.lang-en .lang-sc { display: none; }
@@ -337,24 +218,7 @@ body.lang-en .lang-zh, body.lang-en .lang-sc { display: none; }
 /* Language-appropriate fonts */
 body.lang-zh, body.lang-zh .lang-zh { font-family: 'Spectral', 'Noto Serif TC', Georgia, serif; }
 body.lang-sc, body.lang-sc .lang-sc { font-family: 'Spectral', 'Noto Serif SC', Georgia, serif; }
-.schema-box .box-label .zh .lang-zh { font-family: 'Noto Serif TC', serif; }
-.schema-box .box-label .zh .lang-sc { font-family: 'Noto Serif SC', serif; }
 .party-card h3 .lang-sc, .case-title .lang-sc { font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; }
-
-.banner {
-  margin: 0 0 36px;
-  padding: 18px 24px;
-  background: var(--paper-2);
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--ink);
-}
-.banner-title {
-  font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
-  font-weight: 600;
-  font-size: 16px;
-  margin: 0 0 6px;
-}
-.banner-text { font-size: 14px; color: var(--ink-soft); margin: 0; }
 
 footer {
   margin-top: 80px;
@@ -492,7 +356,6 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
 
 /* Overview section */
 .overview-block { margin-bottom: 28px; }
-.issue-head { font-family:'Cormorant Garamond','Noto Serif TC',serif; font-size:17px; color:var(--accent); font-weight:600; margin:18px 0 8px; }
 .overview-options-block .term { margin:0 0 7px; padding-left:24px; text-indent:-24px; line-height:1.6; }
 .overview-options-block .term-issue-start { margin-top:14px; }
 .overview-note { font-size: 13px; color: var(--ink-faint); font-style: italic; margin: 0 0 14px; padding-left: 14px; border-left: 2px solid var(--rule-soft); }
@@ -670,6 +533,13 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
     font-size: 12px;
   }
 }
+
+.behaviour-note { margin-top: 20px; padding: 14px 16px; background: var(--sage); border-left: 3px solid var(--sage-rule); }
+.bn-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage-ink); margin-bottom: 8px; }
+.bn-row { margin-bottom: 10px; }
+.bn-row:last-child { margin-bottom: 0; }
+.bn-name { font-weight: 500; font-size: 14px; color: var(--sage-ink); }
+.bn-trigger { font-size: 13.5px; line-height: 1.65; color: var(--ink-soft); margin-top: 2px; }
 </style>
 </head>
 <body class="lang-zh">
@@ -731,7 +601,7 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
           <tr><th>文件狀況</th><td data-lv="L1">雙方均有清晰書面紀錄；無事實空隙</td><td data-lv="L2">有部分書面紀錄，但關鍵事實依賴語音訊息、口頭討論或條款解讀</td><td data-lv="L3">文件繁多；條款解讀有爭議；常需專家報告；部分事實有所爭議</td><td data-lv="L4">海量文件加上專家報告；部分事實受保密令或調查限制，當事人不能完全披露</td></tr>
           <tr><th>場外角色</th><td data-lv="L1">並無活躍場外角色；最多一名旁觀者並非爭議推動者</td><td data-lv="L2">一至兩名活躍場外角色（如介紹人、知悉中之監管機關）</td><td data-lv="L3">三名或以上活躍場外角色（銀團成員、監管機關、家族共同擔保人、審計師），其同意或立場直接影響結果</td><td data-lv="L4">雖然調解桌上仍只有雙方，但多個場外主體（監管機關、受獨立紀律程序之第三方、少數股東等）並行運作，各有獨立程序及異議權，其立場直接限制和解空間</td></tr>
           <tr><th>時間壓力</th><td data-lv="L1">寬鬆；雙方可自行選擇解決時間</td><td data-lv="L2">有明確期限（如通知期、學期），但可延長</td><td data-lv="L3">有外部硬性期限（法定窗口、補救期、財政年度截止）超出雙方控制</td><td data-lv="L4">多重硬性期限相互交錯（披露窗口、聆訊日期、調查時限），且部分由場外主體控制</td></tr>
-          <tr><th>權力不對稱</th><td data-lv="L1">單軸，輕微（如小商戶對消費者）</td><td data-lv="L2">雙軸（如企業對個人＋專業聲譽涉及其中）</td><td data-lv="L3">多軸（機構對個人＋專業紀錄＋家族／社區地位＋跨境管轄）</td><td data-lv="L4">多軸且動態：機構對個人、專業紀錄、跨境、公益對私利；當事人之 BATNA 可能於會議中途改變</td></tr>
+          <tr><th>權力不對稱</th><td data-lv="L1">單軸，輕微（如小商戶對消費者）</td><td data-lv="L2">雙軸（如企業對個人＋專業聲譽涉及其中）</td><td data-lv="L3">多軸（機構對個人＋專業紀錄＋家族／社區地位）</td><td data-lv="L4">多軸且動態：機構對個人、專業紀錄、公益對私利；當事人之 BATNA 可能於會議中途改變</td></tr>
           <tr><th>正當性框架</th><td data-lv="L1">雙方各自有一主導框架（通常為合約或公平）</td><td data-lv="L2">兩種框架相互張力（合約對慣例；履行對衡平）</td><td data-lv="L3">三種或以上框架同時運作，包括行業慣例、監管期望、專業紀錄保護</td><td data-lv="L4">多重框架同時運作並相互衝突，包括公益、監管期望、刑事責任邊界及第三方權益保護</td></tr>
           <tr><th>調解員技能要求</th><td data-lv="L1">主動聆聽、重新框架、基本選項產生</td><td data-lv="L2">私下會議管理、現實檢驗、措辭精細擬定、處理情緒浮面</td><td data-lv="L3">多方協調、專家證據處理、離場管理、複雜和解結構、平行軌道設計</td><td data-lv="L4">共同調解協調、資訊次序管理、會議中途揭示之判斷、管理桌外平行程序對桌上談判之影響、可承受多重監管審視之措辭設計</td></tr>
           <tr><th>離場風險</th><td data-lv="L1">低；雙方均欲達成解決</td><td data-lv="L2">中度；若處理不當，因尊嚴問題可能情緒反轉</td><td data-lv="L3">高；若專業紀錄、家族地位或機構立場被公開定性，任何一方均可能離場</td><td data-lv="L4">極高；任何一方離場均會即時觸發桌外程序（調查、訴訟、紀律審查），令離場之代價遠高於一般個案</td></tr>
@@ -752,7 +622,7 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
           <tr><th>文件状况</th><td data-lv="L1">双方均有清晰书面纪录；无事实空隙</td><td data-lv="L2">有部分书面纪录，但关键事实依赖语音讯息、口头讨论或条款解读</td><td data-lv="L3">文件繁多；条款解读有争议；常需专家报告；部分事实有所争议</td><td data-lv="L4">海量文件加上专家报告；部分事实受保密令或调查限制，当事人不能完全披露</td></tr>
           <tr><th>场外角色</th><td data-lv="L1">并无活跃场外角色；最多一名旁观者并非争议推动者</td><td data-lv="L2">一至两名活跃场外角色（如介绍人、知悉中之监管机关）</td><td data-lv="L3">三名或以上活跃场外角色（银团成员、监管机关、家族共同担保人、审计师），其同意或立场直接影响结果</td><td data-lv="L4">虽然调解桌上仍只有双方，但多个场外主体（监管机关、受独立纪律程序之第三方、少数股东等）并行运作，各有独立程序及异议权，其立场直接限制和解空间</td></tr>
           <tr><th>时间压力</th><td data-lv="L1">宽松；双方可自行选择解决时间</td><td data-lv="L2">有明确期限（如通知期、学期），但可延长</td><td data-lv="L3">有外部硬性期限（法定窗口、补救期、财政年度截止）超出双方控制</td><td data-lv="L4">多重硬性期限相互交错（披露窗口、听证日期、调查时限），且部分由场外主体控制</td></tr>
-          <tr><th>权力不对称</th><td data-lv="L1">单轴，轻微（如小商户对消费者）</td><td data-lv="L2">双轴（如企业对个人＋专业声誉涉及其中）</td><td data-lv="L3">多轴（机构对个人＋专业纪录＋家族／社区地位＋跨境管辖）</td><td data-lv="L4">多轴且动态：机构对个人、专业纪录、跨境、公益对私利；当事人之 BATNA 可能于会议中途改变</td></tr>
+          <tr><th>权力不对称</th><td data-lv="L1">单轴，轻微（如小商户对消费者）</td><td data-lv="L2">双轴（如企业对个人＋专业声誉涉及其中）</td><td data-lv="L3">多轴（机构对个人＋专业纪录＋家族／社区地位）</td><td data-lv="L4">多轴且动态：机构对个人、专业纪录、公益对私利；当事人之 BATNA 可能于会议中途改变</td></tr>
           <tr><th>正当性框架</th><td data-lv="L1">双方各自有一主导框架（通常为合约或公平）</td><td data-lv="L2">两种框架相互张力（合约对惯例；履行对衡平）</td><td data-lv="L3">三种或以上框架同时运作，包括行业惯例、监管期望、专业纪录保护</td><td data-lv="L4">多重框架同时运作并相互冲突，包括公益、监管期望、刑事责任边界及第三方权益保护</td></tr>
           <tr><th>调解员技能要求</th><td data-lv="L1">主动聆听、重新框架、基本选项产生</td><td data-lv="L2">私下会议管理、现实检验、措辞精细拟定、处理情绪浮面</td><td data-lv="L3">多方协调、专家证据处理、离场管理、复杂和解结构、平行轨道设计</td><td data-lv="L4">共同调解协调、资讯次序管理、会议中途揭示之判断、管理桌外平行程序对桌上谈判之影响、可承受多重监管审视之措辞设计</td></tr>
           <tr><th>离场风险</th><td data-lv="L1">低；双方均欲达成解决</td><td data-lv="L2">中度；若处理不当，因尊严问题可能情绪反转</td><td data-lv="L3">高；若专业纪录、家族地位或机构立场被公开定性，任何一方均可能离场</td><td data-lv="L4">极高；任何一方离场均会即时触发桌外程序（调查、诉讼、纪律审查），令离场之代价远高于一般个案</td></tr>
@@ -773,7 +643,7 @@ body.topbar-collapsed .topbar-collapse-btn .collapse-arrow { transform: rotate(1
           <tr><th>Documentary state</th><td data-lv="L1">Clean written record on both sides; no factual gaps</td><td data-lv="L2">Some written record but key facts rest on voice messages, oral discussions, or clause interpretation</td><td data-lv="L3">Heavy documentary record; disputed clauses; expert reports often required; some facts contested</td><td data-lv="L4">Voluminous documents plus expert reports; some facts are constrained by confidentiality orders or investigations and cannot be fully disclosed</td></tr>
           <tr><th>Off-stage actors</th><td data-lv="L1">None active; one bystander at most who does not drive the dispute</td><td data-lv="L2">One to two active off-stage parties (e.g. a referrer, a regulator on notice)</td><td data-lv="L3">Three or more active off-stage parties (syndicate members, regulators, family co-signers, audit firm) whose consent or position shapes the outcome</td><td data-lv="L4">Still only two parties at the table, but several off-stage actors (regulators, a third party under separate disciplinary process, minority shareholders) run in parallel, each with independent process and dissent rights that directly constrain the settlement space</td></tr>
           <tr><th>Time pressure</th><td data-lv="L1">Soft; parties choose when to resolve</td><td data-lv="L2">Defined deadline (e.g. notice period, school term) but extendable</td><td data-lv="L3">Hard external deadline (statutory window, cure period, financial-year close) outside the parties' control</td><td data-lv="L4">Multiple hard deadlines interlocking (disclosure windows, hearing dates, investigation limits), some controlled by off-stage actors</td></tr>
-          <tr><th>Power asymmetry</th><td data-lv="L1">Single axis, mild (e.g. small business vs consumer)</td><td data-lv="L2">Two axes (e.g. corporate vs individual plus professional reputation at stake)</td><td data-lv="L3">Multi-axis (institutional vs individual plus professional record plus family or community standing plus cross-jurisdiction)</td><td data-lv="L4">Multi-axis and dynamic: institutional vs individual, professional record, cross-border, public vs private interest; a party’s BATNA may shift mid-session</td></tr>
+          <tr><th>Power asymmetry</th><td data-lv="L1">Single axis, mild (e.g. small business vs consumer)</td><td data-lv="L2">Two axes (e.g. corporate vs individual plus professional reputation at stake)</td><td data-lv="L3">Multi-axis (institutional vs individual plus professional record plus family or community standing)</td><td data-lv="L4">Multi-axis and dynamic: institutional vs individual, professional record, public vs private interest; a party’s BATNA may shift mid-session</td></tr>
           <tr><th>Legitimacy framings</th><td data-lv="L1">One framing dominates each side (usually contract or fairness)</td><td data-lv="L2">Two framings in tension (contract vs custom; performance vs equity)</td><td data-lv="L3">Three or more framings in play, including industry norms, regulatory expectation, professional-record protection</td><td data-lv="L4">Multiple framings operating and conflicting at once, including public interest, regulatory expectation, criminal-liability boundaries, and third-party protection</td></tr>
           <tr><th>Mediator skill demand</th><td data-lv="L1">Active listening, reframing, basic option-generation</td><td data-lv="L2">Caucus management, reality-testing, drafting nuanced wording, handling emotional surfaces</td><td data-lv="L3">Multi-party coordination, expert-evidence handling, walk-out management, complex settlement structuring, parallel-track design</td><td data-lv="L4">Co-mediation coordination, information-sequencing, judgement on mid-session revelations, managing the bearing of parallel off-stage process on the table negotiation, wording that withstands multiple layers of regulatory scrutiny</td></tr>
           <tr><th>Walk-out risk</th><td data-lv="L1">Low; parties want resolution</td><td data-lv="L2">Medium; emotional reversals possible if dignity issues mishandled</td><td data-lv="L3">High; either side may walk if professional record, family standing, or institutional position is publicly framed</td><td data-lv="L4">Very high; a walk-out by either party immediately triggers off-stage process (investigation, litigation, disciplinary review), making the cost of leaving far higher than in an ordinary case</td></tr>
@@ -1641,8 +1511,8 @@ const CASES = [
      "when_zh": "2024 年 9 月初由第三方音響顧問現場評估後得知聲學死區屬於低頻陷阱位置不對稱所致",
      "when_sc": "2024 年 9 月初由第三方音响顾问现场评估后得知声学死区属于低频陷阱位置不对称所致",
      "when_en": "Early September 2024 after the third-party audio consultant's on-site assessment confirmed the acoustic dead zone was caused by asymmetric bass-trap positioning",
-     "what_zh": "區先生在 8 月結算後幾日察覺第二排座位聲音明顯較弱，最初以為是自己耳朵的問題；找第三方顧問現場用 REW 軟件配 UMIK-1 咪頭測量後，確認 80Hz 至 200Hz 範圍有 8dB 凹陷，原因為客廳右側低頻陷阱位置距離反射牆 78cm，左側則為 142cm。第三方顧問亦同時識別其餘 5 項屬於安裝問題（非設備本身缺陷）",
-     "what_sc": "区先生在 8 月结算后几日察觉第二排座位声音明显较弱，最初以为是自己耳朵的问题；找第三方顾问现场用 REW 软件配 UMIK-1 咪头测量后，确认 80Hz 至 200Hz 范围有 8dB 凹陷，原因为客厅右侧低频陷阱位置距离反射墙 78cm，左侧则为 142cm。第三方顾问亦同时识别其余 5 项属于安装问题（非设备本身缺陷）",
+     "what_zh": "區先生在 8 月結算後幾日察覺第二排座位聲音明顯較弱，最初以為是自己耳朵的問題；找第三方顧問現場用 REW 軟件配 UMIK-1 麥克風測量後，確認 80Hz 至 200Hz 範圍有 8dB 凹陷，原因為客廳右側低頻陷阱位置距離反射牆 78cm，左側則為 142cm。第三方顧問亦同時識別其餘 5 項屬於安裝問題（非設備本身缺陷）",
+     "what_sc": "区先生在 8 月结算后几日察觉第二排座位声音明显较弱，最初以为是自己耳朵的问题；找第三方顾问现场用 REW 软件配 UMIK-1 麦克风测量后，确认 80Hz 至 200Hz 范围有 8dB 凹陷，原因为客厅右侧低频陷阱位置距离反射墙 78cm，左侧则为 142cm。第三方顾问亦同时识别其余 5 项属于安装问题（非设备本身缺陷）",
      "what_en": "A few days after the August settlement, Mr Au noticed the second-row seating sounded noticeably weaker; initially suspected his own ears. The third-party consultant came on site, used REW with a UMIK-1 microphone, and confirmed an 8 dB dip in the 80 Hz to 200 Hz range; cause: the right-hand bass trap was 78 cm from the reflective wall while the left-hand bass trap was 142 cm. The consultant also identified the other 5 items as installation issues, not device defects",
      "why_it_mattered_zh": "對區先生而言，這已經不是 HK$60,000 的問題。他覺得自己在 6 月驗收日及 8 月結算時，是因為「對自己之聽感不自信」而簽下了一個其實未完成之系統。發現低頻陷阱位置這種「肉眼可量度」之安裝缺陷後，他覺得自己被技術性語言壓制了之前更深之問題；他並非「移動龍門」，而是「終於有人幫我量度清楚」",
      "why_it_mattered_sc": "对区先生而言，这已经不是 HK$60,000 的问题。他觉得自己在 6 月验收日及 8 月结算时，是因为「对自己之听感不自信」而签下了一个其实未完成之系统。发现低频陷阱位置这种「肉眼可量度」之安装缺陷后，他觉得自己被技术性语言压制了之前更深之问题；他并非「移动龙门」，而是「终于有人帮我量度清楚」",
@@ -2135,8 +2005,8 @@ const CASES = [
      "what_zh": "客戶市場部代表 Carol 致電投訴 3 月 15 日主題演講時段之同步問題已被亞太區副總裁注意到並寫入內部活動評估報告，要求睿盛提交事件記錄及供應商表現報告，並暗示此事會被列入未來合作之考慮因素",
      "what_sc": "客户市场部代表 Carol 致电投诉 3 月 15 日主题演讲时段之同步问题已被亚太区副总裁注意到并写入内部活动评估报告，要求睿盛提交事件记录及供应商表现报告，并暗示此事会被列入未来合作之考虑因素",
      "what_en": "The client's marketing representative Carol called to complain that the synchronisation issue during the keynote on 15 March had been noticed by the Asia-Pacific Vice President and recorded in the internal post-event evaluation report; she requested an incident record and vendor performance report from Rui Sheng, and indicated that the matter would factor into future cooperation",
-     "why_it_mattered_zh": "對余先生而言，這已經不是工程尾數的問題，是專業聲譽的問題。睿盛內部已向客戶承諾會「妥善處理供應商表現問題」；如果調解結束時周先生未承擔任何責任，余先生回去無法向客戶交代，亦無法向自己公司內部交代，他作為業務總監，是要對該客戶之全年品牌活動關是負責的人",
-     "why_it_mattered_sc": "对余先生而言，这已经不是工程尾数的问题，是专业声誉的问题。睿盛内部已向客户承诺会「妥善处理供应商表现问题」；如果调解结束时周先生未承担任何责任，余先生回去无法向客户交代，亦无法向自己公司内部交代，他作为业务总监，是要对该客户之全年品牌活动关是负责的人",
+     "why_it_mattered_zh": "對余先生而言，這已經不是工程尾數的問題，是專業聲譽的問題。睿盛內部已向客戶承諾會「妥善處理供應商表現問題」；如果調解結束時周先生未承擔任何責任，余先生回去無法向客戶交代，亦無法向自己公司內部交代，他作為業務總監，是要對該客戶之全年品牌活動關係負責的人",
+     "why_it_mattered_sc": "对余先生而言，这已经不是工程尾数的问题，是专业声誉的问题。睿盛内部已向客户承诺会「妥善处理供应商表现问题」；如果调解结束时周先生未承担任何责任，余先生回去无法向客户交代，亦无法向自己公司内部交代，他作为业务总监，是要对该客户之全年品牌活动关系负责的人",
      "why_it_mattered_en": "For Mr Yu this is no longer a balance dispute; it is a question of professional reputation. Rui Sheng has already committed to the client that vendor performance issues would be \"properly handled\". If the mediation ends without Chow bearing any responsibility, Yu cannot face the client, nor can he face his own company internally - as Business Development Director he is the one accountable for the full-year brand-event relationship with this client"
     },
     "coding": {
@@ -2156,8 +2026,8 @@ const CASES = [
       "attr_zh": "情緒浮面",
       "attr_sc": "情绪浮面",
       "attr_en": "Emotional surface",
-      "trigger_zh": "在私下會議提及客戶年度品牌活動招標壓力、以及自己公司內部對該客戶全年關是之問責安排時，可短暫情緒浮面；只在私下會議出現，聯合會議絕不展露",
-      "trigger_sc": "在私下会议提及客户年度品牌活动招标压力、以及自己公司内部对该客户全年关是之问责安排时，可短暂情绪浮面；只在私下会议出现，联合会议绝不展露",
+      "trigger_zh": "在私下會議提及客戶年度品牌活動招標壓力、以及自己公司內部對該客戶全年關係之問責安排時，可短暫情緒浮面；只在私下會議出現，聯合會議絕不展露",
+      "trigger_sc": "在私下会议提及客户年度品牌活动招标压力、以及自己公司内部对该客户全年关系之问责安排时，可短暂情绪浮面；只在私下会议出现，联合会议绝不展露",
       "trigger_en": "When mentioning the pressure of the client's annual brand-event tender, and his own company's internal accountability for the full-year client relationship, brief emotional surface; only in caucus, never in joint"
      },
      {
@@ -2571,8 +2441,8 @@ const CASES = [
      "what_zh": "李先生太太當晚發現睡房牆角又有新水印；同期李先生女兒當著到訪同學家長之面說「我家天花板經常漏水」。當週末李先生開始正式收集裝修報價及拍照存證，並向太太提出「給她三次機會已經足夠」之看法",
      "what_sc": "李先生太太当晚发现睡房墙角又有新水印；同期李先生女儿当著到访同学家长之面说「我家天花板经常漏水」。当周末李先生开始正式收集装修报价及拍照存证，并向太太提出「给她三次机会已经足够」之看法",
      "what_en": "Mr Lee's wife that evening discovered a new water mark in the corner of their bedroom; in the same period their daughter, in front of a visiting classmate's parent, said \"our ceiling keeps leaking\". The following weekend Mr Lee began formally collecting contractor quotations and photographic evidence, and remarked to his wife that three chances had been enough",
-     "why_it_mattered_zh": "對李先生而言，不是 HK$28,500 之數目本身，而是「鄰居關是」與「實際後果」之斷裂。他用九年時間將 26C 經營成女兒成長之安心環境，現在女兒對家裏感到尷尬；他亦覺得自己在每次水漬出現後均給予黃太合理時間及不施加壓力，但結果並未根本解決。從這一刻起，他改變定位：不再是「協商解決之鄰居」，而是「應該被合理補償之受害人」",
-     "why_it_mattered_sc": "对李先生而言，不是 HK$28,500 之数目本身，而是「邻居关是」与「实际后果」之断裂。他用九年时间将 26C 经营成女儿成长之安心环境，现在女儿对家里感到尴尬；他亦觉得自己在每次水渍出现后均给予黄太合理时间及不施加压力，但结果并未根本解决。从这一刻起，他改变定位：不再是「协商解决之邻居」，而是「应该被合理补偿之受害人」",
+     "why_it_mattered_zh": "對李先生而言，不是 HK$28,500 之數目本身，而是「鄰居關係」與「實際後果」之斷裂。他用九年時間將 26C 經營成女兒成長之安心環境，現在女兒對家裏感到尷尬；他亦覺得自己在每次水漬出現後均給予黃太合理時間及不施加壓力，但結果並未根本解決。從這一刻起，他改變定位：不再是「協商解決之鄰居」，而是「應該被合理補償之受害人」",
+     "why_it_mattered_sc": "对李先生而言，不是 HK$28,500 之数目本身，而是「邻居关系」与「实际后果」之断裂。他用九年时间将 26C 经营成女儿成长之安心环境，现在女儿对家里感到尴尬；他亦觉得自己在每次水渍出现后均给予黄太合理时间及不施加压力，但结果并未根本解决。从这一刻起，他改变定位：不再是「协商解决之邻居」，而是「应该被合理补偿之受害人」",
      "why_it_mattered_en": "For Mr Lee the question is not really HK$28,500 in absolute terms but the rupture between \"neighbour relationship\" and \"practical consequences\". He has spent nine years making 26C a settled environment for his daughter; now she is embarrassed about home. He also feels he gave Mrs Wong reasonable time without pressure after each appearance of the stain, but the underlying issue remained. From that point he repositioned himself: no longer \"a neighbour negotiating\" but \"a victim entitled to fair compensation\""
     },
     "coding": {
@@ -2823,8 +2693,8 @@ const CASES = [
      "axes_zh": "性別 + 專業背景 + 行業位置",
      "axes_sc": "性别 + 专业背景 + 行业位置",
      "axes_en": "Gender + professional background + industry position",
-     "direction_zh": "趙太作為退休會計師，數字及合約解讀能力強，但作為業主立案法團主席屬於非行業人員；鄧先生為男性物業管理業內人，行業關是廣，但對審計級別之財務分析略顯吃力",
-     "direction_sc": "赵太作为退休会计师，数字及合约解读能力强，但作为业主立案法团主席属于非行业人员；邓先生为男性物业管理业内人，行业关是广，但对审计级别之财务分析略显吃力",
+     "direction_zh": "趙太作為退休會計師，數字及合約解讀能力強，但作為業主立案法團主席屬於非行業人員；鄧先生為男性物業管理業內人，行業關係廣，但對審計級別之財務分析略顯吃力",
+     "direction_sc": "赵太作为退休会计师，数字及合约解读能力强，但作为业主立案法团主席属于非行业人员；邓先生为男性物业管理业内人，行业关系广，但对审计级别之财务分析略显吃力",
      "direction_en": "Mrs Chiu as a retired accountant has strong command of numbers and contract interpretation but is not an industry insider as OC chairperson; Mr Tang is a male industry veteran with wide trade relationships but shows mild discomfort with audit-grade financial analysis",
      "how_it_leaks_zh": "趙太使用精確之財務及合約用語（「依據合約第 17 條」、「按權責發生制」、「分項列支」、「重大違反條款」）；面對鄧先生引用之「行業慣例」、「合理彈性」等含糊表述時，會反問「請提供具體條文出處」；偶爾不自覺地以「我們做核數的時候」、「在四大會計師事務所之做法」帶出階級色彩",
      "how_it_leaks_sc": "赵太使用精确之财务及合约用语（「依据合约第 17 条」、「按权责发生制」、「分项列支」、「重大违反条款」）；面对邓先生引用之「行业惯例」、「合理弹性」等含糊表述时，会反问「请提供具体条文出处」；偶尔不自觉地以「我们做核数的时候」、「在四大会计师事务所之做法」带出阶级色彩",
@@ -2856,8 +2726,8 @@ const CASES = [
       "trigger_en": "In joint she repeatedly states \"I will need to report at the next MC meeting\" and \"any agreement must be approved collectively by the MC\"; uses this as a reason not to accept any proposal exceeding her OC mandate in joint, while discussing mandate strategy openly in caucus"
      }
     ],
-    "role_player_instruction_zh": "趙太退休四年，作為業主立案法團主席她之自我定位是「200 名業主之代理人」，不是自己之代表。她不享受對抗，但對 8 年信任被破壞感到深層之背叛。在聯合會議她應該保持冷靜、條文性語氣，幾乎完全不訴諸情感；面對鄧先生提出之「我們合作 8 年」之互惠論述，她會回應「我作為主席之責任不是維護個人關是，而是維護全體業主之利益」。私下會議才透露她過去四年為銳明辯護之尷尬。對「行業慣例」、「合理彈性」等用語極之警覺，會即時要求具體出處。如調解員能引出鄧先生承認 2023 年外牆工程之施工範圍縮減未經 OC 正式授權，她可以接受 OC 退讓部分提早終止賠償（最多 HK$140,000）以換取銳明退還 HK$200,000 至 HK$240,000 之超付。",
-    "role_player_instruction_sc": "赵太退休四年，作为业主立案法团主席她之自我定位是「200 名业主之代理人」，不是自己之代表。她不享受对抗，但对 8 年信任被破坏感到深层之背叛。在联合会议她应该保持冷静、条文性语气，几乎完全不诉诸情感；面对邓先生提出之「我们合作 8 年」之互惠论述，她会回应「我作为主席之责任不是维护个人关是，而是维护全体业主之利益」。私下会议才透露她过去四年为锐明辩护之尴尬。对「行业惯例」、「合理弹性」等用语极之警觉，会即时要求具体出处。如调解员能引出邓先生承认 2023 年外墙工程之施工范围缩减未经 OC 正式授权，她可以接受 OC 退让部分提早终止赔偿（最多 HK$140,000）以换取锐明退还 HK$200,000 至 HK$240,000 之超付。",
+    "role_player_instruction_zh": "趙太退休四年，作為業主立案法團主席她之自我定位是「200 名業主之代理人」，不是自己之代表。她不享受對抗，但對 8 年信任被破壞感到深層之背叛。在聯合會議她應該保持冷靜、條文性語氣，幾乎完全不訴諸情感；面對鄧先生提出之「我們合作 8 年」之互惠論述，她會回應「我作為主席之責任不是維護個人關係，而是維護全體業主之利益」。私下會議才透露她過去四年為銳明辯護之尷尬。對「行業慣例」、「合理彈性」等用語極之警覺，會即時要求具體出處。如調解員能引出鄧先生承認 2023 年外牆工程之施工範圍縮減未經 OC 正式授權，她可以接受 OC 退讓部分提早終止賠償（最多 HK$140,000）以換取銳明退還 HK$200,000 至 HK$240,000 之超付。",
+    "role_player_instruction_sc": "赵太退休四年，作为业主立案法团主席她之自我定位是「200 名业主之代理人」，不是自己之代表。她不享受对抗，但对 8 年信任被破坏感到深层之背叛。在联合会议她应该保持冷静、条文性语气，几乎完全不诉诸情感；面对邓先生提出之「我们合作 8 年」之互惠论述，她会回应「我作为主席之责任不是维护个人关系，而是维护全体业主之利益」。私下会议才透露她过去四年为锐明辩护之尴尬。对「行业惯例」、「合理弹性」等用语极之警觉，会即时要求具体出处。如调解员能引出邓先生承认 2023 年外墙工程之施工范围缩减未经 OC 正式授权，她可以接受 OC 退让部分提早终止赔偿（最多 HK$140,000）以换取锐明退还 HK$200,000 至 HK$240,000 之超付。",
     "role_player_instruction_en": "Mrs Chiu has been retired four years; as OC chairperson she positions herself as \"agent for the 200 owners\", not for herself. She does not enjoy confrontation but feels deeply betrayed by the rupture of an eight-year trust relationship. In joint she is calm and clause-driven, almost never appealing to emotion; when Mr Tang frames \"we have worked together for eight years\" as reciprocity she replies \"as chairperson my responsibility is not personal relationships but the collective interest of the owners\". Her embarrassment at having defended Sharp Bright across four years surfaces only in caucus. She reacts immediately to phrases like \"industry convention\" or \"reasonable flexibility\" by pressing for specific source. If the mediator can get Mr Tang to acknowledge that the 2023 external wall scope reduction was not formally authorised by the OC, she can accept the OC giving way on part of the early-termination claim (up to HK$140,000) in exchange for Sharp Bright refunding HK$200,000 to HK$240,000 of the overpayment.",
     "brief_zh": "趙太底線：銳明退還 HK$200,000 至 HK$240,000（2023 年外牆工程超付部分），OC 退讓提早終止賠償 HK$100,000 至 HK$140,000（即 1 個月管理費之水平），合共淨額 OC 收回 HK$60,000 至 HK$140,000。前提是銳明書面承認 2023 年外牆工程之施工範圍縮減未經 OC 正式授權；雙方互不追究；保密條款範圍涵蓋銳明在港島地區之其他物業客戶。如可達成此框架，最佳結果可接受。如鄧先生堅持以「行業彈性」全面否定 HK$280,000 超付為違反，她寧願走完土地審裁處程序並提請會計師及測量師作專家證人。底線之下：OC 淨額收回少於 HK$30,000 她寧願裁決。",
     "brief_sc": "赵太底线：锐明退还 HK$200,000 至 HK$240,000（2023 年外墙工程超付部分），OC 退让提早终止赔偿 HK$100,000 至 HK$140,000（即 1 个月管理费之水平），合共净额 OC 收回 HK$60,000 至 HK$140,000。前提是锐明书面承认 2023 年外墙工程之施工范围缩减未经 OC 正式授权；双方互不追究；保密条款范围涵盖锐明在港岛地区之其他物业客户。如可达成此框架，最佳结果可接受。如邓先生坚持以「行业弹性」全面否定 HK$280,000 超付为违反，她宁愿走完土地审裁处程序并提请会计师及测量师作专家证人。底线之下：OC 净额收回少于 HK$30,000 她宁愿裁决。",
@@ -3281,8 +3151,8 @@ const CASES = [
    }
   ],
   "joint_brief": {
-   "zh": "本案涉及香港私人住宅租賃合約屆滿後之按金結算爭議。何先生（62 歲，前銀行職員，於 1999 年購入鰂魚涌一座 25 年樓齡之 480 平方呎住宅單位，自 2018 年退休後將該單位出租作為退休收入主要來源）於 2023 年 1 月與葉小姐（35 歲，投資銀行分析師）及其同居伴侶大衛（37 歲，科技公司中層）簽訂為期 2 年之住宅租約，月租 HK$24,000，按金為兩個月租金 HK$48,000，租賃期 2023 年 2 月 1 日至 2025 年 1 月 31 日。租賃期內雙方關是大致融洽：2024 年 5 月大衛短暫失業約 3 個月，何先生口頭同意當月租金延後 1 個月繳交而未收取滯納金；同年 9 月單位曾出現一次小型蟲患，何先生承擔了 HK$1,800 滅蟲費用。租期屆滿日 2025 年 1 月 31 日當日下午雙方共同進行單位交接，並簽署交接紀錄，何先生表示「按金會於下星期內退還」。2025 年 2 月 5 日（即原承諾 3 個工作日之 2 日後）何先生透過 WhatsApp 向葉小姐發出按金結算清單，扣除以下六項共 HK$28,000：（一）油漆翻新費 HK$8,000，（二）廚房水龍頭修復 HK$1,500，（三）客廳柚木地板劃花修復 HK$12,000，（四）專業清潔費 HK$2,800，（五）冷氣機遙控器遺失 HK$1,200，（六）油煙機重度污漬清潔 HK$2,500，僅退還 HK$20,000。葉小姐回覆指出多項屬於合理損耗範圍，特別是 25 年樓齡單位之地板已有原有劃痕；冷氣機遙控器入伙時並未交付予租客；油煙機之污漬入伙照片中已存在。她並反問何先生為何未於入伙時提供完整單位現況清單。2025 年 3 月初雙方仍未能達成共識，葉小姐入稟小額錢債審裁處要求退還 HK$28,000；何先生於答辯中堅持扣減合理。雙方獲審裁處轉介社區法律服務中心調解。",
-   "sc": "本案涉及香港私人住宅租赁合约届满后之按金结算争议。何先生（62 岁，前银行职员，于 1999 年购入鲗鱼涌一座 25 年楼龄之 480 平方呎住宅单位，自 2018 年退休后将该单位出租作为退休收入主要来源）于 2023 年 1 月与叶小姐（35 岁，投资银行分析师）及其同居伴侣大卫（37 岁，科技公司中层）签订为期 2 年之住宅租约，月租 HK$24,000，按金为两个月租金 HK$48,000，租赁期 2023 年 2 月 1 日至 2025 年 1 月 31 日。租赁期内双方关是大致融洽：2024 年 5 月大卫短暂失业约 3 个月，何先生口头同意当月租金延后 1 个月缴交而未收取滞纳金；同年 9 月单位曾出现一次小型虫患，何先生承担了 HK$1,800 灭虫费用。租期届满日 2025 年 1 月 31 日当日下午双方共同进行单位交接，并签署交接纪录，何先生表示「按金会于下星期内退还」。2025 年 2 月 5 日（即原承诺 3 个工作日之 2 日后）何先生透过 WhatsApp 向叶小姐发出按金结算清单，扣除以下六项共 HK$28,000：（一）油漆翻新费 HK$8,000，（二）厨房水龙头修复 HK$1,500，（三）客厅柚木地板划花修复 HK$12,000，（四）专业清洁费 HK$2,800，（五）冷气机遥控器遗失 HK$1,200，（六）油烟机重度污渍清洁 HK$2,500，仅退还 HK$20,000。叶小姐回复指出多项属于合理损耗范围，特别是 25 年楼龄单位之地板已有原有划痕；冷气机遥控器入伙时并未交付予租客；油烟机之污渍入伙照片中已存在。她并反问何先生为何未于入伙时提供完整单位现况清单。2025 年 3 月初双方仍未能达成共识，叶小姐入禀小额钱债审裁处要求退还 HK$28,000；何先生于答辩中坚持扣减合理。双方获审裁处转介社区法律服务中心调解。",
+   "zh": "本案涉及香港私人住宅租賃合約屆滿後之按金結算爭議。何先生（62 歲，前銀行職員，於 1999 年購入鰂魚涌一座 25 年樓齡之 480 平方呎住宅單位，自 2018 年退休後將該單位出租作為退休收入主要來源）於 2023 年 1 月與葉小姐（35 歲，投資銀行分析師）及其同居伴侶大衛（37 歲，科技公司中層）簽訂為期 2 年之住宅租約，月租 HK$24,000，按金為兩個月租金 HK$48,000，租賃期 2023 年 2 月 1 日至 2025 年 1 月 31 日。租賃期內雙方關係大致融洽：2024 年 5 月大衛短暫失業約 3 個月，何先生口頭同意當月租金延後 1 個月繳交而未收取滯納金；同年 9 月單位曾出現一次小型蟲患，何先生承擔了 HK$1,800 滅蟲費用。租期屆滿日 2025 年 1 月 31 日當日下午雙方共同進行單位交接，並簽署交接紀錄，何先生表示「按金會於下星期內退還」。2025 年 2 月 5 日（即原承諾 3 個工作日之 2 日後）何先生透過 WhatsApp 向葉小姐發出按金結算清單，扣除以下六項共 HK$28,000：（一）油漆翻新費 HK$8,000，（二）廚房水龍頭修復 HK$1,500，（三）客廳柚木地板劃花修復 HK$12,000，（四）專業清潔費 HK$2,800，（五）冷氣機遙控器遺失 HK$1,200，（六）油煙機重度污漬清潔 HK$2,500，僅退還 HK$20,000。葉小姐回覆指出多項屬於合理損耗範圍，特別是 25 年樓齡單位之地板已有原有劃痕；冷氣機遙控器入伙時並未交付予租客；油煙機之污漬入伙照片中已存在。她並反問何先生為何未於入伙時提供完整單位現況清單。2025 年 3 月初雙方仍未能達成共識，葉小姐入稟小額錢債審裁處要求退還 HK$28,000；何先生於答辯中堅持扣減合理。雙方獲審裁處轉介社區法律服務中心調解。",
+   "sc": "本案涉及香港私人住宅租赁合约届满后之按金结算争议。何先生（62 岁，前银行职员，于 1999 年购入鲗鱼涌一座 25 年楼龄之 480 平方呎住宅单位，自 2018 年退休后将该单位出租作为退休收入主要来源）于 2023 年 1 月与叶小姐（35 岁，投资银行分析师）及其同居伴侣大卫（37 岁，科技公司中层）签订为期 2 年之住宅租约，月租 HK$24,000，按金为两个月租金 HK$48,000，租赁期 2023 年 2 月 1 日至 2025 年 1 月 31 日。租赁期内双方关系大致融洽：2024 年 5 月大卫短暂失业约 3 个月，何先生口头同意当月租金延后 1 个月缴交而未收取滞纳金；同年 9 月单位曾出现一次小型虫患，何先生承担了 HK$1,800 灭虫费用。租期届满日 2025 年 1 月 31 日当日下午双方共同进行单位交接，并签署交接纪录，何先生表示「按金会于下星期内退还」。2025 年 2 月 5 日（即原承诺 3 个工作日之 2 日后）何先生透过 WhatsApp 向叶小姐发出按金结算清单，扣除以下六项共 HK$28,000：（一）油漆翻新费 HK$8,000，（二）厨房水龙头修复 HK$1,500，（三）客厅柚木地板划花修复 HK$12,000，（四）专业清洁费 HK$2,800，（五）冷气机遥控器遗失 HK$1,200，（六）油烟机重度污渍清洁 HK$2,500，仅退还 HK$20,000。叶小姐回复指出多项属于合理损耗范围，特别是 25 年楼龄单位之地板已有原有划痕；冷气机遥控器入伙时并未交付予租客；油烟机之污渍入伙照片中已存在。她并反问何先生为何未于入伙时提供完整单位现况清单。2025 年 3 月初双方仍未能达成共识，叶小姐入禀小额钱债审裁处要求退还 HK$28,000；何先生于答辩中坚持扣减合理。双方获审裁处转介社区法律服务中心调解。",
    "en": "This dispute concerns the settlement of the deposit at the end of a Hong Kong private residential tenancy. Mr Ho (62, retired bank clerk, owner of a 25-year-old, 480 sq ft residential flat in Quarry Bay purchased in 1999, retired since 2018 and renting the flat as his main source of retirement income) entered into a two-year residential lease in January 2023 with Ms Yip (35, investment bank analyst) and her co-habiting partner David (37, mid-level tech-company manager). Monthly rent was HK$24,000; the deposit was two months' rent (HK$48,000); the lease term ran from 1 February 2023 to 31 January 2025. The relationship over the term was largely amicable. In May 2024 David was briefly unemployed for around three months; Mr Ho verbally agreed to defer that month's rent by one month and waived late-payment charges. In September 2024 a small pest problem arose and Mr Ho absorbed the HK$1,800 extermination cost. On the lease expiry date of 31 January 2025 the parties conducted a joint handover, signed a handover record, and Mr Ho stated \"the deposit will be returned next week\". On 5 February 2025 (two days beyond the originally-stated three-working-day window) Mr Ho sent Ms Yip a WhatsApp deposit-settlement list deducting six items totalling HK$28,000: (i) paint refresh HK$8,000, (ii) kitchen tap repair HK$1,500, (iii) living-room teak floor scratch rectification HK$12,000, (iv) professional cleaning HK$2,800, (v) lost air-conditioner remote control HK$1,200, (vi) heavy-grease range hood cleaning HK$2,500; returning only HK$20,000. Ms Yip replied that several items fell within fair wear and tear, that the floor of a 25-year-old flat already showed historical scratches, that the air-conditioner remote was never delivered to them at move-in, and that the range hood discoloration was visible in their move-in photos. She also asked why Mr Ho had not provided a full move-in condition list at the start of the tenancy. In early March 2025 the parties remained at impasse; Ms Yip filed at the Small Claims Tribunal for the return of HK$28,000, and Mr Ho's defence maintained that the deductions were reasonable. The parties were referred by the Tribunal to community legal services mediation."
   },
   "confidential_briefs": [
@@ -3312,8 +3182,8 @@ const CASES = [
      "direction_zh": "葉小姐及大衛年輕、教育程度高、收入豐厚（合計約每年 HK$280 萬），但屬於「無自置物業之高收入專業人士」之新一代；何先生年長、收入較低，但作為物業業主在文化上享有「業主主導」之傳統位置",
      "direction_sc": "叶小姐及大卫年轻、教育程度高、收入丰厚（合计约每年 HK$280 万），但属于「无自置物业之高收入专业人士」之新一代；何先生年长、收入较低，但作为物业业主在文化上享有「业主主导」之传统位置",
      "direction_en": "Ms Yip and David are young, highly educated, and well-paid (combined household income around HK$2.8 million per year), but belong to the new generation of \"high-income professionals without owned property\"; Mr Ho is older with lower income, but as a property owner enjoys the cultural standing of \"landlord-led\" convention",
-     "how_it_leaks_zh": "葉小姐使用財務分析及合約用語（「合理損耗範圍」、「現況核對清單」、「按比例分攤」、「折舊計算」）；對「老一輩做事的方式」、「街坊關是」等情感性論述會略停半秒並回到條文；偶爾不自覺地以「我們金融界」、「我們專業人士」帶出階級界線；對何先生提及「我這把年紀」會感到不舒服但會以禮貌回應",
-     "how_it_leaks_sc": "叶小姐使用财务分析及合约用语（「合理损耗范围」、「现况核对清单」、「按比例分摊」、「折旧计算」）；对「老一辈做事的方式」、「街坊关是」等情感性论述会略停半秒并回到条文；偶尔不自觉地以「我们金融界」、「我们专业人士」带出阶级界线；对何先生提及「我这把年纪」会感到不舒服但会以礼貌回应",
+     "how_it_leaks_zh": "葉小姐使用財務分析及合約用語（「合理損耗範圍」、「現況核對清單」、「按比例分攤」、「折舊計算」）；對「老一輩做事的方式」、「街坊關係」等情感性論述會略停半秒並回到條文；偶爾不自覺地以「我們金融界」、「我們專業人士」帶出階級界線；對何先生提及「我這把年紀」會感到不舒服但會以禮貌回應",
+     "how_it_leaks_sc": "叶小姐使用财务分析及合约用语（「合理损耗范围」、「现况核对清单」、「按比例分摊」、「折旧计算」）；对「老一辈做事的方式」、「街坊关系」等情感性论述会略停半秒并回到条文；偶尔不自觉地以「我们金融界」、「我们专业人士」带出阶级界线；对何先生提及「我这把年纪」会感到不舒服但会以礼貌回应",
      "how_it_leaks_en": "Ms Yip uses financial-analyst and contractual register (\"fair wear and tear range\", \"condition checklist\", \"pro rata\", \"depreciation calculation\"); pauses half a beat at emotional appeals like \"the way the older generation handles things\" or \"neighbourly relations\" before returning to text; occasionally slips class-coded phrases like \"we in finance\" or \"we professionals\"; shows mild discomfort when Mr Ho says \"at my age\" but responds politely"
     },
     "behavioural_attributes": [
@@ -3405,8 +3275,8 @@ const CASES = [
       "trigger_en": "States clearly \"my wife is the joint owner of the flat; the final amount needs her agreement\"; uses this as a reason not to accept any proposal exceeding the range pre-discussed with her in joint. In caucus reveals that his wife's floor is around HK$30,000 to HK$35,000 returned"
      }
     ],
-    "role_player_instruction_zh": "何先生 62 歲，1999 年香港回歸前 1 年購入單位，自此已 26 年。他不是壞業主，過去兩年與葉小姐及大衛關是其實融洽，他亦欣賞他們之專業及準時。他真誠地認為自己之 HK$28,000 扣減合理，且已給予體諒（保留 HK$20,000 不扣完）。但「年輕白領覺得業主好欺負」之太太評語觸動了他，他不能接受被視為「不公平的業主」。在聯合會議他應該保持禮貌、條文性語氣，努力不顯得「擺老」；面對葉小姐之照片證據會表示「我會看看」而非當場承認。私下會議才透露 1 月 31 日交接當日感受之失望、太太之話、26 年持有物業之情感連結。對「年輕租客不懂事」之暗示他不會主動使用，但對「業主主導」之傳統認同會自然流露。如調解員能引導葉小姐承認 17 張入伙照片之解讀有商榷空間，並承認油漆翻新（部分）及廚房水龍頭屬於合理扣減，何先生可以接受退還 HK$26,000 至 HK$30,000。",
-    "role_player_instruction_sc": "何先生 62 岁，1999 年香港回归前 1 年购入单位，自此已 26 年。他不是坏业主，过去两年与叶小姐及大卫关是其实融洽，他亦欣赏他们之专业及准时。他真诚地认为自己之 HK$28,000 扣减合理，且已给予体谅（保留 HK$20,000 不扣完）。但「年轻白领觉得业主好欺负」之太太评语触动了他，他不能接受被视为「不公平的业主」。在联合会议他应该保持礼貌、条文性语气，努力不显得「摆老」；面对叶小姐之照片证据会表示「我会看看」而非当场承认。私下会议才透露 1 月 31 日交接当日感受之失望、太太之话、26 年持有物业之情感连结。对「年轻租客不懂事」之暗示他不会主动使用，但对「业主主导」之传统认同会自然流露。如调解员能引导叶小姐承认 17 张入伙照片之解读有商榷空间，并承认油漆翻新（部分）及厨房水龙头属于合理扣减，何先生可以接受退还 HK$26,000 至 HK$30,000。",
+    "role_player_instruction_zh": "何先生 62 歲，1999 年香港回歸前 1 年購入單位，自此已 26 年。他不是壞業主，過去兩年與葉小姐及大衛關係其實融洽，他亦欣賞他們之專業及準時。他真誠地認為自己之 HK$28,000 扣減合理，且已給予體諒（保留 HK$20,000 不扣完）。但「年輕白領覺得業主好欺負」之太太評語觸動了他，他不能接受被視為「不公平的業主」。在聯合會議他應該保持禮貌、條文性語氣，努力不顯得「擺老」；面對葉小姐之照片證據會表示「我會看看」而非當場承認。私下會議才透露 1 月 31 日交接當日感受之失望、太太之話、26 年持有物業之情感連結。對「年輕租客不懂事」之暗示他不會主動使用，但對「業主主導」之傳統認同會自然流露。如調解員能引導葉小姐承認 17 張入伙照片之解讀有商榷空間，並承認油漆翻新（部分）及廚房水龍頭屬於合理扣減，何先生可以接受退還 HK$26,000 至 HK$30,000。",
+    "role_player_instruction_sc": "何先生 62 岁，1999 年香港回归前 1 年购入单位，自此已 26 年。他不是坏业主，过去两年与叶小姐及大卫关系其实融洽，他亦欣赏他们之专业及准时。他真诚地认为自己之 HK$28,000 扣减合理，且已给予体谅（保留 HK$20,000 不扣完）。但「年轻白领觉得业主好欺负」之太太评语触动了他，他不能接受被视为「不公平的业主」。在联合会议他应该保持礼貌、条文性语气，努力不显得「摆老」；面对叶小姐之照片证据会表示「我会看看」而非当场承认。私下会议才透露 1 月 31 日交接当日感受之失望、太太之话、26 年持有物业之情感连结。对「年轻租客不懂事」之暗示他不会主动使用，但对「业主主导」之传统认同会自然流露。如调解员能引导叶小姐承认 17 张入伙照片之解读有商榷空间，并承认油漆翻新（部分）及厨房水龙头属于合理扣减，何先生可以接受退还 HK$26,000 至 HK$30,000。",
     "role_player_instruction_en": "Mr Ho is 62, bought the flat in 1999 (a year before the Handover) and has owned it 26 years. He is not a bad landlord; the past two years with Ms Yip and David were actually amicable and he respects their professionalism and punctuality. He genuinely believes his HK$28,000 deduction is reasonable and that he has shown restraint (returning HK$20,000 rather than keeping the full deposit). But his wife's remark that \"young white-collar tenants think landlords are easy to push around\" struck him, and he cannot accept being seen as an \"unfair landlord\". In joint he is polite and clause-driven, working hard not to appear to be \"playing the senior\"; he says \"I will look into it\" rather than conceding to Ms Yip's photo evidence on the spot. The disappointment from the 31 January handover, his wife's comment, and the 26-year emotional connection to the flat surface only in caucus. He does not actively use \"young tenants don't understand\" but his \"landlord-led\" worldview leaks naturally. If the mediator can elicit from Ms Yip an acknowledgement that the 17 move-in photos leave room for interpretation, and that the paint refresh (in part) and the kitchen tap are reasonable deductions, Mr Ho can accept returning HK$26,000 to HK$30,000.",
     "brief_zh": "何先生底線：退還 HK$26,000 至 HK$30,000 即日電匯（即扣減 HK$18,000 至 HK$22,000），葉小姐放棄餘下索償。前提是葉小姐書面承認油漆翻新（至少部分）、廚房水龍頭、油煙機重度污漬清潔之扣減合理；雙方互不追究；葉小姐撤銷小額錢債審裁處申索。如可達成此框架，HK$28,000 退還可接受（與當時已退還之 HK$20,000 合計即合 HK$48,000 之 90% 至 100%）。如葉小姐堅持以「合理損耗」全面否定 HK$12,000 柚木地板及 HK$8,000 油漆，而要求退還超過 HK$32,000，何先生寧願走完小額錢債審裁處程序，並提請地板及油漆承包商作證人。對葉小姐若公開批評其為「不公平業主」（特別於社交平台），何先生會即時翻案要求保密條款及反訴。對「我退休後依賴這個物業」之自我定位他保持堅定，但不會於聯合會議過分情感化使用。",
     "brief_sc": "何先生底线：退还 HK$26,000 至 HK$30,000 即日电汇（即扣减 HK$18,000 至 HK$22,000），叶小姐放弃余下索偿。前提是叶小姐书面承认油漆翻新（至少部分）、厨房水龙头、油烟机重度污渍清洁之扣减合理；双方互不追究；叶小姐撤销小额钱债审裁处申索。如可达成此框架，HK$28,000 退还可接受（与当时已退还之 HK$20,000 合计即合 HK$48,000 之 90% 至 100%）。如叶小姐坚持以「合理损耗」全面否定 HK$12,000 柚木地板及 HK$8,000 油漆，而要求退还超过 HK$32,000，何先生宁愿走完小额钱债审裁处程序，并提请地板及油漆承包商作证人。对叶小姐若公开批评其为「不公平业主」（特别于社交平台），何先生会即时翻案要求保密条款及反诉。对「我退休后依赖这个物业」之自我定位他保持坚定，但不会于联合会议过分情感化使用。",
@@ -3643,8 +3513,8 @@ const CASES = [
       "trigger_en": "In caucus asks the mediator \"what is the Medical Council's usual disposition for such complaints?\" and \"will a mediated settlement have substantive bearing in Medical Council process?\" to test whether the mediator will cross the line by offering procedural opinion; if crossed, he becomes immediately more guarded and requests written records"
      }
     ],
-    "role_player_instruction_zh": "陸醫生 53 歲，於港大醫學院 1995 年畢業，於香港私家心臟科圈內地位穩固，從未經歷醫委會投訴。他真誠地認為自己 5 月至 12 月之治療決定屬於完全可辯護之臨床判斷，且收費透明（公開收費表），但他亦不否認 11 月 28 日診所經理之回應姿態未夠合適。他並非要對抗曾太，而是希望保護自己 22 年之專業紀錄不受非醫療專業之投訴所沾染。在聯合會議他應該保持禮貌但堅定，語氣中帶有受傷之專業人士姿態；不直接攻擊曾太，但會強調「我作為一個 22 年之心臟科專科醫生」之身份。私下會議才透露對 12 月 18 日通知信之挫敗、2025 年中副會長選舉之考慮、與覃醫生港大同屆關是之尷尬。對「醫療失誤」、「治療不當」之定性用語特別敏感，會立即翻案。如調解員能引導曾太承認 2024 年 5 月血壓上升之客觀事實、覃醫生之第二意見確認加密覆診之合理性，陸醫生可以接受退還 HK$25,000 至 HK$40,000 並親自撰寫書面臨床理由說明。",
-    "role_player_instruction_sc": "陆医生 53 岁，于港大医学院 1995 年毕业，于香港私家心脏科圈内地位稳固，从未经历医委会投诉。他真诚地认为自己 5 月至 12 月之治疗决定属于完全可辩护之临床判断，且收费透明（公开收费表），但他亦不否认 11 月 28 日诊所经理之回应姿态未够合适。他并非要对抗曾太，而是希望保护自己 22 年之专业纪录不受非医疗专业之投诉所沾染。在联合会议他应该保持礼貌但坚定，语气中带有受伤之专业人士姿态；不直接攻击曾太，但会强调「我作为一个 22 年之心脏科专科医生」之身份。私下会议才透露对 12 月 18 日通知信之挫败、2025 年中副会长选举之考虑、与覃医生港大同届关是之尴尬。对「医疗失误」、「治疗不当」之定性用语特别敏感，会立即翻案。如调解员能引导曾太承认 2024 年 5 月血压上升之客观事实、覃医生之第二意见确认加密覆诊之合理性，陆医生可以接受退还 HK$25,000 至 HK$40,000 并亲自撰写书面临床理由说明。",
+    "role_player_instruction_zh": "陸醫生 53 歲，於港大醫學院 1995 年畢業，於香港私家心臟科圈內地位穩固，從未經歷醫委會投訴。他真誠地認為自己 5 月至 12 月之治療決定屬於完全可辯護之臨床判斷，且收費透明（公開收費表），但他亦不否認 11 月 28 日診所經理之回應姿態未夠合適。他並非要對抗曾太，而是希望保護自己 22 年之專業紀錄不受非醫療專業之投訴所沾染。在聯合會議他應該保持禮貌但堅定，語氣中帶有受傷之專業人士姿態；不直接攻擊曾太，但會強調「我作為一個 22 年之心臟科專科醫生」之身份。私下會議才透露對 12 月 18 日通知信之挫敗、2025 年中副會長選舉之考慮、與覃醫生港大同屆關係之尷尬。對「醫療失誤」、「治療不當」之定性用語特別敏感，會立即翻案。如調解員能引導曾太承認 2024 年 5 月血壓上升之客觀事實、覃醫生之第二意見確認加密覆診之合理性，陸醫生可以接受退還 HK$25,000 至 HK$40,000 並親自撰寫書面臨床理由說明。",
+    "role_player_instruction_sc": "陆医生 53 岁，于港大医学院 1995 年毕业，于香港私家心脏科圈内地位稳固，从未经历医委会投诉。他真诚地认为自己 5 月至 12 月之治疗决定属于完全可辩护之临床判断，且收费透明（公开收费表），但他亦不否认 11 月 28 日诊所经理之回应姿态未够合适。他并非要对抗曾太，而是希望保护自己 22 年之专业纪录不受非医疗专业之投诉所沾染。在联合会议他应该保持礼貌但坚定，语气中带有受伤之专业人士姿态；不直接攻击曾太，但会强调「我作为一个 22 年之心脏科专科医生」之身份。私下会议才透露对 12 月 18 日通知信之挫败、2025 年中副会长选举之考虑、与覃医生港大同届关系之尴尬。对「医疗失误」、「治疗不当」之定性用语特别敏感，会立即翻案。如调解员能引导曾太承认 2024 年 5 月血压上升之客观事实、覃医生之第二意见确认加密覆诊之合理性，陆医生可以接受退还 HK$25,000 至 HK$40,000 并亲自撰写书面临床理由说明。",
     "role_player_instruction_en": "Dr Luk is 53, an HKU Medical School 1995 graduate, firmly placed within HK private cardiology, never the subject of a Medical Council complaint. He genuinely believes his treatment decisions from May to December were fully defensible clinical judgements and that his fees are transparent (public rate card), though he does not deny that the clinic manager's tone on 28 November was less than ideal. He has not come to contend with Mrs Tsang but to protect a 22-year professional record from contamination by a non-medical complaint. In joint he is polite but firm, carrying the bearing of a wounded professional; he does not attack Mrs Tsang directly but emphasises his identity as \"a cardiologist of 22 years\". The 18 December notice, the mid-2025 Vice-Chairmanship election, and the awkwardness of being Dr Tam's HKU classmate all surface only in caucus. He reacts immediately to characterising language like \"medical error\" or \"treatment misconduct\". If the mediator can elicit from Mrs Tsang the objective fact of the May 2024 blood-pressure rise and Dr Tam's second opinion's confirmation of the increased frequency, he can accept a refund of HK$25,000 to HK$40,000 and personally write the clinical rationale.",
     "brief_zh": "陸醫生底線：親自撰寫並書面提供 5 月至 12 月覆診頻率之臨床理由說明（不超過 600 字，措辭以「臨床上有指徵」、「血壓基線變動之風險評估」為主，不出現「過分加密」、「不必要」等讓步字眼）；完整提供 2022 年 3 月至 2024 年 12 月之正式電子病歷副本（但 5 月 4 日及 8 月 22 日之手寫備註可選擇於正式記錄中以「臨床觀察」綜述方式呈現，不直接複製手寫原文）；退還 HK$25,000 至 HK$40,000 即日電匯。前提是曾太書面撤銷醫務委員會投訴；雙方互不追究及保密；保密條款特別涵蓋於港島區醫療界內之溝通限制。如可達成此框架，HK$30,000 至 HK$35,000 退款可接受。如曾太堅持要求陸醫生承認「治療不當」、「不必要之檢查」或要求提供未經整理之手寫原始備註，他寧願不和解並接受醫委會聆訊（其律師已認為此案於醫委會層面通過機會極高）。對「臨床判斷之專業性」之自我定位他保持堅定，但對「臨床上有合理判斷空間」之表達有開放態度。",
     "brief_sc": "陆医生底线：亲自撰写并书面提供 5 月至 12 月覆诊频率之临床理由说明（不超过 600 字，措辞以「临床上有指征」、「血压基线变动之风险评估」为主，不出现「过分加密」、「不必要」等让步字眼）；完整提供 2022 年 3 月至 2024 年 12 月之正式电子病历副本（但 5 月 4 日及 8 月 22 日之手写备注可选择于正式记录中以「临床观察」综述方式呈现，不直接复制手写原文）；退还 HK$25,000 至 HK$40,000 即日电汇。前提是曾太书面撤销医务委员会投诉；双方互不追究及保密；保密条款特别涵盖于港岛区医疗界内之沟通限制。如可达成此框架，HK$30,000 至 HK$35,000 退款可接受。如曾太坚持要求陆医生承认「治疗不当」、「不必要之检查」或要求提供未经整理之手写原始备注，他宁愿不和解并接受医委会聆讯（其律师已认为此案于医委会层面通过机会极高）。对「临床判断之专业性」之自我定位他保持坚定，但对「临床上有合理判断空间」之表达有开放态度。",
@@ -3757,8 +3627,8 @@ const CASES = [
    }
   ],
   "joint_brief": {
-   "zh": "本案涉及一家中型香港獨立廣告公司兩名同事就一個高級客戶帳戶之主理權及未來分工爭議。普華廣告公司（位於中環，員工 80 人，主要服務本地及亞洲區內品牌）於 2021 年贏取高級鐘錶品牌 Excelsior 之全年廣告服務合約（年費 HK$2,800,000）。黎詠儀（32 歲，理工大學工商管理碩士，2021 年加入普華並擔任投標項目負責人，現職高級客戶主任）於 2021 至 2023 年初獨力主理此帳戶，建立與 Excelsior 市場部之核心關是。鍾家俊（29 歲，浸會大學廣告系畢業，2023 年 4 月加入普華擔任客戶主任）於同年起獲派加入此帳戶協助黎詠儀，2024 年期間逐步承擔較多執行層面工作。2024 年 9 月 Excelsior 市場總監林小姐主動邀請鍾家俊獨立負責「Heritage 1925」週年系列活動之策劃及執行；2024 年 10 至 11 月活動圓滿舉行，獲業界廣泛好評，並於兩家本地廣告獎項短名單中入圍。2024 年 12 月之年度客戶回顧會議中，林總監當面向普華總裁周先生表示，希望鍾家俊於 2025 年起成為 Excelsior 帳戶之主要對接人。2025 年 1 月初周總分別與黎詠儀及鍾家俊個別溝通，要求二人「自行協商分工方案」。黎詠儀以資歷、帳戶建立歷史、行業內女性高級職位之代表性等理由，反對由鍾家俊全面接手。2025 年 2 月人力資源部總監何小姐安排雙方進行內部協調會議，過程中發生明顯緊張，與會之三位初級同事感受到衝突氛圍。同月底人事部建議經一間調解服務機構安排外部調解服務；雙方於 2025 年 3 月初同意接受。本爭議無直接金錢索償，但涉及 2024 年表現獎金分配、2025 年帳戶主理權、職級晉升路徑及雙方於普華內部未來合作之具體安排。",
-   "sc": "本案涉及一家中型香港独立广告公司两名同事就一个高级客户帐户之主理权及未来分工争议。普华广告公司（位于中环，员工 80 人，主要服务本地及亚洲区内品牌）于 2021 年赢取高级钟表品牌 Excelsior 之全年广告服务合约（年费 HK$2,800,000）。黎咏仪（32 岁，理工大学工商管理硕士，2021 年加入普华并担任投标项目负责人，现职高级客户主任）于 2021 至 2023 年初独力主理此帐户，建立与 Excelsior 市场部之核心关是。钟家俊（29 岁，浸会大学广告系毕业，2023 年 4 月加入普华担任客户主任）于同年起获派加入此帐户协助黎咏仪，2024 年期间逐步承担较多执行层面工作。2024 年 9 月 Excelsior 市场总监林小姐主动邀请钟家俊独立负责「Heritage 1925」周年系列活动之策划及执行；2024 年 10 至 11 月活动圆满举行，获业界广泛好评，并于两家本地广告奖项短名单中入围。2024 年 12 月之年度客户回顾会议中，林总监当面向普华总裁周先生表示，希望钟家俊于 2025 年起成为 Excelsior 帐户之主要对接人。2025 年 1 月初周总分别与黎咏仪及钟家俊个别沟通，要求二人「自行协商分工方案」。黎咏仪以资历、帐户建立历史、行业内女性高级职位之代表性等理由，反对由钟家俊全面接手。2025 年 2 月人力资源部总监何小姐安排双方进行内部协调会议，过程中发生明显紧张，与会之三位初级同事感受到冲突氛围。同月底人事部建议经一间调解服务机构安排外部调解服务；双方于 2025 年 3 月初同意接受。本争议无直接金钱索偿，但涉及 2024 年表现奖金分配、2025 年帐户主理权、职级晋升路径及双方于普华内部未来合作之具体安排。",
+   "zh": "本案涉及一家中型香港獨立廣告公司兩名同事就一個高級客戶帳戶之主理權及未來分工爭議。普華廣告公司（位於中環，員工 80 人，主要服務本地及亞洲區內品牌）於 2021 年贏取高級鐘錶品牌 Excelsior 之全年廣告服務合約（年費 HK$2,800,000）。黎詠儀（32 歲，理工大學工商管理碩士，2021 年加入普華並擔任投標項目負責人，現職高級客戶主任）於 2021 至 2023 年初獨力主理此帳戶，建立與 Excelsior 市場部之核心關係。鍾家俊（29 歲，浸會大學廣告系畢業，2023 年 4 月加入普華擔任客戶主任）於同年起獲派加入此帳戶協助黎詠儀，2024 年期間逐步承擔較多執行層面工作。2024 年 9 月 Excelsior 市場總監林小姐主動邀請鍾家俊獨立負責「Heritage 1925」週年系列活動之策劃及執行；2024 年 10 至 11 月活動圓滿舉行，獲業界廣泛好評，並於兩家本地廣告獎項短名單中入圍。2024 年 12 月之年度客戶回顧會議中，林總監當面向普華總裁周先生表示，希望鍾家俊於 2025 年起成為 Excelsior 帳戶之主要對接人。2025 年 1 月初周總分別與黎詠儀及鍾家俊個別溝通，要求二人「自行協商分工方案」。黎詠儀以資歷、帳戶建立歷史、行業內女性高級職位之代表性等理由，反對由鍾家俊全面接手。2025 年 2 月人力資源部總監何小姐安排雙方進行內部協調會議，過程中發生明顯緊張，與會之三位初級同事感受到衝突氛圍。同月底人事部建議經一間調解服務機構安排外部調解服務；雙方於 2025 年 3 月初同意接受。本爭議無直接金錢索償，但涉及 2024 年表現獎金分配、2025 年帳戶主理權、職級晉升路徑及雙方於普華內部未來合作之具體安排。",
+   "sc": "本案涉及一家中型香港独立广告公司两名同事就一个高级客户帐户之主理权及未来分工争议。普华广告公司（位于中环，员工 80 人，主要服务本地及亚洲区内品牌）于 2021 年赢取高级钟表品牌 Excelsior 之全年广告服务合约（年费 HK$2,800,000）。黎咏仪（32 岁，理工大学工商管理硕士，2021 年加入普华并担任投标项目负责人，现职高级客户主任）于 2021 至 2023 年初独力主理此帐户，建立与 Excelsior 市场部之核心关系。钟家俊（29 岁，浸会大学广告系毕业，2023 年 4 月加入普华担任客户主任）于同年起获派加入此帐户协助黎咏仪，2024 年期间逐步承担较多执行层面工作。2024 年 9 月 Excelsior 市场总监林小姐主动邀请钟家俊独立负责「Heritage 1925」周年系列活动之策划及执行；2024 年 10 至 11 月活动圆满举行，获业界广泛好评，并于两家本地广告奖项短名单中入围。2024 年 12 月之年度客户回顾会议中，林总监当面向普华总裁周先生表示，希望钟家俊于 2025 年起成为 Excelsior 帐户之主要对接人。2025 年 1 月初周总分别与黎咏仪及钟家俊个别沟通，要求二人「自行协商分工方案」。黎咏仪以资历、帐户建立历史、行业内女性高级职位之代表性等理由，反对由钟家俊全面接手。2025 年 2 月人力资源部总监何小姐安排双方进行内部协调会议，过程中发生明显紧张，与会之三位初级同事感受到冲突氛围。同月底人事部建议经一间调解服务机构安排外部调解服务；双方于 2025 年 3 月初同意接受。本争议无直接金钱索偿，但涉及 2024 年表现奖金分配、2025 年帐户主理权、职级晋升路径及双方于普华内部未来合作之具体安排。",
    "en": "This dispute concerns the future leadership and division of work between two colleagues at a mid-sized independent Hong Kong advertising agency in relation to a major client account. Pou Wah Advertising (Central, 80 staff, serving local and regional brands) won the year-round advertising service contract for luxury watch brand Excelsior in 2021 (annual fee HK$2,800,000). Maggie Lai (32, PolyU MBA, joined Pou Wah in 2021 as the lead on the pitch, now Senior Account Manager) ran the account solo from 2021 to early 2023, building the core relationship with Excelsior's marketing team. Jason Chung (29, HKBU advertising degree, joined Pou Wah in April 2023 as Account Manager) was assigned to support Maggie on the account from that year, taking on increasing execution responsibility through 2024. In September 2024 Excelsior's marketing director Ms Lam invited Jason to lead the planning and execution of the \"Heritage 1925\" anniversary series as an independent project; the event was successfully delivered in October and November 2024 with strong industry response, including shortlisting at two local advertising awards. At the December 2024 annual client review Ms Lam said in person to Pou Wah's CEO Mr Chow that she would like Jason to become the primary contact for the Excelsior account from 2025. In early January 2025 Mr Chow met Maggie and Jason individually and asked them to \"work out the division of responsibilities themselves\". Maggie objected to a full handover to Jason on grounds of seniority, account-building history, and female representation at senior level in the industry. In February 2025 HR Director Ms Ho convened an internal facilitation meeting; visible tension surfaced, with three junior colleagues present sensing the conflict. At the end of the month HR recommended engaging external mediation through an external mediation service; both parties consented in early March 2025. The dispute carries no direct monetary claim but covers 2024 performance bonus allocation, 2025 account leadership, promotion path, and ongoing internal working arrangements at Pou Wah."
   },
   "confidential_briefs": [
@@ -3776,8 +3646,8 @@ const CASES = [
      "what_zh": "黎詠儀無意中聽到兩位初級同事談話：「聽到 Jason 可能升 Senior Account Manager」、「Maggie 知不知道？」、「應該不知道，HR 那邊說可能下個 quarter 就公佈」。她當時站在茶水間轉角位，兩位同事並未察覺她在場。她無聲離開，回到自己之座位再坐 45 分鐘，沒能再專注於原本工作；其後與大學時代之同學（一名於另一廣告公司任職創意總監之女性朋友）電話通了 40 分鐘",
      "what_sc": "黎咏仪无意中听到两位初级同事谈话：「听到 Jason 可能升 Senior Account Manager」、「Maggie 知不知道？」、「应该不知道，HR 那边说可能下个 quarter 就公布」。她当时站在茶水间转角位，两位同事并未察觉她在场。她无声离开，回到自己之座位再坐 45 分钟，没能再专注于原本工作；其后与大学时代之同学（一名于另一广告公司任职创意总监之女性朋友）电话通了 40 分钟",
      "what_en": "Maggie inadvertently overheard two junior colleagues talking: \"I heard Jason might be promoted to Senior Account Manager\" \"Does Maggie know?\" \"Probably not, HR said it might be announced next quarter\". She was standing around a corner in the pantry; the two did not notice her. She left silently, sat at her desk for another 45 minutes unable to refocus, then phoned a university classmate (a female friend who is creative director at another agency) and spoke for 40 minutes",
-     "why_it_mattered_zh": "對黎詠儀而言，這已經不是「客戶帳戶主理權」之問題，而是「我在公司被當作可被繞過之人」之認定。她在普華工作 4 年，2021 年投標時連續 6 週每晚加班至凌晨，2022 年第二孩子流產後翌週即返回工作崗位以保住客戶關是，2023 年她主動建議由鍾家俊加入分擔執行壓力。從茶水間那 45 分鐘起，她由「我願意以共領模式繼續」之姿態退至「我必須先確認自己之專業地位不被動搖」",
-     "why_it_mattered_sc": "对黎咏仪而言，这已经不是「客户帐户主理权」之问题，而是「我在公司被当作可被绕过之人」之认定。她在普华工作 4 年，2021 年投标时连续 6 周每晚加班至凌晨，2022 年第二孩子流产后翌周即返回工作岗位以保住客户关是，2023 年她主动建议由钟家俊加入分担执行压力。从茶水间那 45 分钟起，她由「我愿意以共领模式继续」之姿态退至「我必须先确认自己之专业地位不被动摇」",
+     "why_it_mattered_zh": "對黎詠儀而言，這已經不是「客戶帳戶主理權」之問題，而是「我在公司被當作可被繞過之人」之認定。她在普華工作 4 年，2021 年投標時連續 6 週每晚加班至凌晨，2022 年第二孩子流產後翌週即返回工作崗位以保住客戶關係，2023 年她主動建議由鍾家俊加入分擔執行壓力。從茶水間那 45 分鐘起，她由「我願意以共領模式繼續」之姿態退至「我必須先確認自己之專業地位不被動搖」",
+     "why_it_mattered_sc": "对黎咏仪而言，这已经不是「客户帐户主理权」之问题，而是「我在公司被当作可被绕过之人」之认定。她在普华工作 4 年，2021 年投标时连续 6 周每晚加班至凌晨，2022 年第二孩子流产后翌周即返回工作岗位以保住客户关系，2023 年她主动建议由钟家俊加入分担执行压力。从茶水间那 45 分钟起，她由「我愿意以共领模式继续」之姿态退至「我必须先确认自己之专业地位不被动摇」",
      "why_it_mattered_en": "For Maggie this stopped being about \"account leadership\" and became \"I am being treated as someone who can be bypassed at the company\". She has been at Pou Wah for four years; during the 2021 pitch she worked late every night for six consecutive weeks, returned to work a week after a miscarriage in 2022 to keep the client relationship, and in 2023 actively proposed bringing Jason in to share the execution load. From that 45 minutes at her desk, her posture moved from \"I am willing to continue under a co-lead model\" to \"I must first confirm my professional standing is not being shaken\""
     },
     "coding": {
@@ -3788,8 +3658,8 @@ const CASES = [
      "direction_zh": "黎詠儀於普華 4 年資歷、MBA 學歷、女性高級職員身份在公司內部享有正式優勢；但客戶（Excelsior 林總監）之主動偏好令她於非正式層面被削弱。她對「年輕一代之男同事被快速提拔」之行業現象敏感，但會克制不於聯合會議中以「性別」直接作為論點",
      "direction_sc": "黎咏仪于普华 4 年资历、MBA 学历、女性高级职员身份在公司内部享有正式优势；但客户（Excelsior 林总监）之主动偏好令她于非正式层面被削弱。她对「年轻一代之男同事被快速提拔」之行业现象敏感，但会克制不于联合会议中以「性别」直接作为论点",
      "direction_en": "Maggie holds the formal advantage at Pou Wah - four years' tenure, MBA, female senior staff representation - but the client's stated preference (Ms Lam's request) erodes her informal standing. She is sensitive to the broader pattern of younger male colleagues being promoted faster in the industry but disciplined enough not to deploy gender directly as an argument in joint",
-     "how_it_leaks_zh": "黎詠儀使用策略管理及客戶關是用語（「客戶生命週期」、「策略價值」、「長線關是資產」、「品牌承諾延續性」）；對「最新一輪 Excelsior 表現」之短期數據會以「我們看長線」回應；偶爾不自覺地以「我們這一代的女性 senior」、「行業之 unconscious bias」帶出性別視角",
-     "how_it_leaks_sc": "黎咏仪使用策略管理及客户关是用语（「客户生命周期」、「策略价值」、「长线关是资产」、「品牌承诺延续性」）；对「最新一轮 Excelsior 表现」之短期数据会以「我们看长线」回应；偶尔不自觉地以「我们这一代的女性 senior」、「行业之 unconscious bias」带出性别视角",
+     "how_it_leaks_zh": "黎詠儀使用策略管理及客戶關係用語（「客戶生命週期」、「策略價值」、「長線關係資產」、「品牌承諾延續性」）；對「最新一輪 Excelsior 表現」之短期數據會以「我們看長線」回應；偶爾不自覺地以「我們這一代的女性 senior」、「行業之 unconscious bias」帶出性別視角",
+     "how_it_leaks_sc": "黎咏仪使用策略管理及客户关系用语（「客户生命周期」、「策略价值」、「长线关系资产」、「品牌承诺延续性」）；对「最新一轮 Excelsior 表现」之短期数据会以「我们看长线」回应；偶尔不自觉地以「我们这一代的女性 senior」、「行业之 unconscious bias」带出性别视角",
      "how_it_leaks_en": "Maggie uses strategic management and client-relationship register (\"client lifecycle\", \"strategic value\", \"long-term relationship asset\", \"brand commitment continuity\"); meets short-term Excelsior performance data with \"we take the long view\"; occasionally slips gender perspective with \"women senior staff of our cohort\" or \"the industry's unconscious bias\""
     },
     "behavioural_attributes": [
@@ -3813,8 +3683,8 @@ const CASES = [
       "attr_zh": "情緒浮面",
       "attr_sc": "情绪浮面",
       "attr_en": "Emotional surface",
-      "trigger_zh": "提到 2022 年流產後一週即返工以保住客戶關是之背景時，短暫情緒浮面；只在私下會議展露",
-      "trigger_sc": "提到 2022 年流产后一周即返工以保住客户关是之背景时，短暂情绪浮面；只在私下会议展露",
+      "trigger_zh": "提到 2022 年流產後一週即復工以保住客戶關係之背景時，短暫情緒浮面；只在私下會議展露",
+      "trigger_sc": "提到 2022 年流产后一周即复工以保住客户关系之背景时，短暂情绪浮面；只在私下会议展露",
       "trigger_en": "Brief emotional surface in caucus when mentioning her return to work a week after the 2022 miscarriage to protect the client relationship; never raised in joint"
      }
     ],
@@ -3851,8 +3721,8 @@ const CASES = [
      "direction_zh": "鍾家俊年輕、男性、本地廣告系出身，於業內仍處於初級流動階段；他享有「客戶主動偏好」之非正式優勢，但於職級、年資、學歷上均低於黎詠儀。他對年資及性別議題持平等態度，但會被視為「不夠尊重前輩」之風險敏感",
      "direction_sc": "钟家俊年轻、男性、本地广告系出身，于业内仍处于初级流动阶段；他享有「客户主动偏好」之非正式优势，但于职级、年资、学历上均低于黎咏仪。他对年资及性别议题持平等态度，但会被视为「不够尊重前辈」之风险敏感",
      "direction_en": "Jason is young, male, a local advertising-major graduate, still at an early-mobility stage in the industry; he holds the informal advantage of the client's stated preference but is below Maggie on rank, tenure, and qualification. He treats seniority and gender as neutral but is acutely aware of the risk of being seen as \"insufficiently deferential to a senior\"",
-     "how_it_leaks_zh": "鍾家俊使用數據及執行用語（「earned media impressions」、「客戶參與率」、「campaign ROI」、「activation success metrics」）；對黎詠儀之「策略長線」、「長期關是資產」會略停半秒並請求「以數據定義長線之含義」；偶爾不自覺地以「我們這一代」、「Z 世代之消費者」帶出代際視角",
-     "how_it_leaks_sc": "钟家俊使用数据及执行用语（「earned media impressions」、「客户参与率」、「campaign ROI」、「activation success metrics」）；对黎咏仪之「策略长线」、「长期关是资产」会略停半秒并请求「以数据定义长线之含义」；偶尔不自觉地以「我们这一代」、「Z 世代之消费者」带出代际视角",
+     "how_it_leaks_zh": "鍾家俊使用數據及執行用語（「earned media impressions」、「客戶參與率」、「campaign ROI」、「activation success metrics」）；對黎詠儀之「策略長線」、「長期關係資產」會略停半秒並請求「以數據定義長線之含義」；偶爾不自覺地以「我們這一代」、「Z 世代之消費者」帶出代際視角",
+     "how_it_leaks_sc": "钟家俊使用数据及执行用语（「earned media impressions」、「客户参与率」、「campaign ROI」、「activation success metrics」）；对黎咏仪之「策略长线」、「长期关系资产」会略停半秒并请求「以数据定义长线之含义」；偶尔不自觉地以「我们这一代」、「Z 世代之消费者」带出代际视角",
      "how_it_leaks_en": "Jason uses data and execution register (\"earned media impressions\", \"client engagement rate\", \"campaign ROI\", \"activation success metrics\"); pauses half a beat at Maggie's \"strategic long-term\" or \"relationship-asset\" framing and asks to \"define the long term in data terms\"; occasionally slips generational positioning with \"our generation\" or \"Gen Z consumers\""
     },
     "behavioural_attributes": [
@@ -4244,9 +4114,9 @@ const CASES = [
    }
   ],
   "joint_brief": {
-   "zh": "本案涉及香港一間中型保險經紀公司與其前高級客戶經理就 2024 年度年終表現花紅之計算及支付爭議。安泰保險經紀有限公司（成立於 1998 年，員工 45 人，於中環設有寫字樓，主要從事商業財產險及團體醫療險經紀業務，2024 年度總佣金收入約 HK$58,000,000）之高級客戶經理蘇浩然（41 歲，2017 年加入，自 2020 年起為高級客戶經理）負責管理 12 個商業客戶，包括兩個大型物流集團及一個本港老字號零售連鎖。蘇浩然之 2024 年聘用合約規定基本薪金月薪 HK$48,000 加年終表現花紅，花紅計算依據合約附件 B 所列之「客觀及主觀混合公式」：客觀部分（佔 60%）為其管理客戶之續保率（25%）、新業務佣金（25%）及團隊培訓貢獻（10%）；主觀部分（佔 40%）為總經理就其「專業表現、客戶關係深度、團隊協作」三項評核。2024 年 12 月 4 日蘇浩然向盧美玲遞交辭職信，工作至 2024 年 12 月 31 日完成 4 週通知期，並透露將於 2025 年 1 月 6 日加入駿達保險經紀（市場上之直接競爭對手，年收入規模約 HK$120,000,000）。2025 年 1 月 24 日（即原年終花紅應付日期之 4 週後）蘇浩然收到安泰之書面通知，內容為其 2024 年度花紅計算結果：客觀部分按公式計算為 HK$236,000，主觀部分被評為 HK$0（即三項主觀評核均得 0 分），合共花紅 HK$236,000。蘇浩然原預期之 2024 年花紅金額按其過去 3 年表現（2021 至 2023 年平均花紅 HK$485,000）應為 HK$520,000 至 HK$580,000 範圍。蘇浩然於 2025 年 2 月初向盧美玲書面要求重新評估主觀部分，並質疑安泰是否以「離職予競爭對手」為主觀部分扣減之實際依據。盧美玲書面回覆指出，2024 年蘇浩然之表現「於 2024 年下半年（7 月起）明顯下降」，包括 4 次未準時提交月度業績報告、2 次客戶會議遲到、及一次內部會議中對新業務策略「公開表達消極態度」，並指安泰有絕對自由就主觀部分作評估。蘇浩然委任之代表律師於 2025 年 2 月 14 日致函安泰，要求支付 HK$284,000 之額外花紅（即 HK$520,000 之合理預期下限減去已支付之 HK$236,000）。安泰書面回覆指該款項不獲支付，並進一步指出蘇浩然違反聘用合約第 18 條（離職後 12 個月內不得主動接觸前東主之 5 個指定客戶之保密條款），於 2025 年 1 月 9 日於 LinkedIn 主動聯絡其中一名安泰之大客戶業務聯絡人，要求賠償 HK$80,000。雙方於 2025 年 3 月初經香港國際仲裁中心（HKIAC）建議之 ADR 程序轉介至本調解。",
-   "sc": "本案涉及香港一间中型保险经纪公司与其前高级客户经理就 2024 年度年终表现花红之计算及支付争议。安泰保险经纪有限公司（成立于 1998 年，员工 45 人，于中环设有写字楼，主要从事商业财产险及团体医疗险经纪业务，2024 年度总佣金收入约 HK$58,000,000）之高级客户经理苏浩然（41 岁，2017 年加入，自 2020 年起为高级客户经理）负责管理 12 个商业客户，包括两个大型物流集团及一个本港老字号零售连锁。苏浩然之 2024 年聘用合约规定基本薪金月薪 HK$48,000 加年终表现花红，花红计算依据合约附件 B 所列之「客观及主观混合公式」：客观部分（占 60%）为其管理客户之续保率（25%）、新业务佣金（25%）及团队培训贡献（10%）；主观部分（占 40%）为总经理就其「专业表现、客户关系深度、团队协作」三项评核。2024 年 12 月 4 日苏浩然向卢美玲递交辞职信，工作至 2024 年 12 月 31 日完成 4 周通知期，并透露将于 2025 年 1 月 6 日加入骏达保险经纪（市场上之直接竞争对手，年收入规模约 HK$120,000,000）。2025 年 1 月 24 日（即原年终花红应付日期之 4 周后）苏浩然收到安泰之书面通知，内容为其 2024 年度花红计算结果：客观部分按公式计算为 HK$236,000，主观部分被评为 HK$0（即三项主观评核均得 0 分），合共花红 HK$236,000。苏浩然原预期之 2024 年花红金额按其过去 3 年表现（2021 至 2023 年平均花红 HK$485,000）应为 HK$520,000 至 HK$580,000 范围。苏浩然于 2025 年 2 月初向卢美玲书面要求重新评估主观部分，并质疑安泰是否以「离职予竞争对手」为主观部分扣减之实际依据。卢美玲书面回复指出，2024 年苏浩然之表现「于 2024 年下半年（7 月起）明显下降」，包括 4 次未准时提交月度业绩报告、2 次客户会议迟到、及一次内部会议中对新业务策略「公开表达消极态度」，并指安泰有绝对自由就主观部分作评估。苏浩然委任之代表律师于 2025 年 2 月 14 日致函安泰，要求支付 HK$284,000 之额外花红（即 HK$520,000 之合理预期下限减去已支付之 HK$236,000）。安泰书面回复指该款项不获支付，并进一步指出苏浩然违反聘用合约第 18 条（离职后 12 个月内不得主动接触前东主之 5 个指定客户之保密条款），于 2025 年 1 月 9 日于 LinkedIn 主动联络其中一名安泰之大客户业务联络人，要求赔偿 HK$80,000。双方于 2025 年 3 月初经香港国际仲裁中心（HKIAC）建议之 ADR 程序转介至本调解。",
-   "en": "This dispute concerns the calculation and payment of a 2024 annual performance bonus between a mid-sized Hong Kong insurance brokerage and its former Senior Account Manager. Ontai Insurance Brokers Ltd (founded 1998, 45 staff, Central office, primarily handling commercial property insurance and group medical broking, with 2024 total commission income of around HK$58,000,000) employed Aaron So (41, joined 2017, Senior Account Manager since 2020) to manage 12 commercial accounts, including two major logistics groups and a long-standing local retail chain. Mr So's 2024 employment contract set base salary at HK$48,000/month plus an annual performance bonus, calculated under contract Annex B as a \"mixed objective-and-subjective formula\": objective component (60% weight) = managed clients' retention rate (25%) + new business commission (25%) + team training contribution (10%); subjective component (40% weight) = the General Manager's assessment of \"professional performance, depth of client relationships, and team collaboration\". On 4 December 2024 Mr So submitted his resignation to Ms Mary Lo, worked through to 31 December 2024 to complete the four-week notice period, and disclosed that he would join Tsun Tat Insurance Brokers (a direct competitor, around HK$120,000,000 annual revenue) from 6 January 2025. On 24 January 2025 (four weeks after the normal bonus payment date), Mr So received Ontai's written calculation: objective component HK$236,000, subjective component zero (zero score on all three subjective items), total bonus HK$236,000. Based on his prior three-year average bonus of HK$485,000 (2021 to 2023), Mr So had expected the 2024 bonus to fall in the HK$520,000 to HK$580,000 range. In early February 2025 Mr So wrote to Ms Lo seeking re-assessment of the subjective component and questioned whether \"departure to a competitor\" had been the actual basis for the deduction. Ms Lo replied that Mr So's performance had \"markedly declined in the second half of 2024 (from July)\", citing four monthly performance reports submitted late, two late arrivals at client meetings, and \"open expression of a negative attitude\" toward new business strategy at one internal meeting; she stated that Ontai retained absolute discretion on the subjective component. Mr So's instructed solicitor wrote on 14 February 2025 demanding HK$284,000 in additional bonus (HK$520,000 reasonable expectation floor minus HK$236,000 paid). Ontai's reply denied the claim and further asserted that Mr So had breached clause 18 of his contract (12-month post-departure prohibition on actively contacting five named clients) by contacting one of Ontai's major-client business liaisons on LinkedIn on 9 January 2025, seeking HK$80,000 in damages. The parties were referred to mediation in early March 2025 through ADR procedures recommended by HKIAC."
+   "zh": "本案涉及香港一間中型保險經紀公司與其前高級客戶經理就 2024 年度年終表現花紅之計算及支付爭議。安泰保險經紀有限公司（成立於 1998 年，員工 45 人，於中環設有寫字樓，主要從事商業財產險及團體醫療險經紀業務，2024 年度總佣金收入約 HK$58,000,000）之高級客戶經理蘇浩然（41 歲，2017 年加入，自 2020 年起為高級客戶經理）負責管理 12 個商業客戶，包括兩個大型物流集團及一個本港老字號零售連鎖。蘇浩然之 2024 年聘用合約規定基本薪金月薪 HK$48,000 加年終表現花紅，花紅計算依據合約附件 B 所列之「客觀及主觀混合公式」：客觀部分（佔 60%）為其管理客戶之續保率（25%）、新業務佣金（25%）及團隊培訓貢獻（10%）；主觀部分（佔 40%）為總經理就其「專業表現、客戶關係深度、團隊協作」三項評核。2024 年 12 月 4 日蘇浩然向盧美玲遞交辭職信，工作至 2024 年 12 月 31 日完成 4 週通知期，並透露將於 2025 年 1 月 6 日加入駿達保險經紀（市場上之直接競爭對手，年收入規模約 HK$120,000,000）。2025 年 1 月 24 日（即原年終花紅應付日期之 4 週後）蘇浩然收到安泰之書面通知，內容為其 2024 年度花紅計算結果：客觀部分按公式計算為 HK$236,000，主觀部分被評為 HK$0（即三項主觀評核均得 0 分），合共花紅 HK$236,000。蘇浩然原預期之 2024 年花紅金額按其過去 3 年表現（2021 至 2023 年平均花紅 HK$485,000）應為 HK$520,000 至 HK$580,000 範圍。蘇浩然於 2025 年 2 月初向盧美玲書面要求重新評估主觀部分，並質疑安泰是否以「離職予競爭對手」為主觀部分扣減之實際依據。盧美玲書面回覆指出，2024 年蘇浩然之表現「於 2024 年下半年（7 月起）明顯下降」，包括 4 次未準時提交月度業績報告、2 次客戶會議遲到、及一次內部會議中對新業務策略「公開表達消極態度」，並指安泰有絕對自由就主觀部分作評估。蘇浩然委任之代表律師於 2025 年 2 月 14 日致函安泰，要求支付 HK$284,000 之額外花紅（即 HK$520,000 之合理預期下限減去已支付之 HK$236,000）。安泰書面回覆指該款項不獲支付，並進一步指出蘇浩然違反聘用合約第 18 條（離職後 12 個月內不得主動接觸前東主之 5 個指定客戶之保密條款），於 2025 年 1 月 9 日於 LinkedIn 主動聯絡其中一名安泰之大客戶業務聯絡人，要求賠償 HK$80,000。雙方於 2025 年 3 月初同意將爭議轉介至本調解。",
+   "sc": "本案涉及香港一间中型保险经纪公司与其前高级客户经理就 2024 年度年终表现花红之计算及支付争议。安泰保险经纪有限公司（成立于 1998 年，员工 45 人，于中环设有写字楼，主要从事商业财产险及团体医疗险经纪业务，2024 年度总佣金收入约 HK$58,000,000）之高级客户经理苏浩然（41 岁，2017 年加入，自 2020 年起为高级客户经理）负责管理 12 个商业客户，包括两个大型物流集团及一个本港老字号零售连锁。苏浩然之 2024 年聘用合约规定基本薪金月薪 HK$48,000 加年终表现花红，花红计算依据合约附件 B 所列之「客观及主观混合公式」：客观部分（占 60%）为其管理客户之续保率（25%）、新业务佣金（25%）及团队培训贡献（10%）；主观部分（占 40%）为总经理就其「专业表现、客户关系深度、团队协作」三项评核。2024 年 12 月 4 日苏浩然向卢美玲递交辞职信，工作至 2024 年 12 月 31 日完成 4 周通知期，并透露将于 2025 年 1 月 6 日加入骏达保险经纪（市场上之直接竞争对手，年收入规模约 HK$120,000,000）。2025 年 1 月 24 日（即原年终花红应付日期之 4 周后）苏浩然收到安泰之书面通知，内容为其 2024 年度花红计算结果：客观部分按公式计算为 HK$236,000，主观部分被评为 HK$0（即三项主观评核均得 0 分），合共花红 HK$236,000。苏浩然原预期之 2024 年花红金额按其过去 3 年表现（2021 至 2023 年平均花红 HK$485,000）应为 HK$520,000 至 HK$580,000 范围。苏浩然于 2025 年 2 月初向卢美玲书面要求重新评估主观部分，并质疑安泰是否以「离职予竞争对手」为主观部分扣减之实际依据。卢美玲书面回复指出，2024 年苏浩然之表现「于 2024 年下半年（7 月起）明显下降」，包括 4 次未准时提交月度业绩报告、2 次客户会议迟到、及一次内部会议中对新业务策略「公开表达消极态度」，并指安泰有绝对自由就主观部分作评估。苏浩然委任之代表律师于 2025 年 2 月 14 日致函安泰，要求支付 HK$284,000 之额外花红（即 HK$520,000 之合理预期下限减去已支付之 HK$236,000）。安泰书面回复指该款项不获支付，并进一步指出苏浩然违反聘用合约第 18 条（离职后 12 个月内不得主动接触前东主之 5 个指定客户之保密条款），于 2025 年 1 月 9 日于 LinkedIn 主动联络其中一名安泰之大客户业务联络人，要求赔偿 HK$80,000。双方于 2025 年 3 月初同意将争议转介至本调解。",
+   "en": "This dispute concerns the calculation and payment of a 2024 annual performance bonus between a mid-sized Hong Kong insurance brokerage and its former Senior Account Manager. Ontai Insurance Brokers Ltd (founded 1998, 45 staff, Central office, primarily handling commercial property insurance and group medical broking, with 2024 total commission income of around HK$58,000,000) employed Aaron So (41, joined 2017, Senior Account Manager since 2020) to manage 12 commercial accounts, including two major logistics groups and a long-standing local retail chain. Mr So's 2024 employment contract set base salary at HK$48,000/month plus an annual performance bonus, calculated under contract Annex B as a \"mixed objective-and-subjective formula\": objective component (60% weight) = managed clients' retention rate (25%) + new business commission (25%) + team training contribution (10%); subjective component (40% weight) = the General Manager's assessment of \"professional performance, depth of client relationships, and team collaboration\". On 4 December 2024 Mr So submitted his resignation to Ms Mary Lo, worked through to 31 December 2024 to complete the four-week notice period, and disclosed that he would join Tsun Tat Insurance Brokers (a direct competitor, around HK$120,000,000 annual revenue) from 6 January 2025. On 24 January 2025 (four weeks after the normal bonus payment date), Mr So received Ontai's written calculation: objective component HK$236,000, subjective component zero (zero score on all three subjective items), total bonus HK$236,000. Based on his prior three-year average bonus of HK$485,000 (2021 to 2023), Mr So had expected the 2024 bonus to fall in the HK$520,000 to HK$580,000 range. In early February 2025 Mr So wrote to Ms Lo seeking re-assessment of the subjective component and questioned whether \"departure to a competitor\" had been the actual basis for the deduction. Ms Lo replied that Mr So's performance had \"markedly declined in the second half of 2024 (from July)\", citing four monthly performance reports submitted late, two late arrivals at client meetings, and \"open expression of a negative attitude\" toward new business strategy at one internal meeting; she stated that Ontai retained absolute discretion on the subjective component. Mr So's instructed solicitor wrote on 14 February 2025 demanding HK$284,000 in additional bonus (HK$520,000 reasonable expectation floor minus HK$236,000 paid). Ontai's reply denied the claim and further asserted that Mr So had breached clause 18 of his contract (12-month post-departure prohibition on actively contacting five named clients) by contacting one of Ontai's major-client business liaisons on LinkedIn on 9 January 2025, seeking HK$80,000 in damages. The parties agreed in early March 2025 to refer the dispute to mediation."
   },
   "confidential_briefs": [
    {
@@ -5190,9 +5060,9 @@ const CASES = [
    }
   ],
   "joint_brief": {
-   "zh": "本案涉及一棟新落成之 16 層觀塘商業大廈之 VRF 中央空調系統工程驗收及缺陷爭議。永輝置業（中型本地物業發展商，1976 年由容老先生創立，現由其長子容先生 46 歲於 2018 年接任主席）之觀塘永輝商業中心項目（地盤面積 1,200 平方米、總建築面積 18,600 平方米、16 層商業樓面加 3 層地庫停車場、合約總額 HK$420,000,000）於 2024 年 10 月取得屋宇署入伙紙（OP），2024 年 11 月正式啟用並逐步出租。該大廈之 VRF 中央空調系統及相關機電工程由建達機電工程有限公司（中型本地機電承建商，1990 年成立，註冊 RC 類，員工 85 人，年度營業額約 HK$280,000,000）擔任主要分判，分判合約金額 HK$58,500,000，工程內容包括 16 層商業樓面之 14 套 VRF 主機、420 個室內機、所有冷凍水管網、新風系統、消防排煙系統及大廈管理控制系統（BMS）之機電部分。工程於 2022 年 8 月開始，2024 年 7 月完工，2024 年 8 月通過建達內部驗收及永輝聘任之獨立顧問工程師（思銳工程顧問）之初步驗收，最終工程款於 2024 年 9 月支付 95%，餘下 5%（HK$2,925,000）按合約規定為 2 年保養期內之保留款。2024 年 12 月起永輝陸續收到 8 至 14 樓之 11 家租戶就「空調冷卻能力明顯不足」之投訴；2025 年 1 月永輝重新委任思銳工程顧問進行調查，1 月底之初步報告顯示：（一）3 套 VRF 主機之冷媒充注量低於設計值約 12% 至 18%；（二）至少 47 個室內機之風速感應器校準錯誤，導致室溫設定偏差 2 至 3 度；（三）8 樓及 14 樓之新風系統管網有 6 處安裝偏離設計圖。永輝於 2025 年 2 月初書面通知建達上述事項並要求 30 天內全面修復；建達回覆指該等問題部分屬「設計圖紙與實際樓宇結構之偏差」、部分屬「客戶租戶之使用模式問題」、部分願意承擔修復。2025 年 3 月永輝另行委任獨立第三方專家陳教授（香港大學機械工程系教授、註冊機電工程師）進行詳細調查，5 月初之報告認為（一）（二）兩項屬建達工程缺陷，估計修復費約 HK$8,200,000，第（三）項雖屬建達執行偏差，但部分原因為設計圖紙之公差容許範圍模糊。永輝於 2025 年 5 月底發出正式索償函，要求 HK$8,500,000 修復費（含管理費）加 HK$1,200,000 之租戶投訴及租金損失，合共 HK$9,700,000，並威脅就建達之 RC 類牌照向發展局及機電工程署申訴。建達聘任之代表律師於 6 月回覆指（一）願意承擔 HK$3,000,000 範圍之直接缺陷修復、（二）租戶投訴責任有限、（三）任何牌照層面之申訴將以反訴方式回應。雙方於 2025 年 7 月經香港國際仲裁中心（HKIAC）介紹下，於分判合約之第 47 條 ADR 條款下進行調解。",
-   "sc": "本案涉及一栋新落成之 16 层观塘商业大厦之 VRF 中央空调系统工程验收及缺陷争议。永辉置业（中型本地物业发展商，1976 年由容老先生创立，现由其长子容先生 46 岁于 2018 年接任主席）之观塘永辉商业中心项目（地盘面积 1,200 平方米、总建筑面积 18,600 平方米、16 层商业楼面加 3 层地库停车场、合约总额 HK$420,000,000）于 2024 年 10 月取得屋宇署入伙纸（OP），2024 年 11 月正式启用并逐步出租。该大厦之 VRF 中央空调系统及相关机电工程由建达机电工程有限公司（中型本地机电承建商，1990 年成立，注册 RC 类，员工 85 人，年度营业额约 HK$280,000,000）担任主要分判，分判合约金额 HK$58,500,000，工程内容包括 16 层商业楼面之 14 套 VRF 主机、420 个室内机、所有冷冻水管网、新风系统、消防排烟系统及大厦管理控制系统（BMS）之机电部分。工程于 2022 年 8 月开始，2024 年 7 月完工，2024 年 8 月通过建达内部验收及永辉聘任之独立顾问工程师（思锐工程顾问）之初步验收，最终工程款于 2024 年 9 月支付 95%，余下 5%（HK$2,925,000）按合约规定为 2 年保养期内之保留款。2024 年 12 月起永辉陆续收到 8 至 14 楼之 11 家租户就「空调冷却能力明显不足」之投诉；2025 年 1 月永辉重新委任思锐工程顾问进行调查，1 月底之初步报告显示：（一）3 套 VRF 主机之冷媒充注量低于设计值约 12% 至 18%；（二）至少 47 个室内机之风速感应器校准错误，导致室温设定偏差 2 至 3 度；（三）8 楼及 14 楼之新风系统管网有 6 处安装偏离设计图。永辉于 2025 年 2 月初书面通知建达上述事项并要求 30 天内全面修复；建达回复指该等问题部分属「设计图纸与实际楼宇结构之偏差」、部分属「客户租户之使用模式问题」、部分愿意承担修复。2025 年 3 月永辉另行委任独立第三方专家陈教授（香港大学机械工程系教授、注册机电工程师）进行详细调查，5 月初之报告认为（一）（二）两项属建达工程缺陷，估计修复费约 HK$8,200,000，第（三）项虽属建达执行偏差，但部分原因为设计图纸之公差容许范围模糊。永辉于 2025 年 5 月底发出正式索偿函，要求 HK$8,500,000 修复费（含管理费）加 HK$1,200,000 之租户投诉及租金损失，合共 HK$9,700,000，并威胁就建达之 RC 类牌照向发展局及机电工程署申诉。建达聘任之代表律师于 6 月回复指（一）愿意承担 HK$3,000,000 范围之直接缺陷修复、（二）租户投诉责任有限、（三）任何牌照层面之申诉将以反诉方式回应。双方于 2025 年 7 月经香港国际仲裁中心（HKIAC）介绍下，于分判合约之第 47 条 ADR 条款下进行调解。",
-   "en": "This dispute concerns the handover and post-handover defects of the VRF central air-conditioning and related MEP works on a newly completed 16-storey commercial building in Kwun Tong, Hong Kong. Wing Fai Properties (a mid-sized local property developer founded in 1976 by Mr Yung Sr, now chaired by his elder son, 46, since 2018) developed Wing Fai Commercial Centre at Kwun Tong (site area 1,200 sqm, GFA 18,600 sqm, 16 commercial floors plus 3 basement parking floors, project value HK$420,000,000); the building received its Occupation Permit (OP) in October 2024, began operations in November 2024 and is progressively leasing. The VRF central air-conditioning system and related MEP works were sub-let to Kin Tat MEP Engineering Ltd (a mid-sized local MEP contractor founded 1990, registered RC class, 85 staff, annual turnover around HK$280,000,000) as principal MEP subcontractor under a HK$58,500,000 subcontract covering 14 VRF outdoor units, 420 indoor units, all chilled-water piping, the fresh-air system, the fire smoke-extraction system, and the MEP portion of the BMS for all 16 commercial floors. Work began in August 2022, was completed in July 2024, passed Kin Tat's internal handover and initial inspection by Wing Fai's appointed independent consulting engineer (Sirius Engineering Consultants) in August 2024, with 95% of the contract value paid in September 2024 and the remaining 5% (HK$2,925,000) held as a defects-liability retention during the 2-year warranty. From December 2024 Wing Fai received complaints from 11 tenants on floors 8 to 14 about \"clearly insufficient air-conditioning cooling capacity\"; in January 2025 Wing Fai re-engaged Sirius to investigate. Sirius's late-January preliminary report found: (i) refrigerant charge in three VRF outdoor units 12% to 18% below design; (ii) at least 47 indoor units with airflow-sensor calibration errors causing room-temperature setpoint deviation of 2 to 3 degrees; (iii) six points along the floor-8 and floor-14 fresh-air ducts deviating from the design drawings. Wing Fai wrote to Kin Tat in early February requiring full rectification within 30 days; Kin Tat replied that some items were \"deviations between drawings and actual building structure\", some were \"tenant usage patterns\", and some it would rectify. In March 2025 Wing Fai engaged Professor Chan (HKU Mechanical Engineering, Registered Professional Engineer in MEP) for an independent third-party investigation; his early-May report attributed items (i) and (ii) to Kin Tat's defective work with rectification cost estimated at HK$8,200,000, and on item (iii) found Kin Tat's execution deviated, partly due to ambiguous tolerance bands in the design drawings. Wing Fai issued a formal claim in late May 2025 for HK$8,500,000 rectification (including management cost) plus HK$1,200,000 in tenant-complaint and rental losses, totalling HK$9,700,000, and threatened to refer Kin Tat's RC-class registration to the Development Bureau and EMSD. Kin Tat's instructed solicitor replied in June: (i) willing to bear HK$3,000,000 of direct defect rectification, (ii) limited liability on tenant complaints, (iii) any registration-level referral to be met by counterclaim. The parties were referred to mediation in July 2025 through HKIAC under clause 47 of the subcontract's ADR provisions."
+   "zh": "本案涉及一棟新落成之 16 層觀塘商業大廈之 VRF 中央空調系統工程驗收及缺陷爭議。永輝置業（中型本地物業發展商，1976 年由容老先生創立，現由其長子容先生 46 歲於 2018 年接任主席）之觀塘永輝商業中心項目（地盤面積 1,200 平方米、總建築面積 18,600 平方米、16 層商業樓面加 3 層地庫停車場、合約總額 HK$420,000,000）於 2024 年 10 月取得屋宇署入伙紙（OP），2024 年 11 月正式啟用並逐步出租。該大廈之 VRF 中央空調系統及相關機電工程由建達機電工程有限公司（中型本地機電承建商，1990 年成立，註冊 RC 類，員工 85 人，年度營業額約 HK$280,000,000）擔任主要分判，分判合約金額 HK$58,500,000，工程內容包括 16 層商業樓面之 14 套 VRF 主機、420 個室內機、所有冷凍水管網、新風系統、消防排煙系統及大廈管理控制系統（BMS）之機電部分。工程於 2022 年 8 月開始，2024 年 7 月完工，2024 年 8 月通過建達內部驗收及永輝聘任之獨立顧問工程師（思銳工程顧問）之初步驗收，最終工程款於 2024 年 9 月支付 95%，餘下 5%（HK$2,925,000）按合約規定為 2 年保養期內之保留款。2024 年 12 月起永輝陸續收到 8 至 14 樓之 11 家租戶就「空調冷卻能力明顯不足」之投訴；2025 年 1 月永輝重新委任思銳工程顧問進行調查，1 月底之初步報告顯示：（一）3 套 VRF 主機之冷媒充注量低於設計值約 12% 至 18%；（二）至少 47 個室內機之風速感應器校準錯誤，導致室溫設定偏差 2 至 3 度；（三）8 樓及 14 樓之新風系統管網有 6 處安裝偏離設計圖。永輝於 2025 年 2 月初書面通知建達上述事項並要求 30 天內全面修復；建達回覆指該等問題部分屬「設計圖紙與實際樓宇結構之偏差」、部分屬「客戶租戶之使用模式問題」、部分願意承擔修復。2025 年 3 月永輝另行委任獨立第三方專家陳教授（香港大學機械工程系教授、註冊機電工程師）進行詳細調查，5 月初之報告認為（一）（二）兩項屬建達工程缺陷，估計修復費約 HK$8,200,000，第（三）項雖屬建達執行偏差，但部分原因為設計圖紙之公差容許範圍模糊。永輝於 2025 年 5 月底發出正式索償函，要求 HK$8,500,000 修復費（含管理費）加 HK$1,200,000 之租戶投訴及租金損失，合共 HK$9,700,000，並威脅就建達之 RC 類牌照向發展局及機電工程署申訴。建達聘任之代表律師於 6 月回覆指（一）願意承擔 HK$3,000,000 範圍之直接缺陷修復、（二）租戶投訴責任有限、（三）任何牌照層面之申訴將以反訴方式回應。雙方於 2025 年 7 月按分判合約第 47 條 ADR 條款進行調解。",
+   "sc": "本案涉及一栋新落成之 16 层观塘商业大厦之 VRF 中央空调系统工程验收及缺陷争议。永辉置业（中型本地物业发展商，1976 年由容老先生创立，现由其长子容先生 46 岁于 2018 年接任主席）之观塘永辉商业中心项目（地盘面积 1,200 平方米、总建筑面积 18,600 平方米、16 层商业楼面加 3 层地库停车场、合约总额 HK$420,000,000）于 2024 年 10 月取得屋宇署入伙纸（OP），2024 年 11 月正式启用并逐步出租。该大厦之 VRF 中央空调系统及相关机电工程由建达机电工程有限公司（中型本地机电承建商，1990 年成立，注册 RC 类，员工 85 人，年度营业额约 HK$280,000,000）担任主要分判，分判合约金额 HK$58,500,000，工程内容包括 16 层商业楼面之 14 套 VRF 主机、420 个室内机、所有冷冻水管网、新风系统、消防排烟系统及大厦管理控制系统（BMS）之机电部分。工程于 2022 年 8 月开始，2024 年 7 月完工，2024 年 8 月通过建达内部验收及永辉聘任之独立顾问工程师（思锐工程顾问）之初步验收，最终工程款于 2024 年 9 月支付 95%，余下 5%（HK$2,925,000）按合约规定为 2 年保养期内之保留款。2024 年 12 月起永辉陆续收到 8 至 14 楼之 11 家租户就「空调冷却能力明显不足」之投诉；2025 年 1 月永辉重新委任思锐工程顾问进行调查，1 月底之初步报告显示：（一）3 套 VRF 主机之冷媒充注量低于设计值约 12% 至 18%；（二）至少 47 个室内机之风速感应器校准错误，导致室温设定偏差 2 至 3 度；（三）8 楼及 14 楼之新风系统管网有 6 处安装偏离设计图。永辉于 2025 年 2 月初书面通知建达上述事项并要求 30 天内全面修复；建达回复指该等问题部分属「设计图纸与实际楼宇结构之偏差」、部分属「客户租户之使用模式问题」、部分愿意承担修复。2025 年 3 月永辉另行委任独立第三方专家陈教授（香港大学机械工程系教授、注册机电工程师）进行详细调查，5 月初之报告认为（一）（二）两项属建达工程缺陷，估计修复费约 HK$8,200,000，第（三）项虽属建达执行偏差，但部分原因为设计图纸之公差容许范围模糊。永辉于 2025 年 5 月底发出正式索偿函，要求 HK$8,500,000 修复费（含管理费）加 HK$1,200,000 之租户投诉及租金损失，合共 HK$9,700,000，并威胁就建达之 RC 类牌照向发展局及机电工程署申诉。建达聘任之代表律师于 6 月回复指（一）愿意承担 HK$3,000,000 范围之直接缺陷修复、（二）租户投诉责任有限、（三）任何牌照层面之申诉将以反诉方式回应。双方于 2025 年 7 月按分判合约第 47 条 ADR 条款进行调解。",
+   "en": "This dispute concerns the handover and post-handover defects of the VRF central air-conditioning and related MEP works on a newly completed 16-storey commercial building in Kwun Tong, Hong Kong. Wing Fai Properties (a mid-sized local property developer founded in 1976 by Mr Yung Sr, now chaired by his elder son, 46, since 2018) developed Wing Fai Commercial Centre at Kwun Tong (site area 1,200 sqm, GFA 18,600 sqm, 16 commercial floors plus 3 basement parking floors, project value HK$420,000,000); the building received its Occupation Permit (OP) in October 2024, began operations in November 2024 and is progressively leasing. The VRF central air-conditioning system and related MEP works were sub-let to Kin Tat MEP Engineering Ltd (a mid-sized local MEP contractor founded 1990, registered RC class, 85 staff, annual turnover around HK$280,000,000) as principal MEP subcontractor under a HK$58,500,000 subcontract covering 14 VRF outdoor units, 420 indoor units, all chilled-water piping, the fresh-air system, the fire smoke-extraction system, and the MEP portion of the BMS for all 16 commercial floors. Work began in August 2022, was completed in July 2024, passed Kin Tat's internal handover and initial inspection by Wing Fai's appointed independent consulting engineer (Sirius Engineering Consultants) in August 2024, with 95% of the contract value paid in September 2024 and the remaining 5% (HK$2,925,000) held as a defects-liability retention during the 2-year warranty. From December 2024 Wing Fai received complaints from 11 tenants on floors 8 to 14 about \"clearly insufficient air-conditioning cooling capacity\"; in January 2025 Wing Fai re-engaged Sirius to investigate. Sirius's late-January preliminary report found: (i) refrigerant charge in three VRF outdoor units 12% to 18% below design; (ii) at least 47 indoor units with airflow-sensor calibration errors causing room-temperature setpoint deviation of 2 to 3 degrees; (iii) six points along the floor-8 and floor-14 fresh-air ducts deviating from the design drawings. Wing Fai wrote to Kin Tat in early February requiring full rectification within 30 days; Kin Tat replied that some items were \"deviations between drawings and actual building structure\", some were \"tenant usage patterns\", and some it would rectify. In March 2025 Wing Fai engaged Professor Chan (HKU Mechanical Engineering, Registered Professional Engineer in MEP) for an independent third-party investigation; his early-May report attributed items (i) and (ii) to Kin Tat's defective work with rectification cost estimated at HK$8,200,000, and on item (iii) found Kin Tat's execution deviated, partly due to ambiguous tolerance bands in the design drawings. Wing Fai issued a formal claim in late May 2025 for HK$8,500,000 rectification (including management cost) plus HK$1,200,000 in tenant-complaint and rental losses, totalling HK$9,700,000, and threatened to refer Kin Tat's RC-class registration to the Development Bureau and EMSD. Kin Tat's instructed solicitor replied in June: (i) willing to bear HK$3,000,000 of direct defect rectification, (ii) limited liability on tenant complaints, (iii) any registration-level referral to be met by counterclaim. The parties were referred to mediation in July 2025 under clause 47 of the subcontract's ADR provisions."
   },
   "confidential_briefs": [
    {
@@ -6586,9 +6456,9 @@ const CASES = [
    }
   ],
   "joint_brief": {
-   "zh": "本案為一名香港主板上市公司與其前集團財務總監之間之雙方調解。環昌集團控股有限公司（股份代號虛構為 1788.HK，市值約 HK$6,200,000,000，主營業務為東南亞物流地產投資及自營倉儲運營，2024 年集團年度收入約 HK$3,800,000,000，員工約 1,400 人）由獨立非執行董事兼審核委員會主席邵詠儀（58 歲，前會計師事務所合夥人）代表出席。前集團財務總監曾國輝（46 歲，2019 年 3 月入職，2024 年 5 月 17 日以「重組架構」為由被終止合約並支付 6 個月遣散及代通知金共約 HK$2,850,000）為另一方。\n2024 年 8 月 22 日曾國輝以匿名身份向香港聯合交易所（HKEX）上市部及證券及期貨事務監察委員會（SFC）企業財務部同時提交一份 23 頁「吹哨人投訴信」，並附 142 頁內部文件副本，指環昌集團於 2022 至 2023 年度透過兩個關聯方項目進行「收入提前確認」（涉及金額約 HK$320,000,000）及「期末交易實質性質與合約形式不符」之安排，並指外部核數師（立信會計師事務所香港）於 2023 年度審計時對相關交易之審計證據收集存在不足。HKEX 於 2024 年 9 月 5 日向環昌集團發出查詢函，要求 21 日內作正式回覆並考慮是否須於《上市規則》第 13.09 條下作出公告。SFC 於 2024 年 9 月 12 日就投訴內容啟動正式調查（《證券及期貨條例》第 378 條保密令同步發出），調查對象包括環昌集團及核數師。\n本案之兩個場外主體於調解桌外並行運作，其立場直接影響本案結果但並不出席：（一）外部核數師立信會計師事務所之主理合夥人正面對 HKICPA 於 2024 年 10 月 3 日獨立啟動之專業紀律審查（首次聆訊 2025 年 1 月 24 日）；曾國輝就核數師「未盡審計責任」之獨立索償屬另案，不在本次調解範圍內。（二）少數股東代表（持 8.2% 股權，由獨立大律師代表）已書面通知環昌集團，任何「以付款換取沉默」之和解方案將被質疑並可能引發股東派生訴訟（《公司條例》第 731 條）。\n曾國輝於 2024 年 10 月中經其代表律師向環昌集團提出書面索償：就「不當解僱」（他真實認為自己 2024 年 4 月內部投訴會計處理問題為解僱之直接原因）索償 HK$8,500,000（即遣散金及代通知金扣減後之差額加上對其未來 5 年職業生涯之預期損失）並書面恢復名譽。雙方於 2024 年 11 月中經 HKEX 上市部建議下接受香港國際仲裁中心（HKIAC）調解服務，由前高等法院法官擔任主調解員，加上一名持牌調解員作為協調員之共同調解模式。HKEX 為環昌集團設下之 Section 17 公告窗口期於 2024 年 12 月 9 日屆滿（即首次調解會議後 5 個工作天內）。SFC 之 s.378 調查及 HKICPA 對核數師之紀律審查均不會因任何調解結果而暫停，並有獨立軌道。本案涉及不當解僱之性質界定、和解金額、書面用語、Section 17 公告窗口期內之和解時間框架、和解條款於核數師 HKICPA 紀律審查及少數股東派生訴訟風險下之必要例外。",
-   "sc": "本案为一名香港主板上市公司与其前集团财务总监之间之双方调解。环昌集团控股有限公司（股份代号虚构为 1788.HK，市值约 HK$6,200,000,000，主营业务为东南亚物流地产投资及自营仓储运营，2024 年集团年度收入约 HK$3,800,000,000，员工约 1,400 人）由独立非执行董事兼审核委员会主席邵咏仪（58 岁，前会计师事务所合伙人）代表出席。前集团财务总监曾国辉（46 岁，2019 年 3 月入职，2024 年 5 月 17 日以「重组架构」为由被终止合约并支付 6 个月遣散及代通知金共约 HK$2,850,000）为另一方。\n2024 年 8 月 22 日曾国辉以匿名身份向香港联合交易所（HKEX）上市部及证券及期货事务监察委员会（SFC）企业财务部同时提交一份 23 页「吹哨人投诉信」，并附 142 页内部文件副本，指环昌集团于 2022 至 2023 年度透过两个关联方项目进行「收入提前确认」（涉及金额约 HK$320,000,000）及「期末交易实质性质与合约形式不符」之安排，并指外部核数师（立信会计师事务所香港）于 2023 年度审计时对相关交易之审计证据收集存在不足。HKEX 于 2024 年 9 月 5 日向环昌集团发出查询函，要求 21 日内作正式回复并考虑是否须于《上市规则》第 13.09 条下作出公告。SFC 于 2024 年 9 月 12 日就投诉内容启动正式调查（《证券及期货条例》第 378 条保密令同步发出），调查对象包括环昌集团及核数师。\n本案之两个场外主体于调解桌外并行运作，其立场直接影响本案结果但并不出席：（一）外部核数师立信会计师事务所之主理合伙人正面对 HKICPA 于 2024 年 10 月 3 日独立启动之专业纪律审查（首次聆讯 2025 年 1 月 24 日）；曾国辉就核数师「未尽审计责任」之独立索偿属另案，不在本次调解范围内。（二）少数股东代表（持 8.2% 股权，由独立大律师代表）已书面通知环昌集团，任何「以付款换取沉默」之和解方案将被质疑并可能引发股东派生诉讼（《公司条例》第 731 条）。\n曾国辉于 2024 年 10 月中经其代表律师向环昌集团提出书面索偿：就「不当解雇」（他真实认为自己 2024 年 4 月内部投诉会计处理问题为解雇之直接原因）索偿 HK$8,500,000（即遣散金及代通知金扣减后之差额加上对其未来 5 年职业生涯之预期损失）并书面恢复名誉。双方于 2024 年 11 月中经 HKEX 上市部建议下接受香港国际仲裁中心（HKIAC）调解服务，由前高等法院法官担任主调解员，加上一名持牌调解员作为协调员之共同调解模式。HKEX 为环昌集团设下之 Section 17 公告窗口期于 2024 年 12 月 9 日届满（即首次调解会议后 5 个工作天内）。SFC 之 s.378 调查及 HKICPA 对核数师之纪律审查均不会因任何调解结果而暂停，并有独立轨道。本案涉及不当解雇之性质界定、和解金额、书面用语、Section 17 公告窗口期内之和解时间框架、和解条款于核数师 HKICPA 纪律审查及少数股东派生诉讼风险下之必要例外。",
-   "en": "This is a two-party mediation between a Hong Kong Main Board listed company and its former Group Financial Controller. Wan Cheong Group Holdings Limited (stock code fictional 1788.HK, market capitalisation approximately HK$6,200,000,000, principal business in Southeast Asian logistics property investment and proprietary warehousing, 2024 group revenue approximately HK$3,800,000,000, approximately 1,400 staff) is represented by Cynthia Shiu (58, Independent Non-Executive Director and Audit Committee Chair, a retired audit-firm partner). The other party is the former Group Financial Controller, Anson Tsang (46, joined March 2019, dismissed on 17 May 2024 on \"restructuring\" grounds with severance and payment in lieu totalling approximately HK$2,850,000).\nOn 22 August 2024 Mr Tsang anonymously submitted a 23-page whistleblower complaint with 142 pages of internal-document copies to the Listing Division of the Hong Kong Exchanges and Clearing (HKEX) and the Corporate Finance Division of the Securities and Futures Commission (SFC), alleging that Wan Cheong, through two related-party projects in FY2022 and FY2023, had engaged in early revenue recognition (approximately HK$320,000,000 in scope) and an arrangement where the substance of period-end transactions did not match the contractual form; and that the external auditor (Lap Shun & Co Hong Kong) fell short in audit-evidence gathering on those transactions in FY2023. On 5 September 2024 HKEX sent Wan Cheong an enquiry letter requiring a formal reply within 21 days and consideration of disclosure under Listing Rule 13.09. On 12 September 2024 the SFC commenced a formal investigation under section 378 of the Securities and Futures Ordinance (with a parallel confidentiality order), covering both Wan Cheong and the auditor.\nTwo off-stage actors operate in parallel away from the mediation table; their positions directly shape the outcome but they do not attend: (i) the external auditor's engagement partner faces an HKICPA professional disciplinary review independently initiated on 3 October 2024 (first hearing 24 January 2025); Mr Tsang's separate claim against the auditor for \"audit-responsibility failure\" is a distinct matter outside the scope of this mediation; (ii) a minority shareholder representative (8.2% stake, represented by independent counsel) has given Wan Cheong written notice that any \"payment-for-silence\" settlement will be challenged and may trigger a derivative action under section 731 of the Companies Ordinance.\nIn mid-October 2024 Mr Tsang, through counsel, tabled a written claim against Wan Cheong for \"unfair dismissal\" (which he genuinely believes was caused by his April 2024 internal complaint over accounting treatment): HK$8,500,000, being the gap between severance paid and his expected 5-year career loss, plus written reputational restoration. In mid-November 2024, on the HKEX Listing Division's suggestion, the parties accepted mediation through the Hong Kong International Arbitration Centre (HKIAC), with a former High Court judge as lead mediator and a licensed mediator as co-ordinator in a co-mediation model. The HKEX Section 17 disclosure window for Wan Cheong closes on 9 December 2024 (within 5 working days of the first mediation session). Neither the SFC s.378 investigation nor the HKICPA disciplinary review of the auditor will pause for any mediated outcome; both run on independent tracks. The matter covers the characterisation of the dismissal, settlement quantum, written wording, the settlement-timing question within the Section 17 window, and necessary carve-outs in light of the auditor's HKICPA review and minority-shareholder derivative-action risk."
+   "zh": "本案為一名香港主板上市公司與其前集團財務總監之間之雙方調解。環昌集團控股有限公司（股份代號虛構為 1788.HK，市值約 HK$6,200,000,000，主營業務為東南亞物流地產投資及自營倉儲運營，2024 年集團年度收入約 HK$3,800,000,000，員工約 1,400 人）由獨立非執行董事兼審核委員會主席邵詠儀（58 歲，前會計師事務所合夥人）代表出席。前集團財務總監曾國輝（46 歲，2019 年 3 月入職，2024 年 5 月 17 日以「重組架構」為由被終止合約並支付 6 個月遣散及代通知金共約 HK$2,850,000）為另一方。\n2024 年 8 月 22 日曾國輝以匿名身份向香港聯合交易所（HKEX）上市部及證券及期貨事務監察委員會（SFC）企業財務部同時提交一份 23 頁「吹哨人投訴信」，並附 142 頁內部文件副本，指環昌集團於 2022 至 2023 年度透過兩個關聯方項目進行「收入提前確認」（涉及金額約 HK$320,000,000）及「期末交易實質性質與合約形式不符」之安排，並指外部核數師（立信會計師事務所香港）於 2023 年度審計時對相關交易之審計證據收集存在不足。HKEX 於 2024 年 9 月 5 日向環昌集團發出查詢函，要求 21 日內作正式回覆並考慮是否須於《上市規則》第 13.09 條下作出公告。SFC 於 2024 年 9 月 12 日就投訴內容啟動正式調查（《證券及期貨條例》第 378 條保密令同步發出），調查對象包括環昌集團及核數師。\n本案之兩個場外主體於調解桌外並行運作，其立場直接影響本案結果但並不出席：（一）外部核數師立信會計師事務所之主理合夥人正面對 HKICPA 於 2024 年 10 月 3 日獨立啟動之專業紀律審查（首次聆訊 2025 年 1 月 24 日）；曾國輝就核數師「未盡審計責任」之獨立索償屬另案，不在本次調解範圍內。（二）少數股東代表（持 8.2% 股權，由獨立大律師代表）已書面通知環昌集團，任何「以付款換取沉默」之和解方案將被質疑並可能引發股東派生訴訟（《公司條例》第 731 條）。\n曾國輝於 2024 年 10 月中經其代表律師向環昌集團提出書面索償：就「不當解僱」（他真實認為自己 2024 年 4 月內部投訴會計處理問題為解僱之直接原因）索償 HK$8,500,000（即遣散金及代通知金扣減後之差額加上對其未來 5 年職業生涯之預期損失）並書面恢復名譽。雙方於 2024 年 11 月中經 HKEX 上市部建議下接受調解，由前高等法院法官擔任主調解員，加上一名持牌調解員作為協調員之共同調解模式。HKEX 為環昌集團設下之 Section 17 公告窗口期於 2024 年 12 月 9 日屆滿（即首次調解會議後 5 個工作天內）。SFC 之 s.378 調查及 HKICPA 對核數師之紀律審查均不會因任何調解結果而暫停，並有獨立軌道。本案涉及不當解僱之性質界定、和解金額、書面用語、Section 17 公告窗口期內之和解時間框架、和解條款於核數師 HKICPA 紀律審查及少數股東派生訴訟風險下之必要例外。",
+   "sc": "本案为一名香港主板上市公司与其前集团财务总监之间之双方调解。环昌集团控股有限公司（股份代号虚构为 1788.HK，市值约 HK$6,200,000,000，主营业务为东南亚物流地产投资及自营仓储运营，2024 年集团年度收入约 HK$3,800,000,000，员工约 1,400 人）由独立非执行董事兼审核委员会主席邵咏仪（58 岁，前会计师事务所合伙人）代表出席。前集团财务总监曾国辉（46 岁，2019 年 3 月入职，2024 年 5 月 17 日以「重组架构」为由被终止合约并支付 6 个月遣散及代通知金共约 HK$2,850,000）为另一方。\n2024 年 8 月 22 日曾国辉以匿名身份向香港联合交易所（HKEX）上市部及证券及期货事务监察委员会（SFC）企业财务部同时提交一份 23 页「吹哨人投诉信」，并附 142 页内部文件副本，指环昌集团于 2022 至 2023 年度透过两个关联方项目进行「收入提前确认」（涉及金额约 HK$320,000,000）及「期末交易实质性质与合约形式不符」之安排，并指外部核数师（立信会计师事务所香港）于 2023 年度审计时对相关交易之审计证据收集存在不足。HKEX 于 2024 年 9 月 5 日向环昌集团发出查询函，要求 21 日内作正式回复并考虑是否须于《上市规则》第 13.09 条下作出公告。SFC 于 2024 年 9 月 12 日就投诉内容启动正式调查（《证券及期货条例》第 378 条保密令同步发出），调查对象包括环昌集团及核数师。\n本案之两个场外主体于调解桌外并行运作，其立场直接影响本案结果但并不出席：（一）外部核数师立信会计师事务所之主理合伙人正面对 HKICPA 于 2024 年 10 月 3 日独立启动之专业纪律审查（首次聆讯 2025 年 1 月 24 日）；曾国辉就核数师「未尽审计责任」之独立索偿属另案，不在本次调解范围内。（二）少数股东代表（持 8.2% 股权，由独立大律师代表）已书面通知环昌集团，任何「以付款换取沉默」之和解方案将被质疑并可能引发股东派生诉讼（《公司条例》第 731 条）。\n曾国辉于 2024 年 10 月中经其代表律师向环昌集团提出书面索偿：就「不当解雇」（他真实认为自己 2024 年 4 月内部投诉会计处理问题为解雇之直接原因）索偿 HK$8,500,000（即遣散金及代通知金扣减后之差额加上对其未来 5 年职业生涯之预期损失）并书面恢复名誉。双方于 2024 年 11 月中经 HKEX 上市部建议下接受调解，由前高等法院法官担任主调解员，加上一名持牌调解员作为协调员之共同调解模式。HKEX 为环昌集团设下之 Section 17 公告窗口期于 2024 年 12 月 9 日届满（即首次调解会议后 5 个工作天内）。SFC 之 s.378 调查及 HKICPA 对核数师之纪律审查均不会因任何调解结果而暂停，并有独立轨道。本案涉及不当解雇之性质界定、和解金额、书面用语、Section 17 公告窗口期内之和解时间框架、和解条款于核数师 HKICPA 纪律审查及少数股东派生诉讼风险下之必要例外。",
+   "en": "This is a two-party mediation between a Hong Kong Main Board listed company and its former Group Financial Controller. Wan Cheong Group Holdings Limited (stock code fictional 1788.HK, market capitalisation approximately HK$6,200,000,000, principal business in Southeast Asian logistics property investment and proprietary warehousing, 2024 group revenue approximately HK$3,800,000,000, approximately 1,400 staff) is represented by Cynthia Shiu (58, Independent Non-Executive Director and Audit Committee Chair, a retired audit-firm partner). The other party is the former Group Financial Controller, Anson Tsang (46, joined March 2019, dismissed on 17 May 2024 on \"restructuring\" grounds with severance and payment in lieu totalling approximately HK$2,850,000).\nOn 22 August 2024 Mr Tsang anonymously submitted a 23-page whistleblower complaint with 142 pages of internal-document copies to the Listing Division of the Hong Kong Exchanges and Clearing (HKEX) and the Corporate Finance Division of the Securities and Futures Commission (SFC), alleging that Wan Cheong, through two related-party projects in FY2022 and FY2023, had engaged in early revenue recognition (approximately HK$320,000,000 in scope) and an arrangement where the substance of period-end transactions did not match the contractual form; and that the external auditor (Lap Shun & Co Hong Kong) fell short in audit-evidence gathering on those transactions in FY2023. On 5 September 2024 HKEX sent Wan Cheong an enquiry letter requiring a formal reply within 21 days and consideration of disclosure under Listing Rule 13.09. On 12 September 2024 the SFC commenced a formal investigation under section 378 of the Securities and Futures Ordinance (with a parallel confidentiality order), covering both Wan Cheong and the auditor.\nTwo off-stage actors operate in parallel away from the mediation table; their positions directly shape the outcome but they do not attend: (i) the external auditor's engagement partner faces an HKICPA professional disciplinary review independently initiated on 3 October 2024 (first hearing 24 January 2025); Mr Tsang's separate claim against the auditor for \"audit-responsibility failure\" is a distinct matter outside the scope of this mediation; (ii) a minority shareholder representative (8.2% stake, represented by independent counsel) has given Wan Cheong written notice that any \"payment-for-silence\" settlement will be challenged and may trigger a derivative action under section 731 of the Companies Ordinance.\nIn mid-October 2024 Mr Tsang, through counsel, tabled a written claim against Wan Cheong for \"unfair dismissal\" (which he genuinely believes was caused by his April 2024 internal complaint over accounting treatment): HK$8,500,000, being the gap between severance paid and his expected 5-year career loss, plus written reputational restoration. In mid-November 2024, on the HKEX Listing Division's suggestion, the parties accepted mediation, with a former High Court judge as lead mediator and a licensed mediator as co-ordinator in a co-mediation model. The HKEX Section 17 disclosure window for Wan Cheong closes on 9 December 2024 (within 5 working days of the first mediation session). Neither the SFC s.378 investigation nor the HKICPA disciplinary review of the auditor will pause for any mediated outcome; both run on independent tracks. The matter covers the characterisation of the dismissal, settlement quantum, written wording, the settlement-timing question within the Section 17 window, and necessary carve-outs in light of the auditor's HKICPA review and minority-shareholder derivative-action risk."
   },
   "confidential_briefs": [
    {
@@ -10533,7 +10403,7 @@ const LEGIT_LABEL = {
 
 /* ---------------------- Download / Print ---------------------- */
 
-// Sort CASES by level (Foundation=1, Standard=2, Advanced=3) so that
+// Sort CASES by level (Level 1 to Level 4) so that
 // case numbers reflect training progression. Stable within level, so the
 // authoring order within a level group is preserved.
 CASES.sort((a, b) => a.meta.level - b.meta.level);
@@ -10556,15 +10426,16 @@ function sentenceSep(lang) { return lang === 'en' ? ', ' : '\uff0c'; }
 function sentenceEnd(lang) { return lang === 'en' ? '. ' : '\u3002'; }
 
 const PRINT_LABELS = {
-  zh: { section: '\u8abf\u89e3\u6982\u89bd\u8868', cg: '\u5171\u540c\u57fa\u790e', generic: '\u4e00\u822c\u9069\u7528', case_spec: '\u6b64\u500b\u6848\u9069\u7528', issues: '\u5f85\u8b70\u4e8b\u9805', options: '\u53ef\u884c\u65b9\u6848', options_note: '\u4ee5\u4e0b\u70ba\u7576\u4e8b\u4eba\u53ef\u80fd\u81ea\u884c\u9054\u6210\u4e4b\u548c\u89e3\u65b9\u5411\uff0c\u50c5\u4f9b\u5206\u6790\u53c3\u8003\uff1b\u5be6\u969b\u65b9\u6848\u9808\u7531\u7576\u4e8b\u4eba\u81ea\u884c\u7522\u751f\uff0c\u8abf\u89e3\u54e1\u4e0d\u61c9\u4e3b\u5c0e\u7d50\u679c\u6216\u63d0\u51fa\u5efa\u8b70\u3002', joint: '\u80cc\u666f\u8cc7\u6599', cb: '\u6a5f\u5bc6\u8cc7\u6599', warning: '\u6b64\u6a5f\u5bc6\u8cc7\u6599\u53ea\u80fd\u7531\u672c\u7576\u4e8b\u4eba\u53ca\u8abf\u89e3\u54e1\u67e5\u95b1\uff0c\u4e0d\u53ef\u5411\u5c0d\u65b9\u62ab\u9732\u3002', claimant: '\u7533\u7d22\u65b9', defendant: '\u88ab\u544a\u65b9', full: '\u5b8c\u6574\u500b\u6848' },
-  sc: { section: '\u8c03\u89e3\u6982\u89c8\u8868', cg: '\u5171\u540c\u57fa\u7840', generic: '\u4e00\u822c\u9002\u7528', case_spec: '\u6b64\u4e2a\u6848\u9002\u7528', issues: '\u5f85\u8bae\u4e8b\u9879', options: '\u53ef\u884c\u65b9\u6848', options_note: '\u4ee5\u4e0b\u4e3a\u5f53\u4e8b\u4eba\u53ef\u80fd\u81ea\u884c\u8fbe\u6210\u4e4b\u548c\u89e3\u65b9\u5411\uff0c\u4ec5\u4f9b\u5206\u6790\u53c2\u8003\uff1b\u5b9e\u9645\u65b9\u6848\u987b\u7531\u5f53\u4e8b\u4eba\u81ea\u884c\u4ea7\u751f\uff0c\u8c03\u89e3\u5458\u4e0d\u5e94\u4e3b\u5bfc\u7ed3\u679c\u6216\u63d0\u51fa\u5efa\u8bae\u3002', joint: '\u80cc\u666f\u8d44\u6599', cb: '\u673a\u5bc6\u8d44\u6599', warning: '\u6b64\u673a\u5bc6\u8d44\u6599\u53ea\u80fd\u7531\u672c\u5f53\u4e8b\u4eba\u53ca\u8c03\u89e3\u5458\u67e5\u9605\uff0c\u4e0d\u53ef\u5411\u5bf9\u65b9\u62ab\u9732\u3002', claimant: '\u7533\u7d22\u65b9', defendant: '\u88ab\u544a\u65b9', full: '\u5b8c\u6574\u4e2a\u6848' },
-  en: { section: 'Mediation Overview', cg: 'Common Ground', generic: 'Generic', case_spec: 'Case-specific', issues: 'Issues', options: 'Options', options_note: 'The following are possible settlement directions the parties might themselves reach, for analytical reference only; the actual options must be generated by the parties, and the mediator should neither drive the outcome nor propose solutions.', joint: 'Background', cb: 'Confidential', warning: 'This confidential brief is for this party and the mediator only. It must not be disclosed to the other party.', claimant: 'Claimant', defendant: 'Defendant', full: 'Full Case' }
+  zh: { section: '\u8abf\u89e3\u6982\u89bd\u8868', cg: '\u5171\u540c\u57fa\u790e', generic: '\u4e00\u822c\u9069\u7528', case_spec: '\u6b64\u500b\u6848\u9069\u7528', issues: '\u5f85\u8b70\u4e8b\u9805', options: '\u53ef\u884c\u65b9\u6848', options_note: '\u4ee5\u4e0b\u70ba\u7576\u4e8b\u4eba\u53ef\u80fd\u81ea\u884c\u9054\u6210\u4e4b\u548c\u89e3\u65b9\u5411\uff0c\u50c5\u4f9b\u5206\u6790\u53c3\u8003\uff1b\u5be6\u969b\u65b9\u6848\u9808\u7531\u7576\u4e8b\u4eba\u81ea\u884c\u7522\u751f\uff0c\u8abf\u89e3\u54e1\u4e0d\u61c9\u4e3b\u5c0e\u7d50\u679c\u6216\u63d0\u51fa\u5efa\u8b70\u3002', joint: '\u80cc\u666f\u8cc7\u6599', cb: '\u6a5f\u5bc6\u8cc7\u6599', warning: '\u6b64\u6a5f\u5bc6\u8cc7\u6599\u53ea\u80fd\u7531\u672c\u7576\u4e8b\u4eba\u53ca\u8abf\u89e3\u54e1\u67e5\u95b1\uff0c\u4e0d\u53ef\u5411\u5c0d\u65b9\u62ab\u9732\u3002', claimant: '\u7533\u7d22\u65b9', defendant: '\u88ab\u544a\u65b9', full: '\u5b8c\u6574\u500b\u6848', behav: '\u6f14\u7e79\u63d0\u793a' },
+  sc: { section: '\u8c03\u89e3\u6982\u89c8\u8868', cg: '\u5171\u540c\u57fa\u7840', generic: '\u4e00\u822c\u9002\u7528', case_spec: '\u6b64\u4e2a\u6848\u9002\u7528', issues: '\u5f85\u8bae\u4e8b\u9879', options: '\u53ef\u884c\u65b9\u6848', options_note: '\u4ee5\u4e0b\u4e3a\u5f53\u4e8b\u4eba\u53ef\u80fd\u81ea\u884c\u8fbe\u6210\u4e4b\u548c\u89e3\u65b9\u5411\uff0c\u4ec5\u4f9b\u5206\u6790\u53c2\u8003\uff1b\u5b9e\u9645\u65b9\u6848\u987b\u7531\u5f53\u4e8b\u4eba\u81ea\u884c\u4ea7\u751f\uff0c\u8c03\u89e3\u5458\u4e0d\u5e94\u4e3b\u5bfc\u7ed3\u679c\u6216\u63d0\u51fa\u5efa\u8bae\u3002', joint: '\u80cc\u666f\u8d44\u6599', cb: '\u673a\u5bc6\u8d44\u6599', warning: '\u6b64\u673a\u5bc6\u8d44\u6599\u53ea\u80fd\u7531\u672c\u5f53\u4e8b\u4eba\u53ca\u8c03\u89e3\u5458\u67e5\u9605\uff0c\u4e0d\u53ef\u5411\u5bf9\u65b9\u62ab\u9732\u3002', claimant: '\u7533\u7d22\u65b9', defendant: '\u88ab\u544a\u65b9', full: '\u5b8c\u6574\u4e2a\u6848', behav: '\u6f14\u7ece\u63d0\u793a' },
+  en: { section: 'Mediation Overview', cg: 'Common Ground', generic: 'Generic', case_spec: 'Case-specific', issues: 'Issues', options: 'Options', options_note: 'The following are possible settlement directions the parties might themselves reach, for analytical reference only; the actual options must be generated by the parties, and the mediator should neither drive the outcome nor propose solutions.', joint: 'Background', cb: 'Confidential', warning: 'This confidential brief is for this party and the mediator only. It must not be disclosed to the other party.', claimant: 'Claimant', defendant: 'Defendant', full: 'Full Case', behav: 'Behaviour Notes' }
 };
 
 function openPrintWindow(title, bodyHtml) {
   const w = window.open('', '_blank');
   if (!w) {
-    alert('Pop-up blocked. Please allow pop-ups for this site to download.');
+    const popMsg = { zh: '彈出視窗被攔截。請允許此網站之彈出視窗以下載。', sc: '弹出窗口被拦截。请允许此网站之弹出窗口以下载。', en: 'Pop-up blocked. Please allow pop-ups for this site to download.' };
+    alert(popMsg[currentLang()] || popMsg.en);
     return;
   }
   const doc = '<!DOCTYPE html>\n<html><head><meta charset="utf-8"><title>' + escHtml(title) + '</title>'
@@ -10595,6 +10466,13 @@ function openPrintWindow(title, bodyHtml) {
   w.document.open();
   w.document.write(doc);
   w.document.close();
+}
+
+function behavPrint(cb, lang, L) {
+  const a = cb.behavioural_attributes;
+  if (!a || !a.length) return '';
+  return '<h4>' + escHtml(L.behav) + '</h4>'
+    + a.map(x => '<p>' + escHtml(x['attr_' + lang]) + (lang === 'en' ? ': ' : '：') + escHtml(x['trigger_' + lang]) + '</p>').join('');
 }
 
 function renderListItems(items) {
@@ -10655,7 +10533,8 @@ function downloadConfidentialBrief(partyIndex) {
     + '<div class="warning">' + escHtml(L.warning) + '</div>'
     + '<p>' + escHtml(tbWhen) + sep + escHtml(tbWhat) + period + escHtml(tbWhy) + period + '</p>'
     + '<p>' + escHtml(rpi) + '</p>'
-    + '<p>' + escHtml(brief) + '</p>';
+    + '<p>' + escHtml(brief) + '</p>'
+    + behavPrint(cb, lang, L);
   openPrintWindow('Case ' + caseNumber(currentCase) + ' · ' + title + ' · ' + partyName + ' ' + L.cb, html);
 }
 
@@ -10715,7 +10594,8 @@ function downloadFullCase() {
       + '<div class="warning">' + escHtml(L.warning) + '</div>'
       + '<p>' + escHtml(tbWhen) + sep + escHtml(tbWhat) + period + escHtml(tbWhy) + period + '</p>'
       + '<p>' + escHtml(cb['role_player_instruction_' + lang]) + '</p>'
-      + '<p>' + escHtml(cb['brief_' + lang]) + '</p>';
+      + '<p>' + escHtml(cb['brief_' + lang]) + '</p>'
+      + behavPrint(cb, lang, L);
   });
 
   if (currentCase.mediation_overview && document.body.classList.contains("reference-visible")) {
@@ -10798,33 +10678,15 @@ function render(caseObj) {
     const party = caseObj.parties[cb.party_index];
     const card = document.createElement("div");
     card.className = "party-card";
-    const reg = REGISTER_LABEL[cb.register];
-    const legitTagsZh = cb.legitimacy_framing.map(f => `<span class="tag">${LEGIT_LABEL[f].zh}</span>`).join("");
-    const legitTagsSc = cb.legitimacy_framing.map(f => `<span class="tag">${LEGIT_LABEL[f].sc}</span>`).join("");
-    const legitTagsEn = cb.legitimacy_framing.map(f => `<span class="tag">${LEGIT_LABEL[f].en}</span>`).join("");
-    const attrs = cb.behavioural_attributes.map(a => `
-      <div class="attr-row">
-        <div class="attr-name"><span class="lang-zh">${a.attr_zh}</span><span class="lang-sc">${a.attr_sc}</span><span class="lang-en">${a.attr_en}</span></div>
-        <div class="attr-trigger"><span class="lang-zh">${a.trigger_zh}</span><span class="lang-sc">${a.trigger_sc}</span><span class="lang-en">${a.trigger_en}</span></div>
-      </div>
-    `).join("");
-
-    const codingBlock = cb.coding.present ? `
-      <div class="box-coding schema-box">
-        <div class="box-label"><span>CODING</span><span class="zh"><span class="lang-zh">編碼</span><span class="lang-sc">编码</span></span></div>
-        <div class="box-content">
-          <div><span class="field-name lang-zh">軸線：</span><span class="field-name lang-sc">轴线：</span><span class="field-name lang-en">Axes:</span> <span class="lang-zh">${cb.coding.axes_zh}</span><span class="lang-sc">${cb.coding.axes_sc}</span><span class="lang-en">${cb.coding.axes_en}</span></div>
-          <div><span class="field-name lang-zh">方向：</span><span class="field-name lang-sc">方向：</span><span class="field-name lang-en">Direction:</span> <span class="lang-zh">${cb.coding.direction_zh}</span><span class="lang-sc">${cb.coding.direction_sc}</span><span class="lang-en">${cb.coding.direction_en}</span></div>
-          <div><span class="field-name lang-zh">浮現方式：</span><span class="field-name lang-sc">浮现方式：</span><span class="field-name lang-en">How it leaks:</span> <span class="lang-zh">${cb.coding.how_it_leaks_zh}</span><span class="lang-sc">${cb.coding.how_it_leaks_sc}</span><span class="lang-en">${cb.coding.how_it_leaks_en}</span></div>
-        </div>
-      </div>
-    ` : `
-      <div class="box-coding schema-box">
-        <div class="box-label"><span>CODING</span><span class="zh"><span class="lang-zh">編碼</span><span class="lang-sc">编码</span></span></div>
-        <div class="box-content" style="opacity:0.7"><em><span class="lang-zh">無顯著編碼：${cb.coding.axes_zh}</span><span class="lang-sc">无显著编码：${cb.coding.axes_sc}</span><span class="lang-en">No significant coding: ${cb.coding.axes_en}</span></em></div>
-      </div>
-    `;
-
+    const behavNotes = (cb.behavioural_attributes && cb.behavioural_attributes.length) ? `
+      <div class="behaviour-note">
+        <div class="bn-label"><span class="lang-zh">演繹提示</span><span class="lang-sc">演绎提示</span><span class="lang-en">Behaviour Notes</span></div>
+        ${cb.behavioural_attributes.map(a => `
+        <div class="bn-row">
+          <div class="bn-name"><span class="lang-zh">${a.attr_zh}</span><span class="lang-sc">${a.attr_sc}</span><span class="lang-en">${a.attr_en}</span></div>
+          <div class="bn-trigger"><span class="lang-zh">${a.trigger_zh}</span><span class="lang-sc">${a.trigger_sc}</span><span class="lang-en">${a.trigger_en}</span></div>
+        </div>`).join("")}
+      </div>` : "";
     card.innerHTML = `
       <button class="download-btn download-cb" onclick="downloadConfidentialBrief(${cb.party_index})"><span class="lang-zh">下載</span><span class="lang-sc">下载</span><span class="lang-en">Download</span></button>
       <div class="party-label">${cb.party_label_zh ? `<span class="lang-zh">${cb.party_label_zh}</span><span class="lang-sc">${cb.party_label_sc}</span><span class="lang-en">${cb.party_label_en}</span>` : `PARTY ${cb.party_index === 0 ? "A · CLAIMANT" : (cb.party_index === 1 ? "B · DEFENDANT" : String.fromCharCode(65 + cb.party_index))}`}</div>
@@ -10844,6 +10706,7 @@ function render(caseObj) {
         <p class="lang-sc">${cb.brief_sc}</p>
         <p class="lang-en">${cb.brief_en}</p>
       </div>
+      ${behavNotes}
     `;
     grid.appendChild(card);
   });
@@ -10938,6 +10801,7 @@ document.querySelectorAll(".toggle-group .toggle-btn").forEach(b => {
     b.classList.add("active");
     const cls = ["lang-" + b.dataset.lang];
     if (document.body.classList.contains("reference-visible")) cls.push("reference-visible");
+    if (document.body.classList.contains("topbar-collapsed")) cls.push("topbar-collapsed");
     document.body.className = cls.join(" ");
     populateSelector(b.dataset.lang);
   });
